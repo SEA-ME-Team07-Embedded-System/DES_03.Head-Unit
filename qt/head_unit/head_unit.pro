@@ -1,4 +1,4 @@
-QT += quick
+QT += quick quickcontrols2 multimedia
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -27,4 +27,5 @@ DISTFILES += \
     image/navigate_icon.png \
     image/playing_icon.png \
     image/setting_icon.png \
+    image/theater_icon.png \
     image/video_icon.png

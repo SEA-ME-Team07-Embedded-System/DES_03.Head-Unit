@@ -2,6 +2,8 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtMultimedia 5.15
+import "ui/musicPage"
 
 Window {
     width: 1024
@@ -44,13 +46,90 @@ Window {
 
             }
             Rectangle { //centerstack : 1
-                id: musicPage
-                color: "green"
+                id: playPage
+                //feature : 1. music 2. video
+                StackLayout{
+                    id: playpageStack
+                    anchors.fill: parent
 
-                //feature : 1. play 2. destination 3. list
-                //1. current music - play, stop, album cover, when there is not empty
-                //2. previous playlist - add favorite
-                //3. every songs list
+                    musicPage {
+                        id: musicpage
+                    }
+
+                    Rectangle{//videopage
+                        id: b
+                        color: "#1c1c1c"
+                    }
+                }
+
+                ColumnLayout {
+                    anchors.top: parent.top
+                    anchors.left: parent.left
+                    spacing: 0
+
+                    // Music Button
+                    Button {
+                        id: playMusicButton
+                        Layout.preferredWidth: 70  // Adjust according to your needs
+                        Layout.preferredHeight: 70  // Adjust according to your needs
+                        background: Rectangle {
+                            color: "#242323"  // Change this color for your button background color
+                            anchors.fill: parent
+                        }
+                        Image {
+                            anchors.centerIn: parent
+                            width: playMusicButton.width * 0.5
+                            source: "file://Users/kimjunho/qt_workspace/qt_qml/head_unit/image/music_icon.png" // Update the path to your music icon
+                            fillMode: Image.PreserveAspectFit
+                        }
+                        // Animation Effect
+                        scale: musicbuttonmouseArea.pressed ? 0.95 : 1.0
+                        Behavior on scale {
+                            PropertyAnimation {
+                                duration: 100
+                            }
+                        }
+                        MouseArea {
+                            id: musicbuttonmouseArea
+                            anchors.fill: parent
+                            onClicked: {
+                                playpageStack.currentIndex = 0;
+                                // Logic for video button
+                            }
+                        }
+                    }
+                    // Video Button
+                    Button {
+                        id: playVideoButton
+                        Layout.preferredWidth: 70  // Adjust according to your needs
+                        Layout.preferredHeight: 70  // Adjust according to your needs
+                        background: Rectangle {
+                            color: "#242323"  // Change this color for your button background color
+                            anchors.fill: parent
+                        }
+                        Image {
+                            anchors.centerIn: parent
+                            width: playVideoButton.width * 0.5
+                            source: "file://Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/theater_icon.png" // Update the path to your video icon
+                        fillMode: Image.PreserveAspectFit
+                        }
+                        // Animation Effect
+                        scale: videobuttonmouseArea.pressed ? 0.95 : 1.0
+                        Behavior on scale {
+                            PropertyAnimation {
+                                duration: 100
+                            }
+                        }
+                        MouseArea {
+                            id: videobuttonmouseArea
+                            anchors.fill: parent
+                            onClicked: {
+                                playpageStack.currentIndex = 1;
+                                // Logic for video button
+                            }
+                        }
+                    }
+                }
 
             }
             Rectangle { //centerstack : 2
@@ -124,7 +203,7 @@ Window {
             }
 
             Button {
-                id: musicButton
+                id: playButton
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 background: Rectangle {
@@ -133,23 +212,23 @@ Window {
                 }
                 Image {
                     anchors.centerIn: parent
-                    width:musicButton.width*.5
+                    width:playButton.width*.5
                     source: "file://Users/kimjunho/qt_workspace/qt_qml/head_unit/image/playing_icon.png"
                     fillMode:Image.PreserveAspectFit
                 }
                 // Animation Effect
-                scale: musicmouseArea.pressed ? 0.95 : 1.0
+                scale: playmouseArea.pressed ? 0.95 : 1.0
                 Behavior on scale {
                     PropertyAnimation {
                         duration: 100
                     }
                 }
                 MouseArea {
-                    id: musicmouseArea
+                    id: playmouseArea
                     anchors.fill: parent
                     onClicked: {
                         centerStack.currentIndex = 1;
-                        // Logic for music button
+                        // Logic for play button
                     }
                 }
             }
