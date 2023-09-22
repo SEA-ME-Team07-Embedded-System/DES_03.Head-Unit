@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 10.0.2, 2023-09-22T15:36:03. -->
+<!-- Written by QtCreator 10.0.2, 2023-09-22T16:55:05. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -236,7 +236,6 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">head_unit2</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/head_unit.pro</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/head_unit.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
