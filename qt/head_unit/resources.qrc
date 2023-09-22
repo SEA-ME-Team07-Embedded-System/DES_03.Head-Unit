@@ -36,5 +36,9 @@
         <file>ui/assets/music/NewJeans-Super Shy.mp3</file>
         <file>ui/assets/music/Sam Smith-I'm not the only one.mp3</file>
     </qresource>
-    <qresource prefix="/"/>
+    <qresource prefix="/video">
+        <file>ui/assets/video/race.mp4</file>
+        <file>ui/assets/video/sportcar.mp4</file>
+        <file>ui/assets/video/wave.mp4</file>
+    </qresource>
 </RCC>

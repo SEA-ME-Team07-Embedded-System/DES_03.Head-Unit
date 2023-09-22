@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>ui/Musicpage/Musicpage.qml</file>
+        <file>ui/Videopage/Videopage.qml</file>
     </qresource>
 </RCC>

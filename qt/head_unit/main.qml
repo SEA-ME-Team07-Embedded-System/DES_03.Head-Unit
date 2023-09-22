@@ -4,6 +4,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtMultimedia 5.15
 import "ui/Musicpage"
+import "ui/Videopage"
 
 Window {
     width: 1024
@@ -53,18 +54,12 @@ Window {
                     id: playpageStack
                     anchors.fill: parent
 
-//                    Rectangle{//musicpage
-//                        id: a
-//                        color: "#1c1c1c"
-//                    }
-
                     Musicpage {
                         id: musicpage
                     }
 
-                    Rectangle{//videopage
-                        id: b
-                        color: "#1c1c1c"
+                    Videopage {//videopage
+                        id: videopage
                     }
                 }
 
