@@ -1,4 +1,4 @@
-QT += quick
+QT += quick quickcontrols2 multimedia
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -7,7 +7,8 @@ QT += quick
 SOURCES += \
         main.cpp
 
-RESOURCES += qml.qrc
+RESOURCES += qml.qrc \
+    resources.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -20,11 +21,4 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES += \
-    image/car_icon.png \
-    image/light_icon.png \
-    image/music_icon.png \
-    image/navigate_icon.png \
-    image/playing_icon.png \
-    image/setting_icon.png \
-    image/video_icon.png
+DISTFILES +=
