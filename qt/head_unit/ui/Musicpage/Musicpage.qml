@@ -1,49 +1,12 @@
 import QtQuick 2.15
-import QtQuick.Layouts 1.12
-import QtQuick.Controls 2.12
-import QtQuick.Window 2.0
+import QtQuick.Window 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
 import QtMultimedia 5.15
 
 Rectangle{ //musicpage
     id: musicpage
-    color: "#1c1c1c"
-
-    // Create a property to track the current song index
-    property int currentSongIndex: 0
-
-
-    ListModel {
-        id: songsModel
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/music/Avici-The Nigths.mp3"; title: "Avici - The Nigths"}
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/music/GAYLE-ABCDEFU.mp3"; title: "GAYLE - ABCDEFU" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/music/Lauv-I Like Me Better.mp3"; title: "Lauv - I Like Me Better" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/music/Lauv-Paris In The Rain.mp3"; title: "Lauv - Paris In The Rain" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/music/Mina Okabe-Every Second.mp3"; title: "Mina Okabe - Every Second" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/music/NewJeans-ASAP.mp3"; title: "NewJeans - ASAP" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/music/NewJeans-ETA.mp3"; title: "NewJeans - ETA" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/music/NewJeans-Super Shy.mp3"; title: "NewJeans - Super Shy" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/music/Sam Smith-I'm not the only one.mp3"; title: "Sam Smith - I'm not the only one" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/music/Jungkuk-Seven.mp3"; title: "Jungkuk - Seven" }
-    }
-
-    ListModel {
-        id: songsCover
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/The Nigths.jpeg"; title: "Avici - The Nigths"}
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/ABCDEFU.jpeg"; title: "GAYLE - ABCDEFU" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/I Like Me Better.jpeg"; title: "Lauv - I Like Me Better" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/Paris In The Rain.jpeg"; title: "Lauv - Paris In The Rain" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/Every Second.jpeg"; title: "Mina Okabe - Every Second" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/ASAP.jpeg"; title: "NewJeans - ASAP" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/ETA.jpeg"; title: "NewJeans - ETA" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/Super Shy.jpeg"; title: "NewJeans - Super Shy" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/Im not the only one.jpeg"; title: "Sam Smith - I'm not the only one" }
-        ListElement { source: "file:///Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/Seven.jpeg"; title: "Jungkuk - Seven" }
-    }
-
-    MediaPlayer {
-        id: mediaPlayer
-        source: songsModel.get(0).source  // Set the default song
-    }
+    color: "#dfe4ea"
 
     //playsong with index
     function playSong(index) {
@@ -57,21 +20,57 @@ Rectangle{ //musicpage
         songImage.source = songsCover.get(index).source;
     }
 
+    // Create a property to track the current song index
+    property int currentSongIndex: 0
+
+    ListModel {
+        id: songsModel
+        ListElement { source: "qrc:/music/ui/assets/music/Avici-The Nigths.mp3"; title: "Avici - The Nigths"}
+        ListElement { source: "qrc:/music/ui/assets/music/GAYLE-ABCDEFU.mp3"; title: "GAYLE - ABCDEFU" }
+        ListElement { source: "qrc:/music/ui/assets/music/Lauv-I Like Me Better.mp3"; title: "Lauv - I Like Me Better" }
+        ListElement { source: "qrc:/music/ui/assets/music/Lauv-Paris In The Rain.mp3"; title: "Lauv - Paris In The Rain" }
+        ListElement { source: "qrc:/music/ui/assets/music/Mina Okabe-Every Second.mp3"; title: "Mina Okabe - Every Second" }
+        ListElement { source: "qrc:/music/ui/assets/music/NewJeans-ASAP.mp3"; title: "NewJeans - ASAP" }
+        ListElement { source: "qrc:/music/ui/assets/music/NewJeans-ETA.mp3"; title: "NewJeans - ETA" }
+        ListElement { source: "qrc:/music/ui/assets/music/NewJeans-Super Shy.mp3"; title: "NewJeans - Super Shy" }
+        ListElement { source: "qrc:/music/ui/assets/music/Sam Smith-I'm not the only one.mp3"; title: "Sam Smith - I'm not the only one" }
+        ListElement { source: "qrc:/music/ui/assets/music/Jungkuk-Seven.mp3"; title: "Jungkuk - Seven" }
+    }
+
+    ListModel {
+        id: songsCover
+        ListElement { source: "qrc:/img/ui/assets/image/The Nigths.jpeg"; title: "Avici - The Nigths"}
+        ListElement { source: "qrc:/img/ui/assets/image/ABCDEFU.jpeg"; title: "GAYLE - ABCDEFU" }
+        ListElement { source: "qrc:/img/ui/assets/image/I Like Me Better.jpeg"; title: "Lauv - I Like Me Better" }
+        ListElement { source: "qrc:/img/ui/assets/image/Paris In The Rain.jpeg"; title: "Lauv - Paris In The Rain" }
+        ListElement { source: "qrc:/img/ui/assets/image/Every Second.jpeg"; title: "Mina Okabe - Every Second" }
+        ListElement { source: "qrc:/img/ui/assets/image/ASAP.jpeg"; title: "NewJeans - ASAP" }
+        ListElement { source: "qrc:/img/ui/assets/image/ETA.jpeg"; title: "NewJeans - ETA" }
+        ListElement { source: "qrc:/img/ui/assets/image/Super Shy.jpeg"; title: "NewJeans - Super Shy" }
+        ListElement { source: "qrc:/img/ui/assets/image/Im not the only one.jpeg"; title: "Sam Smith - I'm not the only one" }
+        ListElement { source: "qrc:/img/ui/assets/image/Seven.jpeg"; title: "Jungkuk - Seven" }
+    }
+
+    MediaPlayer {
+        id: mediaPlayer
+        source: songsModel.get(0).source  // Set the default song
+    }
+
     RowLayout {
         spacing: 115
         anchors.fill: parent
-        anchors.margins: 70
+        anchors.margins: 100
 
         ColumnLayout {
             spacing: 26
-            Layout.preferredWidth: 150
-            Layout.preferredHeight: 150
+            Layout.preferredWidth: 100
+            Layout.preferredHeight: 100
 
             Item {
-                //width: 200  // Desired width
-                //height: 200  // Desired height
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+                width: 250  // Desired width
+                height: 250  // Desired height
+                //Layout.fillWidth: true
+                //Layout.fillHeight: true
 
 
                 Image {
@@ -198,6 +197,7 @@ Rectangle{ //musicpage
                     icon.name: "stop"
                     icon.width: 32
                     icon.height: 32
+                    icon.source: "qrc:/img/ui/assets/image/stop.png"
                     onClicked: {
                         mediaPlayer.stop();
                         songNameLabel.text = "";
@@ -208,6 +208,7 @@ Rectangle{ //musicpage
                     icon.name: "previous"
                     icon.width: 32
                     icon.height: 32
+                    icon.source: "qrc:/img/ui/assets/image/previous.png"
                     onClicked: {
                         // Decrease currentSongIndex if it's not the first song, otherwise wrap around to the last song
                         if (currentSongIndex > 0) {
@@ -223,6 +224,7 @@ Rectangle{ //musicpage
                     icon.name: "pause"
                     icon.width: 32
                     icon.height: 32
+                    icon.source: "qrc:/img/ui/assets/image/pause.png"
                     onClicked: {
                         if (mediaPlayer.playbackState === MediaPlayer.PlayingState) {
                             mediaPlayer.pause();
@@ -237,6 +239,7 @@ Rectangle{ //musicpage
                     icon.name: "next"
                     icon.width: 32
                     icon.height: 32
+                    icon.source: "qrc:/img/ui/assets/image/next.png"
                     onClicked: {
                         // Increase currentSongIndex if it's not the last song, otherwise wrap around to the first song
                         if (currentSongIndex < songsModel.count - 1) {
@@ -253,6 +256,7 @@ Rectangle{ //musicpage
                     icon.name: "shuffle"
                     icon.width: 32
                     icon.height: 32
+                    icon.source: "qrc:/img/ui/assets/image/shuffle.png"
                     onClicked: {
                         // Generate a random index between 0 and the number of songs minus one
                         var randomIndex;
@@ -290,6 +294,7 @@ Rectangle{ //musicpage
             }
         }
 
+
         ColumnLayout {
             spacing: 16
             Layout.preferredWidth: 230
@@ -300,6 +305,11 @@ Rectangle{ //musicpage
                 leftPadding: 1
                 rightPadding: 1
 
+                background: Rectangle {
+                    color: "lightgray"
+                    radius: 5
+                }
+
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
@@ -308,9 +318,11 @@ Rectangle{ //musicpage
                     clip: true
                     anchors.fill: parent
                     model: songsModel
+
                     delegate: ItemDelegate {
                         text: model.title
                         width: filesListView.width
+
                         onClicked: {
                             mediaPlayer.source = model.source;
                             songNameLabel.text = model.title;
@@ -332,6 +344,8 @@ Rectangle{ //musicpage
                 }
             }
         }
+
+
     }
 
 }

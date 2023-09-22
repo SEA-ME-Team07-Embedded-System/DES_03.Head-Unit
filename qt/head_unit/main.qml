@@ -3,13 +3,14 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtMultimedia 5.15
-import "ui/musicPage"
+import "ui/Musicpage"
 
 Window {
     width: 1024
     height: 600
     visible: true
     title: qsTr("Head Unit")
+
 
     //top bar
     Rectangle {
@@ -52,7 +53,12 @@ Window {
                     id: playpageStack
                     anchors.fill: parent
 
-                    musicPage {
+//                    Rectangle{//musicpage
+//                        id: a
+//                        color: "#1c1c1c"
+//                    }
+
+                    Musicpage {
                         id: musicpage
                     }
 
@@ -79,7 +85,7 @@ Window {
                         Image {
                             anchors.centerIn: parent
                             width: playMusicButton.width * 0.5
-                            source: "file://Users/kimjunho/qt_workspace/qt_qml/head_unit/image/music_icon.png" // Update the path to your music icon
+                            source: "qrc:/img/ui/assets/image/music_icon.png" // Update the path to your music icon
                             fillMode: Image.PreserveAspectFit
                         }
                         // Animation Effect
@@ -110,7 +116,7 @@ Window {
                         Image {
                             anchors.centerIn: parent
                             width: playVideoButton.width * 0.5
-                            source: "file://Users/kimjunho/Desktop/DES03_HeadUnit/qt/head_unit/image/theater_icon.png" // Update the path to your video icon
+                            source: "qrc:/img/ui/assets/image/theater_icon.png" // Update the path to your video icon
                         fillMode: Image.PreserveAspectFit
                         }
                         // Animation Effect
@@ -181,7 +187,7 @@ Window {
                 Image {
                     anchors.centerIn: parent
                     width:naviButton.width*.6
-                    source: "file://Users/kimjunho/qt_workspace/qt_qml/head_unit/image/navigate_icon.png"
+                    source: "qrc:/img/ui/assets/image/navigate_icon.png"
                     fillMode:Image.PreserveAspectFit
                 }
 
@@ -213,7 +219,7 @@ Window {
                 Image {
                     anchors.centerIn: parent
                     width:playButton.width*.5
-                    source: "file://Users/kimjunho/qt_workspace/qt_qml/head_unit/image/playing_icon.png"
+                    source: "qrc:/img/ui/assets/image/playing_icon.png"
                     fillMode:Image.PreserveAspectFit
                 }
                 // Animation Effect
@@ -244,7 +250,7 @@ Window {
                 Image {
                     anchors.centerIn: parent
                     width:videoButton.width*.5
-                    source: "file://Users/kimjunho/qt_workspace/qt_qml/head_unit/image/video_icon.png"
+                    source: "qrc:/img/ui/assets/image/video_icon.png"
                     fillMode:Image.PreserveAspectFit
                 }
                 // Animation Effect
@@ -276,7 +282,7 @@ Window {
                 Image {
                     anchors.centerIn: parent
                     width:lightButton.width*.5
-                    source: "file://Users/kimjunho/qt_workspace/qt_qml/head_unit/image/car_icon.png"
+                    source: "qrc:/img/ui/assets/image/car_icon.png"
                     fillMode:Image.PreserveAspectFit
                 }
                 // Animation Effect
@@ -307,7 +313,7 @@ Window {
                 Image {
                     anchors.centerIn: parent
                     width:settingButton.width*.5
-                    source: "file://Users/kimjunho/qt_workspace/qt_qml/head_unit/image/light_icon.png"
+                    source: "qrc:/img/ui/assets/image/light_icon.png"
                     fillMode:Image.PreserveAspectFit
                 }
                 // Animation Effect
