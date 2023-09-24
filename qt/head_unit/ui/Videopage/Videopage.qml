@@ -1,10 +1,9 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtWebEngine 1.10
+import QtQuick 2.11
+import QtQuick.Controls 2.4
+import QtWebEngine 1.7
 import QtQuick.VirtualKeyboard 2.15
 
 Rectangle {
-
 
     InputPanel {
         id: inputPanel
@@ -22,10 +21,10 @@ Rectangle {
 
         TextField {
             id: searchField
-            width: parent.width - searchButton.width - 20
+            width: parent.width - searchButton.width - 100
             anchors.top: parent.top
             anchors.left: parent.left
-            anchors.leftMargin: 10
+            anchors.leftMargin: 80
             placeholderText: "Search for a YouTube video..."
             focus: true
             onActiveFocusChanged: {

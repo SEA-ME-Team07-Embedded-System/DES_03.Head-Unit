@@ -1,7 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-//#include <QQmlEngine>
-//#include <QQuickView>
+#include <QQmlEngine>
+#include <QQuickView>
 
 int main(int argc, char *argv[])
 {
