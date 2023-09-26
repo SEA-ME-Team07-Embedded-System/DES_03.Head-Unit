@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>fonts/DejaVuSans.ttf</file>
+        <file>images/fuel-icon.png</file>
+        <file>images/temperature-icon.png</file>
+        <file>qml/dashboard.qml</file>
+        <file>qml/DashboardGaugeStyle.qml</file>
+        <file>qml/IconGaugeStyle.qml</file>
+        <file>qml/TachometerStyle.qml</file>
+        <file>qml/TurnIndicator.qml</file>
+        <file>qml/ValueSource.qml</file>
+        <file>images/distance-icon.png</file>
+        <file>images/hour.png</file>
+        <file>images/minute.png</file>
+        <file>images/second.png</file>
+        <file>images/car_upview.png</file>
+        <file>images/car_park.png</file>
+        <file>images/tesla_frame.png</file>
+        <file>images/clock_minute2.png</file>
+        <file>images/clock_hour2.png</file>
+        <file>images/arrow_grey.png</file>
+    </qresource>
+</RCC>
