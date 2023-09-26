@@ -1,0 +1,4 @@
+/home/seame-workstation05/hello/build/CMakeFiles/rebuild_cache.dir
+/home/seame-workstation05/hello/build/CMakeFiles/edit_cache.dir
+/home/seame-workstation05/hello/build/CMakeFiles/HelloWorldService.dir
+/home/seame-workstation05/hello/build/CMakeFiles/HelloWorldClient.dir

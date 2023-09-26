@@ -1,0 +1,856 @@
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][INFO] Registering function for creating "commonapi.HelloWorld:v1_0" stub adapter.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test stub.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][INFO] Registering stub for "local:commonapi.HelloWorld:v1_0:test"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/hello/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.HelloWorld:v1_0:test <--> [1234.5678(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.HelloWorld:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.HelloWorld:v1_0:test proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_HelloWorld:v1_0__test.so" failed (liblocal__commonapi_HelloWorld:v1_0__test.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.HelloWorld:v1_0:test"
