@@ -1,4 +1,3 @@
-
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 
@@ -9,7 +8,7 @@ import QtLocation 5.15
 import QtPositioning 5.15
 
 import com.example 1.0
-
+//import someip 1.0
 
 Window {
 
@@ -921,7 +920,7 @@ Window {
                             Text {
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 y:parent.height/2.5
-                                text: "Dist.:             m"
+                                text: "Dist.:             cm"
                                 font.pixelSize: 16
                                 color: "white"
                                 rotation:90

@@ -37,37 +37,41 @@ Item {
         }
     }
 
+    Connections{
+        target: someipManager
 
-    DBusManager {
-        id: dbusmanager
-        onSpeedChanged: {
-            //console.log("onSpeedChanged")
-            valueSource.kph = dbusmanager.getSpeed() // Update kph property when speed changes
-            valueSource.rpm = dbusmanager.getRPM() / 10
+        onRpmChanged: {
+            valueSource.kph = Math.round(rpm * 0.35); // Update kph property when speed changes
+            valueSource.rpm = rpm;
         }
-        onDistanceChanged: {
-            //console.log("onDistanceChanged")
-            valueSource.temperature = dbusmanager.getDistance() / 100 // Update kph property when speed changes
-        }
-        onBatteryChanged: {
-            //console.log("onBatteryChanged")
-            valueSource.fuel = dbusmanager.getBattery() // Update kph property when speed changes
+        onDisChanged: {
+            valueSource.temperature = dis / 100; // Update kph property when speed changes
         }
         onOdoChanged: {
             //console.log("onOdoChanged")
-            valueSource.odo = dbusmanager.getODO()
+            valueSource.odo = odo;
+        }
+        onLatitudeChanged: {
+            //console.log("onLatitudeChanged")
+            valueSource.lati += valueSource.kph/1000000;
+        }
+        onLongitudeChanged: {
+            //console.log("onLongitudeChanged")
+            valueSource.longi += valueSource.kph/10000000;
+        }
+    }
+
+    DBusManager {
+        id: dbusmanager
+
+        onBatteryChanged: {
+            //console.log("onBatteryChanged")
+            valueSource.fuel = dbusmanager.getBattery() // Update kph property when speed changes
         }
         onTravelableDisChanged: {
             //console.log("onTraevelChanged")
             valueSource.travelableDis = dbusmanager.getTravelableDis()
         }
-        onLatitudeChanged: {
-            //console.log("onLatitudeChanged")
-            valueSource.lati += dbusmanager.getSpeed()/1000000
-        }
-        onLongitudeChanged: {
-            //console.log("onLongitudeChanged")
-            valueSource.longi +=  dbusmanager.getSpeed()/10000000
-        }
+
     }
  }

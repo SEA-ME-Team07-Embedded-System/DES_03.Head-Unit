@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 11.0.2, 2023-09-26T12:28:45. -->
+<!-- Written by QtCreator 11.0.2, 2023-10-03T17:30:11. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -81,6 +81,9 @@
     <valuelist type="QVariantList" key="ClangTools.SelectedFiles"/>
     <valuelist type="QVariantList" key="ClangTools.SuppressedDiagnostics"/>
     <value type="bool" key="ClangTools.UseGlobalSettings">true</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="CppEditor.QuickFix">
+    <value type="bool" key="UseGlobalSettings">true</value>
    </valuemap>
   </valuemap>
  </data>
@@ -255,8 +258,9 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/seame-workstation05/Embedded-Systems/DES_Instrument-Cluster/dashboard_new/dashboard.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/seame-workstation05/Embedded-Systems/DES_Instrument-Cluster/dashboard_new/dashboard.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">dashboard2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/dashboard.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/dashboard.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
