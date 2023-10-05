@@ -12,30 +12,8 @@ Item {
     property real travelableDis:0
     property real lati:52.424455
     property real longi:10.792025
-
-    property string gear: {
-        if (kph == 0) {
-            return "P";
-        }
-        else if (kph < 10) {
-            return "1";
-        }
-        else if (kph < 20) {
-            return "2";
-        }
-        else if (kph < 30) {
-            return "3";
-        }
-        else if (kph < 40) {
-            return "4";
-        }
-        else if (kph < 50) {
-            return "5";
-        }
-        else {
-            return "6"; // Assuming there is a gear 6 for speeds higher than 160 kph
-        }
-    }
+    property real gear:0
+    property real mode:0
 
     Connections{
         target: someipManager
@@ -45,7 +23,7 @@ Item {
             valueSource.rpm = rpm;
         }
         onDisChanged: {
-            valueSource.temperature = dis / 100; // Update kph property when speed changes
+            valueSource.temperature = dis; // Update kph property when speed changes
         }
         onOdoChanged: {
             //console.log("onOdoChanged")
@@ -72,6 +50,13 @@ Item {
             //console.log("onTraevelChanged")
             valueSource.travelableDis = dbusmanager.getTravelableDis()
         }
-
+        onGearChanged: {
+            //console.log("onGearChanged")
+            valueSource.gear = dbusmanager.getGear()
+        }
+        onModeChanged: {
+            //console.log("onModeChanged")
+            valueSource.mode = dbusmanager.getMode()
+        }
     }
  }

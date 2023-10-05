@@ -2,17 +2,12 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-
-
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Extras 1.4
 import QtLocation 5.12
 import QtPositioning 5.12
 import QtGraphicalEffects 1.0
-
-//import com.example 1.0
-
-
+import com.example 1.0
 
 Window {
     id: main_window
@@ -21,6 +16,14 @@ Window {
     visible: true
     title: qsTr("Head Unit")
     property color leftbutton_colors : "#383838"
+
+    ValueSource {
+        id: valueSource
+    }
+
+    DBusManager {
+        id: dbusHandler
+    }
 
     //center bar
     Rectangle{
@@ -46,7 +49,7 @@ Window {
                     id: map
                     anchors.fill: parent
                     plugin: mapPlugin
-                    center: QtPositioning.coordinate(37.609622, 126.997906) //valueSource.lati, valueSource.longi
+                    center: QtPositioning.coordinate(valueSource.lati, valueSource.longi) //valueSource.lati, valueSource.longi
                     zoomLevel: 18
 
                 tilt:85
@@ -88,6 +91,40 @@ Window {
         }
         height: parent.height / 12
         color: "#6d7485"
+
+        Image {
+            id: house_icon
+            source: "qrc:/image/house_icon.png"
+            anchors {
+                left: parent.left
+                leftMargin: 36
+            }
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.height*.6
+            fillMode:Image.PreserveAspectFit
+        }
+
+        // Digital Clock
+        Text {
+            id: digitalClock
+            anchors {
+                right: parent.right
+                rightMargin: 20
+                verticalCenter: parent.verticalCenter
+            }
+            text: Qt.formatDateTime(new Date(), "hh:mm")
+            color: "white"
+            font.pixelSize: 25
+        }
+
+        Timer {
+            interval: 1000
+            running: true
+            repeat: true
+            onTriggered: {
+                digitalClock.text = Qt.formatDateTime(new Date(), "hh:mm")
+            }
+        }
     }
 
     //left bar
@@ -100,6 +137,8 @@ Window {
         }
         width: parent.width / 10
         color: "black"
+
+
         ColumnLayout {
             anchors.fill: parent
             spacing: 3

@@ -12,6 +12,8 @@ import QtLocation 5.12
 import QtPositioning 5.12
 import QtGraphicalEffects 1.0
 
+//ambient light
+
 Rectangle { //centerstack : 4
     id: lightPage
     color: "cyan"

@@ -40,5 +40,7 @@
         <file>image/Super Shy.jpeg</file>
         <file>image/The Nigths.jpeg</file>
         <file>image/theater_icon.png</file>
+        <file>ValueSource.qml</file>
+        <file>image/house_icon.png</file>
     </qresource>
 </RCC>

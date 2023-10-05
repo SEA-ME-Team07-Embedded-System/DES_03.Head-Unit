@@ -1,17 +1,17 @@
 import QtQuick 2.11
 import QtQuick.Controls 2.4
 import QtWebEngine 1.7
-//import QtQuick.VirtualKeyboard 2.12
+import QtQuick.VirtualKeyboard 2.12
 
 Rectangle {
 
-//    InputPanel {
-//        id: inputPanel
-//        z: 99
-//        width: parent.width
-//        anchors.bottom: parent.bottom
-//        visible: Qt.inputMethod.visible  // Important modification
-//    }
+    InputPanel {
+        id: inputPanel
+        z: 99
+        width: parent.width
+        anchors.bottom: parent.bottom
+        visible: Qt.inputMethod.visible  // Important modification
+    }
 
     Rectangle {
         id: videopage

@@ -13,6 +13,69 @@ import QtGraphicalEffects 1.0
 Rectangle { //centerstack : 3
     id: settingPage
     color: "black"
+
+    Connections {
+        target: valueSource
+
+        onGearChanged: {
+            console.log("onGearChanged")
+            p_light.visible = false;
+            r_light.visible = false;
+            n_light.visible = false;
+            d_light.visible = false;
+
+            switch (valueSource.gear) {
+                case 0:  // P gear
+                    p_light.visible = true;
+                    r_light.visible = false;
+                    n_light.visible = false;
+                    d_light.visible = false;
+                    break;
+                case 1:  // R gear
+                    p_light.visible = false;
+                    r_light.visible = true;
+                    n_light.visible = false;
+                    d_light.visible = false;
+                    break;
+                case 2:  // N gear
+                    p_light.visible = false;
+                    r_light.visible = false;
+                    n_light.visible = true;
+                    d_light.visible = false;
+                    break;
+                case 3:  // D gear
+                    p_light.visible = false;
+                    r_light.visible = false;
+                    n_light.visible = false;
+                    d_light.visible = true;
+                    break;
+            }
+        }
+
+
+        onModeChanged: {
+            console.log("onModeChanged")
+
+            switch (valueSource.mode) {
+                case 9:  // Sports mode
+                    sportsmode_light.visible = true;
+                    normalmode_light.visible = false;
+                    ecomode_light.visible = false;
+                    break;
+                case 5:  // Normal mode
+                    sportsmode_light.visible = false;
+                    normalmode_light.visible = true;
+                    ecomode_light.visible = false;
+                    break;
+                case 3:  // Eco mode
+                    sportsmode_light.visible = false;
+                    normalmode_light.visible = false;
+                    ecomode_light.visible = true;
+                    break;
+            }
+        }
+    }
+
     Canvas {
         id:shadow
         width: 900
@@ -336,6 +399,7 @@ Rectangle { //centerstack : 3
             }
         }
     }
+
     ////////////////////////////////////////////// after mode  button click
     ColumnLayout {
         id:modebutton_detail
@@ -381,10 +445,10 @@ Rectangle { //centerstack : 3
                 id: sportsmode_Area
                 anchors.fill: parent
                 onClicked: {
-                    sportsmode_light.visible=true
-                    normalmode_light.visible=false
-                    ecomode_light.visible=false
-                    // Logic for video button
+//                    sportsmode_light.visible=true
+//                    normalmode_light.visible=false
+//                    ecomode_light.visible=false
+                    dbusHandler.mode_select(9);
                 }
             }
             Rectangle {
@@ -424,9 +488,10 @@ Rectangle { //centerstack : 3
                 id: nomalmode_Area
                 anchors.fill: parent
                 onClicked: {
-                    sportsmode_light.visible=false
-                    normalmode_light.visible=true
-                    ecomode_light.visible=false
+//                    sportsmode_light.visible=false
+//                    normalmode_light.visible=true
+//                    ecomode_light.visible=false
+                    dbusHandler.mode_select(5);
                 }
             }
             Rectangle {
@@ -467,9 +532,10 @@ Rectangle { //centerstack : 3
                 id: ecomode_Area
                 anchors.fill: parent
                 onClicked: {
-                    sportsmode_light.visible=false
-                    normalmode_light.visible=false
-                    ecomode_light.visible=true
+//                    sportsmode_light.visible=false
+//                    normalmode_light.visible=false
+//                    ecomode_light.visible=true
+                    dbusHandler.mode_select(3);
                 }
             }
             Rectangle {
@@ -483,6 +549,7 @@ Rectangle { //centerstack : 3
             }
         }
     }
+
 //////////////////////////////// after info button click
     ColumnLayout {
         id:informationbutton_detail
@@ -512,7 +579,7 @@ Rectangle { //centerstack : 3
                 anchors.fill: parent
             }
             Text{
-                text:"BATTETRY: " + " 68%"
+                text:"BATTETRY: " + valueSource.fuel + "%"
                 color: "white"
                 font.pointSize: parent.width*0.06
                 anchors.centerIn:parent
@@ -586,7 +653,7 @@ Rectangle { //centerstack : 3
                 anchors.fill: parent
             }
             Text{
-                text:"DISTANCE: " + "0"+ " M"
+                text:"DISTANCE: " + valueSource.temperature + " M"
                 color: "white"
                 font.pointSize: parent.width*0.06
                 anchors.centerIn:parent
@@ -618,7 +685,7 @@ Rectangle { //centerstack : 3
             }
         }
 
-       // Temperature
+       // Speed
         Button {
             id: temperature
             Layout.preferredWidth: 200  // Adjust according to your needs
@@ -628,7 +695,7 @@ Rectangle { //centerstack : 3
                 anchors.fill: parent
             }
             Text{
-                text:"TEMPERATURE: " +"10 "+ " C"
+                text:"Speed: " + valueSource.kph + "CM/S"
                 color: "white"
                 font.pointSize: parent.width*0.06
                 anchors.centerIn:parent
@@ -701,10 +768,7 @@ Rectangle { //centerstack : 3
                     id: p_Area
                     anchors.fill: parent
                     onClicked: {
-                        p_light.visible=true
-                        r_light.visible=false
-                        n_light.visible=false
-                        d_light.visible=false
+                        dbusHandler.gear_select(0);
                     }
                 }
                 Rectangle {
@@ -750,10 +814,7 @@ Rectangle { //centerstack : 3
                     id: r_Area
                     anchors.fill: parent
                     onClicked: {
-                        p_light.visible=false
-                        r_light.visible=true
-                        n_light.visible=false
-                        d_light.visible=false
+                        dbusHandler.gear_select(1);
                     }
                 }
                 Rectangle {
@@ -798,10 +859,7 @@ Rectangle { //centerstack : 3
                     id: n_Area
                     anchors.fill: parent
                     onClicked: {
-                        p_light.visible=false
-                        r_light.visible=false
-                        n_light.visible=true
-                        d_light.visible=false
+                        dbusHandler.gear_select(2);
                     }
                 }
                 Rectangle {
@@ -845,10 +903,7 @@ Rectangle { //centerstack : 3
                     id: d_Area
                     anchors.fill: parent
                     onClicked: {
-                        p_light.visible=false
-                        r_light.visible=false
-                        n_light.visible=false
-                        d_light.visible=true
+                        dbusHandler.gear_select(3);
                     }
                 }
                 Rectangle {

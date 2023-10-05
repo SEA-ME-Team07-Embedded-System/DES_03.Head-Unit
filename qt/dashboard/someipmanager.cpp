@@ -21,7 +21,7 @@ void SomeIPManager::setRpm(uint8_t newRpm)
     //m_odo += m_speed * 0.1;
 
     emit rpmChanged(m_rpm);
-    std::cout << "setRpm: " << int(m_rpm) << std::endl;
+   //std::cout << "setRpm: " << int(m_rpm) << std::endl;
 }
 
 uint8_t SomeIPManager::dis() const
@@ -33,7 +33,7 @@ void SomeIPManager::setDis(uint8_t newDis)
 {
     m_dis = newDis;
     emit disChanged(m_rpm);
-    std::cout << "setDis: " << int(m_dis) << std::endl;
+    //std::cout << "setDis: " << int(m_dis) << std::endl;
 }
 
 void SomeIPManager::initVsomeipClient()
@@ -53,7 +53,7 @@ void SomeIPManager::startSubscribeDis()
         setOdo(rpm);
         setLatitude(rpm);
         setLongitude(rpm);
-        std::cout << "Received change RPM message: " << int(rpm) << std::endl;
+        //std::cout << "Received change RPM message: " << int(rpm) << std::endl;
     });
 }
 
@@ -61,7 +61,7 @@ void SomeIPManager::startSubscribeRPM()
 {
     proxy->getDisAttribute().getChangedEvent().subscribe([&](const uint8_t& dis) {
         setDis(dis);
-        std::cout << "Received change Distance message: " << int(dis) << std::endl;
+        //std::cout << "Received change Distance message: " << int(dis) << std::endl;
     });
 }
 
@@ -90,7 +90,7 @@ void SomeIPManager::setOdo(qreal newOdo)
     m_odo = qRound(m_odo);
     m_odo /= 10;
 
-    std::cout << "m_odo type & value : " << typeid(m_odo).name() << " " << int(m_odo) << std::endl;
+    //std::cout << "m_odo type & value : " << typeid(m_odo).name() << " " << int(m_odo) << std::endl;
     emit odoChanged(m_odo);
 }
 

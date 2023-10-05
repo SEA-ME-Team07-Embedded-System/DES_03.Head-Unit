@@ -1,14 +1,11 @@
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
-
 import QtQuick 2.2
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Extras 1.4
 import QtLocation 5.15
 import QtPositioning 5.15
-
 import com.example 1.0
-//import someip 1.0
 
 Window {
 
@@ -36,6 +33,95 @@ Window {
 
     ValueSource {
         id: valueSource
+    }
+
+    Connections {
+        target: valueSource
+
+        onGearChanged: {
+            //console.log("onGearChanged")
+
+            gear_light_P.visible = false;
+            gear_light_R.visible = false;
+            gear_light_N.visible = false;
+            gear_light_D.visible = false;
+            gear_p.visible = false;
+            gear_r.visible = false;
+            gear_n.visible = false;
+            gear_d.visible = false;
+
+            // Show the appropriate gear-related element based on the gear value
+            switch (valueSource.gear) {
+                case 0:  // Gear P
+                    gear_light_P.visible = true;
+                    gear_p.visible = true;
+                    break;
+                case 1:  // Gear R
+                    gear_light_R.visible = true;
+                    gear_r.visible = true;
+                    break;
+                case 2:  // Gear N
+                    gear_light_N.visible = true;
+                    gear_n.visible = true;
+                    break;
+                case 3:  // Gear D
+                    gear_light_D.visible = true;
+                    gear_d.visible = true;
+                    break;
+            }
+        }
+
+
+        onModeChanged: {
+            console.log("onModeChanged")
+            switch (valueSource.mode) {
+                case 9:  // Sport mode
+                    left_circle.color = "#f03e6e"//"#77ff3f19"
+                    right_circle.color = "#f03e6e"
+                    if (left_drivemode.visible) {
+                        left_drivemode.opacity = 0;  // 애니메이션 시작
+                        left_clockmode.visible=true;
+                        left_clockmode.opacity=1;
+
+                    } else {
+                        left_drivemode.visible = true;
+                        left_drivemode.opacity = 1;  // 애니메이션 시작
+                        left_clockmode.visible=false;
+                        left_clockmode.opacity=0;
+                    }
+                    break
+                case 5:  // Normal mode
+                    left_circle.color = "#73c7ff"
+                    right_circle.color = "#73c7ff"//"#7719afff"
+                    if (left_drivemode.visible) {
+                        left_drivemode.opacity = 0;  // 애니메이션 시작
+                        left_clockmode.visible=true;
+                        left_clockmode.opacity=1;
+
+                    } else {
+                        left_drivemode.visible = true;
+                        left_drivemode.opacity = 1;  // 애니메이션 시작
+                        left_clockmode.visible=false;
+                        left_clockmode.opacity=0;
+                    }
+                    break
+                case 3:  // Echo mode
+                    left_circle.color = "#77a0ff9e"
+                    right_circle.color = "#77a0ff9e"
+                    if (left_drivemode.visible) {
+                        left_drivemode.opacity = 0;  // 애니메이션 시작
+                        left_clockmode.visible=true;
+                        left_clockmode.opacity=1;
+
+                    } else {
+                        left_drivemode.visible = true;
+                        left_drivemode.opacity = 1;  // 애니메이션 시작
+                        left_clockmode.visible=false;
+                        left_clockmode.opacity=0;
+                    }
+                    break
+            }
+        }
     }
 
 
@@ -320,6 +406,7 @@ Window {
                 opacity: 1
                 anchors.fill:left_circle
                 anchors.centerIn: left_circle
+
                 Behavior on opacity {
                     NumberAnimation {
                         duration: 500  // 1초 동안 애니메이션 진행
@@ -374,20 +461,7 @@ Window {
                             MouseArea {
                                 anchors.fill: sports
                                 onClicked: {
-                                    dbusHandler.sendToDBus(9);
-                                    left_circle.color = "#f03e6e"//"#77ff3f19"
-                                    right_circle.color = "#f03e6e"
-                                    if (left_drivemode.visible) {
-                                        left_drivemode.opacity = 0;  // 애니메이션 시작
-                                        left_clockmode.visible=true;
-                                        left_clockmode.opacity=1;
-
-                                    } else {
-                                        left_drivemode.visible = true;
-                                        left_drivemode.opacity = 1;  // 애니메이션 시작
-                                        left_clockmode.visible=false;
-                                        left_clockmode.opacity=0;
-                                    }
+                                    dbusHandler.mode_select(9);
                                 }
                             }
 
@@ -419,20 +493,7 @@ Window {
                             MouseArea {
                                 anchors.fill: normal
                                 onClicked: {
-                                    dbusHandler.sendToDBus(5);
-                                    left_circle.color = "#73c7ff"
-                                    right_circle.color = "#73c7ff"//"#7719afff"
-                                    if (left_drivemode.visible) {
-                                        left_drivemode.opacity = 0;  // 애니메이션 시작
-                                        left_clockmode.visible=true;
-                                        left_clockmode.opacity=1;
-
-                                    } else {
-                                        left_drivemode.visible = true;
-                                        left_drivemode.opacity = 1;  // 애니메이션 시작
-                                        left_clockmode.visible=false;
-                                        left_clockmode.opacity=0;
-                                    }
+                                    dbusHandler.mode_select(5);
                                 }
                             }
 
@@ -463,20 +524,7 @@ Window {
                             MouseArea {
                                 anchors.fill: eco
                                 onClicked: {
-                                    dbusHandler.sendToDBus(3);
-                                    left_circle.color = "#77a0ff9e"
-                                    right_circle.color = "#77a0ff9e"
-                                    if (left_drivemode.visible) {
-                                        left_drivemode.opacity = 0;  // 애니메이션 시작
-                                        left_clockmode.visible=true;
-                                        left_clockmode.opacity=1;
-
-                                    } else {
-                                        left_drivemode.visible = true;
-                                        left_drivemode.opacity = 1;  // 애니메이션 시작
-                                        left_clockmode.visible=false;
-                                        left_clockmode.opacity=0;
-                                    }
+                                    dbusHandler.mode_select(3);
                                 }
                             }
 
@@ -503,36 +551,57 @@ Window {
             text:"P R N D"
         }
 
-
+//////////////////////////gear backlight
         Rectangle{
-            id:gear_light
-            x:x_center+x_gap*14.1 //x_center-x_gap*1.5
-            visible: driveVisible
-            width:25
-            height:30
-            radius:3
-
-            SequentialAnimation on color {
-                ColorAnimation { from: "#aae6e6e6"; to: "#aa737373"; duration: 1500 }
-//                ColorAnimation { from: "#737373"; to: "#73ccff"; duration: 1500 }
-            }
-            opacity:1
-            anchors{
-                top: centerScreen.top
-                topMargin: 102
-            }
-        }
-        Rectangle{
-            id:gear_light_2
+            id:gear_light_P
             x:x_center+x_gap*11 //x_center-x_gap*1.5
-            visible: parkVisible
+            visible: true
             width:25
             height:30
             radius:3
-            SequentialAnimation on color {
-            ColorAnimation { from: "#e6e6e6"; to: "#ff9090"; duration: 1500 }
-                //                ColorAnimation { from: "#e6e6e6"; to: "#73ccff"; duration: 1500 }
+            color: "#aa737373"
+            opacity:1
+            anchors{
+                top: centerScreen.top
+                topMargin: 102
             }
+        }
+        Rectangle{
+            id:gear_light_R
+            x:x_center+x_gap*12 //x_center-x_gap*1.5
+            visible: false
+            width:25
+            height:30
+            radius:3
+            color: "#aa737373"
+            opacity:1
+            anchors{
+                top: centerScreen.top
+                topMargin: 102
+            }
+        }
+        Rectangle{
+            id:gear_light_N
+            x:x_center+x_gap*13 //x_center-x_gap*1.5
+            visible: false
+            width:25
+            height:30
+            radius:3
+            color: "#aa737373"
+            opacity:1
+            anchors{
+                top: centerScreen.top
+                topMargin: 102
+            }
+        }
+        Rectangle{
+            id:gear_light_D
+            x:x_center+x_gap*14.1 //x_center-x_gap*1.5
+            visible: false
+            width:25
+            height:30
+            radius:3
+            color: "#aa737373"
             opacity:1
             anchors{
                 top: centerScreen.top
@@ -540,14 +609,54 @@ Window {
             }
         }
 
+//////////////////////////gear text
+        Text{
+            id:gear_p
+            visible: true
+            x:x_center+x_gap*11.1//x_center-x_gap*1.5
+            color: "#ffffff"
+            anchors{
+                top: centerScreen.top
+                topMargin: 100
+            }
+            font.pixelSize: 30
+            font.bold: false
+            text:"P"
+        }
+
+        Text{
+            id:gear_r
+            visible: false
+            x:x_center+x_gap*12//x_center-x_gap*1.5
+            color: "#ffffff"
+            anchors{
+                top: centerScreen.top
+                topMargin: 100
+            }
+            font.pixelSize: 30
+            font.bold: false
+            text:"R"
+        }
+
+        Text{
+            id:gear_n
+            visible: false
+            x:x_center+x_gap*13//x_center-x_gap*1.5
+            color: "#ffffff"
+            anchors{
+                top: centerScreen.top
+                topMargin: 100
+            }
+            font.pixelSize: 30
+            font.bold: false
+            text:"N"
+        }
 
         Text{
             id:gear_d
+            visible: false
             x:x_center+x_gap*14.1
-            visible: driveVisible
-            SequentialAnimation on color {
-                ColorAnimation { from: "#000000"; to: "#ffffff"; duration: 1500 }
-            }
+            color: "#ffffff"
             anchors{
                 top: centerScreen.top
                 topMargin: 100
@@ -556,25 +665,6 @@ Window {
             font.bold: false
             text:"D"
         }
-
-        Text{
-            id:gear_p
-            x:x_center+x_gap*11.1//x_center-x_gap*1.5
-            //color:"blue"
-            visible: parkVisible
-            SequentialAnimation on color {
-                ColorAnimation { from: "#000000"; to: "#ffffff"; duration: 1500 }
-            }
-            anchors{
-                top: centerScreen.top
-                topMargin: 100
-            }
-            font.pixelSize: 30
-            font.bold: false
-            text:"P"
-
-        }
-
 
         Item{ //park mode
             anchors.fill:centerScreen

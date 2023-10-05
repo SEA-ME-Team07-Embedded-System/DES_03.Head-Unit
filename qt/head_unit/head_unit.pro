@@ -1,15 +1,19 @@
-QT += quick
+QT += quick dbus
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+INCLUDEPATH += ../../someip/project-pyracer/src-gen/
 SOURCES += \
-        image/settingpage.cpp \
-        main.cpp
+        ../../someip/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp \
+        ../../someip/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp \
+        ../../someip/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp \
+        dbusmanager.cpp \
+        main.cpp \
+        someipmanager.cpp
 
-RESOURCES += qml.qrc \
-    images.qrc
+RESOURCES += qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -32,4 +36,28 @@ DISTFILES += \
     image/video_icon.png
 
 HEADERS += \
-    image/settingpage.h
+    ../../someip/project-pyracer/src-gen/v1/commonapi/CAN.hpp \
+    ../../someip/project-pyracer/src-gen/v1/commonapi/CANProxy.hpp \
+    ../../someip/project-pyracer/src-gen/v1/commonapi/CANProxyBase.hpp \
+    ../../someip/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.hpp \
+    ../../someip/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.hpp \
+    ../../someip/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.hpp \
+    ../../someip/project-pyracer/src-gen/v1/commonapi/CANStub.hpp \
+    ../../someip/project-pyracer/src-gen/v1/commonapi/CANStubDefault.hpp \
+    dbusmanager.h \
+    someipmanager.h
+
+unix:!macx: LIBS += -L$$PWD/../../../../build-commonapi/capicxx-someip-runtime/build/ -lCommonAPI-SomeIP
+
+INCLUDEPATH += $$PWD/../../../../build-commonapi/capicxx-someip-runtime/include
+DEPENDPATH += $$PWD/../../../../build-commonapi/capicxx-someip-runtime/include
+
+unix:!macx: LIBS += -L$$PWD/../../../../build-commonapi/capicxx-core-runtime/build/ -lCommonAPI
+
+INCLUDEPATH += $$PWD/../../../../build-commonapi/capicxx-core-runtime/include
+DEPENDPATH += $$PWD/../../../../build-commonapi/capicxx-core-runtime/include
+
+unix:!macx: LIBS += -L$$PWD/../../../../build-commonapi/vsomeip/build/ -lvsomeip3
+
+INCLUDEPATH += $$PWD/../../../../build-commonapi/vsomeip/interface
+DEPENDPATH += $$PWD/../../../../build-commonapi/vsomeip/interface
