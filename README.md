@@ -17,7 +17,7 @@ The Yocto Project is widely used in the embedded and IoT industry because it pro
 
 ## Downloading Yocto
 
-    bitbake in the qemu environment is faster, things that can be run with qemu are built first.
+bitbake in the qemu environment is faster, things that can be run with qemu are built first.
 
 1. **Download poky (we used kirkstone)**
 
