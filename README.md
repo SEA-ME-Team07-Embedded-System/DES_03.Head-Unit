@@ -9,7 +9,9 @@ Embedded system DES_03. Head Unit
 1. git clone poky
 
 We  used kirkstone
-   
-  git clone -b kirkstone git://git.yoctoproject.org/poky.git
+
+'''
+git clone -b kirkstone git://git.yoctoproject.org/poky.git
+'''
 
 dfsf
