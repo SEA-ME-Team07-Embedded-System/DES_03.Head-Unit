@@ -25,7 +25,7 @@ bitbake in the qemu environment is faster, things that can be run with qemu are 
 git clone -b kirkstone git://git.yoctoproject.org/poky.git
 ```
 
-1. **Download essential layer**
+2. **Download essential layer**
 
 ```cpp
 cd poky
@@ -34,7 +34,7 @@ git clone -b kirkstone git://git.openembedded.org/meta-openembedded
 
 - All layers have to set same version ( In this case, kirkstone)
 
-1. ****************************************Add on bblayers.conf****************************************
+3. ****************************************Add on bblayers.conf****************************************
 
 ```cpp
 cd poky/build/conf
@@ -52,7 +52,7 @@ nano bblayers.conf
     ```
     
 
-1. **Define the number of cores to use in local.conf**
+4. **Define the number of cores to use in local.conf**
 
 ```cpp
 cd poky/build/conf
@@ -94,7 +94,7 @@ nano local.conf
     ```
     
 
-1. **Enable wifi**
+2. **Enable wifi**
 
 ```cpp
 cd ~/yocto/poky/build/conf
@@ -110,7 +110,7 @@ nano local.conf
     
     (When entering IMAGE_INSTALL:append, you must enter a space as shown above to add it.)
     
-1. ************************Create layer************************
+3. ************************Create layer************************
 
 ```cpp
 cd ~/yocto/poky
@@ -194,7 +194,7 @@ nano wpa_supplicant-nl80211-wlan0.conf
     ctrl_interface=/var/run/wpa_supplicant
     update_config=1
     network={
-        ssid=”MYSSID”
-        psk=”MY-SECURE-PASSKEY”
+        ssid="MYSSID"
+        psk="MY-SECURE-PASSKEY"
     }
     ```
