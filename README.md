@@ -203,3 +203,78 @@ nano wpa_supplicant-nl80211-wlan0.conf
         psk="MY-SECURE-PASSKEY"
     }
     ```
+
+## **Building a Yocto environment on Raspberry Pi**
+
+1. **Install meta-raspberrypi layer**
+
+```cpp
+cd poky
+git clone -b kirkstone git://git.yoctoproject.org/meta-raspberrypi
+```
+
+1. **Add meta-raspberrypi layer on bblayers.conf**
+
+```cpp
+cd poky/build
+bitbake-layers add-layer ../meta-raspberrypi
+```
+
+1. **Update machine and set for sdcard**
+
+```cpp
+cd ~/yocto/poky/build/conf
+nano local.conf
+```
+
+- Add this line
+    
+    `MACHINE ??= "qemux86-64"` -> `MACHINE = "raspberrypi4-64"`
+    
+    ```cpp
+    MACHINE = "raspberrypi4-64"
+    
+    # For SD card image 
+    IMAGE_FSTYPES = "rpi-sdimg"
+    ```
+    
+
+1. **Edit raspberrypi4-64.conf**
+
+```cpp
+cd ~/yocto/poky/meta-raspberrypi/conf/machine
+vim raspberrypi4-64.conf
+```
+
+- Add this line
+    
+    ```cpp
+    //VC4DTBO ?= "vc4-kms-v3d"
+    VC4DTBO ?= "vc4-fkms-v3d-pi4"
+    ```
+    
+1. **build**
+
+```cpp
+cd ~/yocto/poky
+source oe-init-build-env
+bitbake core-image-base
+```
+
+## Write **Yocto OS on SD card**
+
+1. Find SD card
+
+```cpp
+sudo fdisk -l
+```
+
+1. After bitbake, write on your SD card
+
+```cpp
+cd ~/yocto/poky/build/tmp/deploy/images/raspberrypi4-64
+sudo dd if=core-image-base-raspberrypi4-64-20231001112357.rootfs.rpi-sdimg of=/dev/sda
+sync
+```
+
+don’t miss sync
