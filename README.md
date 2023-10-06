@@ -4,5 +4,5 @@ Embedded system DES_03. Head Unit
 
 좋은거
 
-# step1 Downloading Yocto
+## step1 Downloading Yocto
 
