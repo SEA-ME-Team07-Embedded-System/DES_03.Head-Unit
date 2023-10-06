@@ -1,7 +1,7 @@
 # Table of Contents
 1. [What is yocto project?](#what-is-yocto-project)
-2. [Create layer and Add wifi]([https://github.com/leeoodol/DES_03.Head-Unit/edit/main/README.md#create-layer-and-add-wifi:~:text=Create%20layer%20and%20Add%20wifi](https://github.com/leeoodol/DES_03.Head-Unit/edit/main/README.md#create-layer-and-add-wifi:~:text=j%2020%22-,Create%20layer%20and%20Add%20wifi,-Enable%20systemd))
-- [Downloading Yocto](#downloading-yocto)
+2. [Downloading Yocto](#downloading-yocto)
+3. [Create layer and Add wifi](#create-layer-and-add-wifi)
 
 ## What is Yocto project?
 
