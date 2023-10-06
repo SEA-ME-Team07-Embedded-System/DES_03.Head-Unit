@@ -2,6 +2,8 @@
 1. [What is yocto project?](#what-is-yocto-project)
 2. [Downloading Yocto](#downloading-yocto)
 3. [Create layer and Add wifi](#create-layer-and-add-wifi)
+4. [Building a Yocto environment on Raspberry Pi](#building-a-yocto-environment-on-raspberry-pi)
+5. [Write Yocto OS on SD card](#write-yocto-os-on-sd-card)
 
 ## What is Yocto project?
 
@@ -213,14 +215,14 @@ cd poky
 git clone -b kirkstone git://git.yoctoproject.org/meta-raspberrypi
 ```
 
-1. **Add meta-raspberrypi layer on bblayers.conf**
+2. **Add meta-raspberrypi layer on bblayers.conf**
 
 ```cpp
 cd poky/build
 bitbake-layers add-layer ../meta-raspberrypi
 ```
 
-1. **Update machine and set for sdcard**
+3. **Update machine and set for sdcard**
 
 ```cpp
 cd ~/yocto/poky/build/conf
@@ -239,7 +241,7 @@ nano local.conf
     ```
     
 
-1. **Edit raspberrypi4-64.conf**
+4. **Edit raspberrypi4-64.conf**
 
 ```cpp
 cd ~/yocto/poky/meta-raspberrypi/conf/machine
@@ -253,7 +255,7 @@ vim raspberrypi4-64.conf
     VC4DTBO ?= "vc4-fkms-v3d-pi4"
     ```
     
-1. **build**
+5. **build**
 
 ```cpp
 cd ~/yocto/poky
@@ -269,7 +271,7 @@ bitbake core-image-base
 sudo fdisk -l
 ```
 
-1. After bitbake, write on your SD card
+2. After bitbake, write on your SD card
 
 ```cpp
 cd ~/yocto/poky/build/tmp/deploy/images/raspberrypi4-64
