@@ -295,8 +295,6 @@ nano local.conf
     ENABLE_I2C = "1"
     KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
     ENABLE_SPI_BUS = "1"
-    # ENABLE_CAN = "1"
-    # CAN_OSCILLATOR="16000000"
     
     RPI_EXTRA_CONFIG = " \n\
     dtoverlay=spil-3cs \n\
