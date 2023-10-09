@@ -4,6 +4,7 @@
 3. [Create layer and Add wifi](#create-layer-and-add-wifi)
 4. [Building a Yocto environment on Raspberry Pi](#building-a-yocto-environment-on-raspberry-pi)
 5. [Write Yocto OS on SD card](#write-yocto-os-on-sd-card)
+6. [How to add CAN](#how-to-add-can)
 
 ## What is Yocto project?
 
@@ -280,3 +281,28 @@ sync
 ```
 
 don’t miss sync
+
+## How to add CAN
+
+```cpp
+cd poky/build/conf
+nano local.conf
+```
+
+- Add this line
+    
+    ```cpp
+    ENABLE_I2C = "1"
+    KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
+    ENABLE_SPI_BUS = "1"
+    # ENABLE_CAN = "1"
+    # CAN_OSCILLATOR="16000000"
+    
+    RPI_EXTRA_CONFIG = " \n\
+    dtoverlay=spil-3cs \n\
+    dtoverlay=mcp251xfd,spi0-0,interrupt=25 \n\
+    dtoverlay=mcp251xfd,spi1-0,interrupt=24 \n\
+    "
+    
+    KERNEL_DEVICETREE:append = "overlays/mcp251xfd.dtbo"
+    ```
