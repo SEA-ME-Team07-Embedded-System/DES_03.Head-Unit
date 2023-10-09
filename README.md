@@ -309,3 +309,9 @@ nano local.conf
     
     KERNEL_DEVICETREE:append = "overlays/mcp251xfd.dtbo"
     ```
+2. **Build and Run**
+
+```cpp
+ip link set can0 up type can bitrate 125000
+candump can0
+```
