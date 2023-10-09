@@ -285,6 +285,7 @@ don’t miss sync
 ## How to add CAN
 
 [Model : waveshare 2ch CAN FD Hat](https://www.waveshare.com/wiki/2-CH_CAN_FD_HAT)
+
 Generally, a method such as ENABLE_CAN = "1" is used to recognize the CAN transiver device, but this device is not a default device called mcp251xfd, a separate driver is required. So KERNEL_DEVICETREE:append = "overlays/mcp251xfd.dtbo" command is essential
 
 ```cpp
