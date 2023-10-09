@@ -284,6 +284,8 @@ don’t miss sync
 
 ## How to add CAN
 
+Model : waveshare 2ch CAN FD Hat
+
 ```cpp
 cd poky/build/conf
 nano local.conf
