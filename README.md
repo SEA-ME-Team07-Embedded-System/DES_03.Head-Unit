@@ -284,7 +284,7 @@ don’t miss sync
 
 ## How to add CAN
 
-Model : waveshare 2ch CAN FD Hat
+[Model : waveshare 2ch CAN FD Hat](https://www.waveshare.com/wiki/2-CH_CAN_FD_HAT)
 
 ```cpp
 cd poky/build/conf
