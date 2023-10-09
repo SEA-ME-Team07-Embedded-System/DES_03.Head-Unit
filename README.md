@@ -294,6 +294,7 @@ nano local.conf
 - Add this line
     
     ```cpp
+    IMAGE_INSTALL:append = " can-utils libsocketcan"
     ENABLE_I2C = "1"
     KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
     ENABLE_SPI_BUS = "1"
