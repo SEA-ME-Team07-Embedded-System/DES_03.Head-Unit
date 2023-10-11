@@ -1,0 +1,9 @@
+package commonapi
+
+interface CAN {
+  version {major 1 minor 0}
+  
+  attribute UInt8  dis readonly
+  attribute UInt8  rpm readonly
+  
+}
