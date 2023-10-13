@@ -20,11 +20,6 @@ cd /home/team07/Desktop/DES03_HeadUnit/infotainment
 python3 dbus_send.py &
 child_pids+=($!)
 
-# Navigate to the first directory and execute the programs in the background
-cd /home/team07/Desktop/DES03_HeadUnit/someip/vcan
-./can_sender &
-child_pids+=($!)
-
 # Navigate to the third directory and execute the program in the background
 cd /home/team07/Desktop/DES03_HeadUnit/infotainment/project-pyracer/build
 ./CANService &

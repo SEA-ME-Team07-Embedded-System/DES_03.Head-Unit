@@ -34,22 +34,24 @@ class dbusService(object):
     """
 
     def rc_control_thread(self):
-        shanwan_gamepad = ShanWanGamepad()
         while True:
-            gamepad_input = shanwan_gamepad.read_data()
-            throttle = gamepad_input.analog_stick_right.y * self.mode
-            steering = -gamepad_input.analog_stick_left.x
+            self.gamepad_input = self.gamepad.read_data()
+            self.throttle = self.gamepad_input.analog_stick_right.y * self.mode
+            self.steering = -self.gamepad_input.analog_stick_left.x
 
             #print(f'throttle={throttle}, steering={steering}')
 
-            self.piracer.set_throttle_percent(throttle)
-            self.piracer.set_steering_percent(steering)
+            self.piracer.set_throttle_percent(self.throttle)
+            self.piracer.set_steering_percent(self.steering)
     
     def __init__(self):
         os.system(f'sudo ifconfig {CAN_ID} down')
         os.system(f'sudo ip link set {CAN_ID} up type can bitrate 125000 dbitrate 8000000 restart-ms 1000 berr-reporting on fd on')
         self.can = can.interface.Bus(channel = CAN_ID, bustype = 'socketcan')
         self.piracer = PiRacerStandard()
+        self.gamepad = ShanWanGamepad()
+        self.throttle = 0
+        self.steering = 0
 
         rc_thread = Thread(target=self.rc_control_thread)
         #rc_thread.start()
