@@ -5,11 +5,12 @@
 #include <sys/ioctl.h>
 #include <net/if.h>
 #include <linux/can.h>
-
+#include <thread>
+#include <chrono>
 int main()
 {
     int s;
-    int cnt = 10;
+    int cnt = 0;
     struct sockaddr_can addr;
     struct ifreq ifr;
     struct can_frame frame;
@@ -33,14 +34,19 @@ int main()
     frame.data[6] = 0x07;
     frame.data[7] = 0x08;
 
-    while (cnt>=0)
+    while (true) // Infinite loop to keep sending data
     {
-	frame.data[0] = cnt;
-        frame.data[1] = cnt;
-        int bytes_sent = write(s, &frame, sizeof(frame));
-        std::cout << "Sent " << cnt << "&" << bytes_sent << " bytes" << std::endl;
-	cnt--;
-        sleep(1);
+    frame.data[0] = cnt;
+    frame.data[1] = cnt;
+    int bytes_sent = write(s, &frame, sizeof(frame));
+    std::cout << "Sent " << cnt << "&" << bytes_sent << " bytes" << std::endl;
+
+    cnt += 10;
+
+    if (cnt > 500)
+        cnt = 0; // Reset cnt when it exceeds 50
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 
     return 0;
