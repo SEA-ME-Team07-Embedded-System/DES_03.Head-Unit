@@ -1,0 +1,28 @@
+import "platform:/plugin/org.genivi.commonapi.someip/deployment/CommonAPI-4-SOMEIP_deployment_spec.fdepl"
+import "CAN.fidl"
+
+define org.genivi.commonapi.someip.deployment for interface commonapi.CAN {
+  SomeIpServiceID = 4660
+
+  attribute dis {
+    SomeIpGetterID = 3002
+    SomeIpNotifierID = 33011
+    SomeIpNotifierEventGroups = { 33011 }
+
+    SomeIpAttributeReliable = true
+  }
+  attribute rpm {
+    SomeIpGetterID = 3004
+    SomeIpNotifierID = 33012
+    SomeIpNotifierEventGroups = { 33012 }
+
+    SomeIpAttributeReliable = true
+  }
+}
+
+define org.genivi.commonapi.someip.deployment for provider as JunhoService {
+  instance commonapi.CAN {
+    InstanceId = "can"
+    SomeIpInstanceID = 22136
+  }
+}

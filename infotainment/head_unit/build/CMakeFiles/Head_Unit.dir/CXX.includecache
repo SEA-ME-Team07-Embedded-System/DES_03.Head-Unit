@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit/build/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp
+
