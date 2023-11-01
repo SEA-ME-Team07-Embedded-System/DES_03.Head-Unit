@@ -5,6 +5,10 @@
 4. [Building a Yocto environment on Raspberry Pi](#building-a-yocto-environment-on-raspberry-pi)
 5. [Write Yocto OS on SD card](#write-yocto-os-on-sd-card)
 6. [How to add CAN](#how-to-add-can)
+7. [Enable access to piracer](#enable-access-to-piracer)
+8. [Enable dbus and vsome ip](#enable-dbus-and-vsome-ip)
+9. [Make QT recipe file](#make-qt-recipe-file)
+   
 
 ## What is Yocto project?
 
