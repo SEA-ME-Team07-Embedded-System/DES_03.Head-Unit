@@ -315,3 +315,150 @@ nano local.conf
 ip link set can0 up type can bitrate 125000
 candump can0
 ```
+
+## Enable access to Piracer
+
+for enable something, You can check all dependency with using **pipoe** command
+
+### - pipoe
+
+1. First, install pipoe
+
+```jsx
+pip3 install pipoe
+```
+
+1. Check the dependency
+
+```jsx
+mkdir piracer && cd piracer
+pipoe -p piracer-py
+```
+
+All. license name is “closed”
+
+After that, You can check all dependency files about piracer
+
+![Screenshot from 2023-11-01 12-22-28.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/bb8ca1ef-de36-4f72-bef0-64b2d526bf69/c5d52ad5-c164-4400-b15d-64c95fc94305/Screenshot_from_2023-11-01_12-22-28.png)
+
+But this files are not proper to use. Next step, you have to change the version and some code
+
+[Piracer code](#https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/tree/develop/Yocto/poky/meta-mylayer/recipes-piracer)
+
+setuptools → setuptools3, and setuptools3 depend on [setup.py](http://setup.py) file. But many new version files have .toml file instead of setup.py. So, You have to change version that having setup.py. You can find all release version from (https://pypi.org/)
+
+### - Change python3-adafruit-blinka code
+
+Original python3-adafruit-blinka code have two version bcm283x file. One is for 32 bit and other one is 64. My raspberry pi is 64bit. So I removed all thing about 32bit.
+
+```jsx
+do_install:append() {
+rm -rf ${D}${PYTHON_SITEPACKAGES_DIR}/adafruit_blinka/microcontroller/bcm283x/pulseio/libgpiod_pulsein
+rm -rf ${D}${PYTHON_SITEPACKAGES_DIR}/adafruit_blinka/microcontroller/bcm283x/pulseio/libgpiod_pulsein.license
+rm -rf ${D}${PYTHON_SITEPACKAGES_DIR}/adafruit_blinka/microcontroller/amlogic/a311d/bcm283x/pulseio/libgpiod_pulsein
+rm -rf ${D}${PYTHON_SITEPACKAGES_DIR}/adafruit_blinka/microcontroller/amlogic/a311d/bcm283x/pulseio/libgpiod_pulsein.license
+}
+```
+
+But if this command doesn’t work, You just can remove this file from python3-adafruit-blinka.tar.gz and change the path to inner computer path like this.
+
+```jsx
+SRC_URI = "file:///home/seame-workstation07/Downloads/Adafruit-Blinka-8.23.0.tar.gz"
+SRC_URI[md5sum] = "e84358e78f96aafd4e44adac862ded4c"
+SRC_URI[sha256sum] = "86ebc07e1b0bb118fb1929d2b89c201674263c016408f38f92e1db080add660b"
+```
+
+You can check md5sum and sha256sum using this command
+
+```jsx
+md5sum file:///home/seame-workstation07/Downloads/Adafruit-Blinka-8.23.0.tar.gz
+sha256sum file:///home/seame-workstation07/Downloads/Adafruit-Blinka-8.23.0.tar.gz
+```
+
+If you finished all, follow this.
+
+```jsx
+cd build/conf
+nano local.conf
+```
+
+If you have all this files, add this line
+
+```jsx
+# for piracer
+IMAGE_INSTALL:append = " rpio"
+IMAGE_INSTALL:append = " libgpiod"
+IMAGE_INSTALL:append = " rpi-gpio"
+IMAGE_INSTALL:append = " python3-adafruit-blinka"
+IMAGE_INSTALL:append = " python3-adafruit-pureio"
+IMAGE_INSTALL:append = " python3-adafruit-circuitpython-pca9685"
+IMAGE_INSTALL:append = " python3-adafruit-platformdetect"
+IMAGE_INSTALL:append = " python3-pyftdi"
+IMAGE_INSTALL:append = " python3-pyusb"
+IMAGE_INSTALL:append = " python3-pyserial"
+IMAGE_INSTALL:append = " python3-adafruit-circuitpython-typing"
+IMAGE_INSTALL:append = " python3-adafruit-circuitpython-busdevice"
+IMAGE_INSTALL:append = " python3-adafruit-circuitpython-requests"
+IMAGE_INSTALL:append = " python3-typing-extensions"
+IMAGE_INSTALL:append = " python3-adafruit-circuitpython-register"
+IMAGE_INSTALL:append = " python3-adafruit-circuitpython-ina219"
+IMAGE_INSTALL:append = " python3-adafruit-circuitpython-ssd1306"
+IMAGE_INSTALL:append = " python3-adafruit-circuitpython-framebuf"
+IMAGE_INSTALL:append = " python-wheel"
+IMAGE_INSTALL:append = " opencv"
+IMAGE_INSTALL:append = " python-piracer-py"
+```
+
+## Enable dbus and vsome ip
+
+All files for enable vsomeip are here(https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/tree/develop/Yocto/poky/meta-mylayer/recipes-ivi)
+
+```jsx
+cd build/conf
+nano local.conf
+```
+
+```jsx
+# for dbus and vsome ip
+IMAGE_INSTALL:append = " vsomeip"
+IMAGE_INSTALL:append = " python-pydbus"
+IMAGE_INSTALL:append = " packagegroup-core-x11"
+IMAGE_INSTALL:append = " packagegroup-core-x11-base"
+IMAGE_INSTALL:append = " packagegroup-core-x11-sato"
+IMAGE_INSTALL:append = " packagegroup-core-x11-xserver"
+IMAGE_INSTALL:append = " pydbus-test"
+IMAGE_INSTALL:append = " dlt-daemon"
+IMAGE_INSTALL:append = " vsomeip-example"
+IMAGE_INSTALL:append = " boost"
+IMAGE_INSTALL:append = " common-api-c++"
+IMAGE_INSTALL:append = " common-api-c++-someip"
+```
+
+All files and layer can find from here (https://layers.openembedded.org/layerindex/branch/master/layers/)
+
+And all dbus, vsomeip example files in here(https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/tree/develop/Yocto/poky/meta-mylayer/recipes-example/example)
+
+After bitbake, You can check dbus and vsomeip follow this command in Yocto OS
+
+- check dbus
+
+```jsx
+startx
+cd /usr/bin
+python3 send_dbus.py &
+python3 recv_dbus.py
+```
+
+- check vsomeip
+
+```jsx
+cd /usr/bin/example/vsomeip-example
+./service_v
+./client_v
+```
+
+## Make QT recipe file
+
+It is our all qt dependency
+
+[basic-qt5-image](https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/blob/develop/Yocto/poky/meta-mylayer/recipes-core/images/basic-qt5-image.bb)
