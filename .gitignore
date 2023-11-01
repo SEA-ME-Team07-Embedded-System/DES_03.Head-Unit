@@ -1,2 +1,4 @@
-Yocto/poky/build/tmp/
-Yocto/poky/build/cache/
+tmp/
+cache/
+downloads/
+sstate-cache/
