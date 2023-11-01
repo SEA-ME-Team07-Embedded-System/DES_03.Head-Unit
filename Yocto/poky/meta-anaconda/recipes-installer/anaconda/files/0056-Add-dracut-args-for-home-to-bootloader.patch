@@ -1,0 +1,39 @@
+From fe670d289e09d807fb760194290fbb35ab6230a5 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Sat, 29 Jun 2019 17:06:24 +0800
+Subject: [PATCH] Add dracut args for /home to bootloader
+
+When /home is on a separate device like LVM or RAID dracut needs
+to know about this so add the needed rd.* parameters to the cmdline.
+This also works when upgrading.
+
+Upstream-Status: Pending
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Rebase for anaconda 34.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ pyanaconda/modules/storage/bootloader/base.py | 5 +++++++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/pyanaconda/modules/storage/bootloader/base.py b/pyanaconda/modules/storage/bootloader/base.py
+index 71ca9c5c4..cfe84810e 100644
+--- a/pyanaconda/modules/storage/bootloader/base.py
++++ b/pyanaconda/modules/storage/bootloader/base.py
+@@ -760,6 +760,11 @@ class BootLoader(object):
+         if usr_device:
+             dracut_devices.extend([usr_device])
+ 
++        # Does /home have its own device? If so, we need to tell dracut
++        home_device = storage.mountpoints.get("/home")
++        if home_device:
++            dracut_devices.extend([home_device])
++
+         netdevs = [d for d in storage.devices \
+                    if (getattr(d, "complete", True) and
+                        isinstance(d, NetworkStorageDevice))]
+-- 
+2.7.4
+

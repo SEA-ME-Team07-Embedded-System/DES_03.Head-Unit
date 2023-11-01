@@ -1,0 +1,42 @@
+From 32f5f740f5447fe541274e231ecb3300c6b969a4 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Thu, 4 Jul 2019 11:04:00 +0800
+Subject: [PATCH] fix calling grub-mkconfig failed
+
+Since commit [a252e44 Set default entry to the BLS id instead
+of the entry index] applied, calling grub-mkconfig failed if
+/etc/machine-id not found.
+
+Make sure the existence of /etc/machine-id for Yocto
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Rebase for anaconda 34.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ pyanaconda/modules/storage/bootloader/grub2.py | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/pyanaconda/modules/storage/bootloader/grub2.py b/pyanaconda/modules/storage/bootloader/grub2.py
+index 52116bcee..441f89e73 100644
+--- a/pyanaconda/modules/storage/bootloader/grub2.py
++++ b/pyanaconda/modules/storage/bootloader/grub2.py
+@@ -344,8 +344,10 @@ class GRUB2(BootLoader):
+         if self.default is not None:
+             machine_id_path = conf.target.system_root + "/etc/machine-id"
+             if not os.access(machine_id_path, os.R_OK):
+-                log.error("failed to read machine-id, default entry not set")
+-                return
++                # Make sure the new system has a machine-id, it won't boot without it
++                # (and nor will some of the subsequent commands)
++                log.info("Generating machine ID")
++                util.execInSysroot("systemd-machine-id-setup", [])
+ 
+             with open(machine_id_path, "r") as fd:
+                 machine_id = fd.readline().strip()
+-- 
+2.7.4
+

@@ -1,0 +1,165 @@
+From 0a8021958ea816fcc033da01ed5a4d882f39086c Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Sat, 29 Jun 2019 14:46:57 +0800
+Subject: [PATCH] support authentication for kickstart
+
+We add option 'ksuser' and 'kspasswd' in /proc/cmdline to support
+authentication while downloading kickstart from web server.
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Update patch for anaconda 32:
+* replace self.cmdline with kernel_arguments
+* update patch context
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+
+Rebase for anaconda 34:
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+
+It requires option prefix 'inst.' in anaconda 34. Update the error
+message.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ pyanaconda/flags.py                                |  7 +++-
+ pyanaconda/kickstart.py                            | 37 +++++++++++++++++++---
+ .../modules/boss/kickstart_manager/parser.py       | 10 +++---
+ 3 files changed, 43 insertions(+), 11 deletions(-)
+
+diff --git a/pyanaconda/flags.py b/pyanaconda/flags.py
+index 8e7321ec0..a94a581fd 100644
+--- a/pyanaconda/flags.py
++++ b/pyanaconda/flags.py
+@@ -17,6 +17,7 @@
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ #
+ from pyanaconda.core.constants import ANACONDA_ENVIRON
++from pyanaconda.core.kernel import kernel_arguments
+ 
+ from pyanaconda.anaconda_loggers import get_module_logger
+ log = get_module_logger(__name__)
+@@ -49,8 +50,12 @@ class Flags(object):
+         self.nosave_logs = False
+         # current runtime environments
+         self.environs = [ANACONDA_ENVIRON]
++
++        # Authentication for downloading kickstart file through http
++        self.ksuser = kernel_arguments.get('ksuser')
++        self.kspasswd = kernel_arguments.get('kspasswd')
++
+         # Lock it down: no more creating new flags!
+         self.__dict__['_in_init'] = False
+ 
+-
+ flags = Flags()
+diff --git a/pyanaconda/kickstart.py b/pyanaconda/kickstart.py
+index 67297af70..5ba8ef7eb 100644
+--- a/pyanaconda/kickstart.py
++++ b/pyanaconda/kickstart.py
+@@ -44,7 +44,7 @@ from pyanaconda.pwpolicy import F34_PwPolicy, F34_PwPolicyData
+ 
+ from pykickstart.base import BaseHandler, KickstartCommand, RemovedCommand
+ from pykickstart.constants import KS_SCRIPT_POST, KS_SCRIPT_PRE, KS_SCRIPT_TRACEBACK, KS_SCRIPT_PREINSTALL
+-from pykickstart.errors import KickstartError, KickstartParseWarning, KickstartDeprecationWarning
++from pykickstart.errors import KickstartError, KickstartParseWarning, KickstartDeprecationWarning, KickstartAuthError
+ from pykickstart.ko import KickstartObject
+ from pykickstart.parser import KickstartParser
+ from pykickstart.parser import Script as KSScript
+@@ -415,8 +415,35 @@ class AnacondaKSHandler(superclass):
+         return super().__str__() + "\n" + modules + "\n\n" + str(self.anaconda)
+ 
+ 
+-class AnacondaPreParser(KickstartParser):
+-    # A subclass of KickstartParser that only looks for %pre scripts and
++class OEKickstartParser(KickstartParser):
++    # A subclass of KickstartParser that parse the authentication failure
++    # while downloading kickstart file from web server
++    def __init__(self, handler, followIncludes=True, errorsAreFatal=True,
++                  missingIncludeIsFatal=True):
++        super().__init__(handler, missingIncludeIsFatal=False)
++        self.username = flags.ksuser
++        self.password = flags.kspasswd
++
++    def readKickstart(self, f, reset=True):
++        while True:
++            try:
++                super().readKickstart(f, reset=reset,
++                                              username=self.username,
++                                              password=self.password)
++
++                # Make sure the following readKickstart invoking will success
++                flags.ksuser = self.username
++                flags.kspasswd = self.password
++                break
++            except KickstartAuthError as e:
++                msg = 'Append "inst.ksuser=<username> inst.kspasswd=<password>" to boot command'
++                raise KickstartError(msg)
++            except:
++                raise
++
++
++class AnacondaPreParser(OEKickstartParser):
++    # A subclass of OEKickstartParser that only looks for %pre scripts and
+     # sets them up to be run.  All other scripts and commands are ignored.
+     def __init__(self, handler, followIncludes=True, errorsAreFatal=True,
+                  missingIncludeIsFatal=True):
+@@ -436,7 +463,7 @@ class AnacondaPreParser(KickstartParser):
+         self.registerSection(NullSection(self.handler.anaconda, sectionOpen="%anaconda"))
+ 
+ 
+-class AnacondaKSParser(KickstartParser):
++class AnacondaKSParser(OEKickstartParser):
+     def __init__(self, handler, followIncludes=True, errorsAreFatal=True,
+                  missingIncludeIsFatal=True, scriptClass=AnacondaKSScript):
+         self.scriptClass = scriptClass
+@@ -446,7 +473,7 @@ class AnacondaKSParser(KickstartParser):
+         if not self.handler:
+             return
+ 
+-        return KickstartParser.handleCommand(self, lineno, args)
++        return super().handleCommand(lineno, args)
+ 
+     def setupSections(self):
+         self.registerSection(PreScriptSection(self.handler, dataObj=self.scriptClass))
+diff --git a/pyanaconda/modules/boss/kickstart_manager/parser.py b/pyanaconda/modules/boss/kickstart_manager/parser.py
+index a65afdc9b..3183ba41e 100644
+--- a/pyanaconda/modules/boss/kickstart_manager/parser.py
++++ b/pyanaconda/modules/boss/kickstart_manager/parser.py
+@@ -18,7 +18,7 @@
+ 
+ __all__ = ["SplitKickstartParser", "VALID_SECTIONS_ANACONDA"]
+ 
+-from pykickstart.parser import KickstartParser
++from pyanaconda.kickstart import OEKickstartParser
+ from pykickstart.sections import Section
+ 
+ from pyanaconda.modules.boss.kickstart_manager.element import KickstartElement,\
+@@ -80,7 +80,7 @@ class StoreSection(Section):
+         self.lines = []
+ 
+ 
+-class SplitKickstartParser(KickstartParser):
++class SplitKickstartParser(OEKickstartParser):
+     """Kickstart parser for storing kickstart elements.
+ 
+     Stores kickstart elements (commands, sections, addons) with their line
+@@ -131,9 +131,9 @@ class SplitKickstartParser(KickstartParser):
+                  kickstart files
+         :rtype: KickstartElements
+         """
+-        with open(filename, "r") as f:
+-            kickstart = f.read()
+-        return self.split_from_string(kickstart, filename=filename)
++        self._current_ks_filename = filename or self.unknown_filename
++        self.readKickstart(filename)
++        return self._result
+ 
+     def split_from_string(self, kickstart, filename=None):
+         """Split the kickstart given as string into elements.
+-- 
+2.7.4
+

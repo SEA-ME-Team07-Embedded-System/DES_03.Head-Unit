@@ -1,0 +1,72 @@
+From 3f1a992889c858b400d84a5583fd144d93ea23f3 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Tue, 24 Jul 2018 16:49:09 +0800
+Subject: [PATCH 34/65] text repository setting: support http proxy
+
+For text mode, it supports:
+- http repo + http proxy;
+- https repo + http proxy;
+- ftp repo + http proxy;
+
+Upstream-Status: Pending
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Rebase for anaconda 34. The helpers.py has been updated in upstream, so
+drop the patch for it.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ pyanaconda/ui/tui/spokes/installation_source.py | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+
+diff --git a/pyanaconda/ui/tui/spokes/installation_source.py b/pyanaconda/ui/tui/spokes/installation_source.py
+index db526a069..b1cf1271b 100644
+--- a/pyanaconda/ui/tui/spokes/installation_source.py
++++ b/pyanaconda/ui/tui/spokes/installation_source.py
+@@ -238,6 +238,7 @@ class SpecifyRepoSpoke(NormalTUISpoke, SourceSwitchHandler):
+         self.protocol = protocol
+         self._container = None
+         self._url = self._get_url()
++        self._proxy = self.data.method.proxy
+ 
+     def _get_url(self):
+         """Get the URL of the current source."""
+@@ -261,11 +262,17 @@ class SpecifyRepoSpoke(NormalTUISpoke, SourceSwitchHandler):
+         dialog = Dialog(_("Repo URL"))
+         self._container.add(EntryWidget(dialog.title, self._url), self._set_repo_url, dialog)
+ 
++        dialog = Dialog(_("Repo Proxy"))
++        self._container.add(EntryWidget(dialog.title, self._proxy), self._set_repo_proxy, dialog)
++
+         self.window.add_with_separator(self._container)
+ 
+     def _set_repo_url(self, dialog):
+         self._url = dialog.run()
+ 
++    def _set_repo_proxy(self, dialog):
++        self._proxy = dialog.run()
++
+     def input(self, args, key):
+         if self._container.process_user_input(key):
+             self.apply()
+@@ -289,7 +296,15 @@ class SpecifyRepoSpoke(NormalTUISpoke, SourceSwitchHandler):
+             # protocol either unknown or entry already starts with a protocol
+             # specification
+             url = self._url
+-        self.set_source_url(url)
++
++        # Proxy only support http protocal
++        proxy = None
++        if self._proxy is not None:
++            if not self._proxy.startswith("http://"):
++                proxy = "http://" + self._proxy
++            else:
++                proxy = self._proxy
++        self.set_source_url(url, proxy)
+ 
+ 
+ class SpecifyNFSRepoSpoke(NormalTUISpoke, SourceSwitchHandler):
+-- 
+2.7.4
+

@@ -1,0 +1,33 @@
+From 42dcc8683f600d3902fdcb841922bd14bff7e160 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Sat, 29 Jun 2019 16:00:30 +0800
+Subject: [PATCH] remove incorrect prefix of addon repo url
+
+While user set addon repo url with "http://128.224.162.227/intel_x86_64/",
+it has incorrect prefix "http://http://128.224.162.227/intel_x86_64/".
+
+So remove incorrect prefix of addon repo url.
+
+Upstream-Status: Pending
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+---
+ pyanaconda/ui/gui/spokes/installation_source.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/pyanaconda/ui/gui/spokes/installation_source.py b/pyanaconda/ui/gui/spokes/installation_source.py
+index 6fddfd7..6f725a4 100644
+--- a/pyanaconda/ui/gui/spokes/installation_source.py
++++ b/pyanaconda/ui/gui/spokes/installation_source.py
+@@ -1713,6 +1713,8 @@ class SourceSpoke(NormalSpoke, GUISpokeInputCheckHandler):
+ 
+         url_prefix = REPO_PROTO[combo_protocol]
+         url = self._repo_url_entry.get_text().strip()
++        if url.startswith(url_prefix):
++            url = url[len(url_prefix):]
+ 
+         if combo_protocol in (PROTOCOL_HTTP, PROTOCOL_HTTPS):
+             url_type = self._repo_url_type_combo_box.get_active_id()
+-- 
+2.7.4
+

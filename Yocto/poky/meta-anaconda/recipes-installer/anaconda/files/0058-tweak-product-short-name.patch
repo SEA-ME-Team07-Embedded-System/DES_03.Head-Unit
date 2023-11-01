@@ -1,0 +1,31 @@
+From 802976bb4039e9adfd6c3f80816a78a305a545ab Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Mon, 30 Jul 2018 14:52:09 +0800
+Subject: [PATCH] tweak product short name
+
+The yocto named its production with braces which caused short name
+with illegal character that broke lvm partition.
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+---
+ pyanaconda/core/constants.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/pyanaconda/core/constants.py b/pyanaconda/core/constants.py
+index 9c36d6014..b2854196b 100644
+--- a/pyanaconda/core/constants.py
++++ b/pyanaconda/core/constants.py
+@@ -38,7 +38,9 @@ isFinal = product.isFinal
+ 
+ # for use in device names, eg: "fedora", "rhel"
+ shortProductName = productName.lower()          # pylint: disable=no-member
+-if productName.count(" "):                      # pylint: disable=no-member
++if '(' in shortProductName and ')' in shortProductName:
++    shortProductName = shortProductName.split()[0]
++elif productName.count(" "):                    # pylint: disable=no-member
+     shortProductName = ''.join(s[0] for s in shortProductName.split())
+ 
+ # The default virtio port.

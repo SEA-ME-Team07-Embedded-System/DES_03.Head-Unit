@@ -1,0 +1,32 @@
+From 8d761383e0bdb9ce0d4c3f4efe1d14ffc0e06ba4 Mon Sep 17 00:00:00 2001
+From: Kai Kang <kai.kang@windriver.com>
+Date: Mon, 2 Aug 2021 16:25:42 +0800
+Subject: [PATCH] anaconda.py: use 'Fedora' as default product
+
+It used to use 'Fedora' as default product in Anaconda 32. But it
+changed to get from /etc/os-release file. Set it with 'Fedora' directly
+for oe.
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ anaconda.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/anaconda.py b/anaconda.py
+index cefe6849f..07cc35fba 100755
+--- a/anaconda.py
++++ b/anaconda.py
+@@ -204,7 +204,7 @@ if __name__ == "__main__":
+         requested_variant=opts.variant_name,
+         buildstamp_product=product.productName,
+         buildstamp_variant=product.productVariant,
+-        default_product=util.get_os_release_value("NAME")
++        default_product='Fedora'
+     )
+ 
+     conf.set_from_files()
+-- 
+2.25.1
+

@@ -1,0 +1,454 @@
+Introduction
+-----------
+This layer provides an installation program based on
+OE platform. The installation program is anaconda from
+fedora, which is the installer of distribution Fedora,
+RedHat and Centos.
+(https://fedoraproject.org/wiki/Anaconda)
+
+There are two builds required, one is target build,
+another is host build.
+
+The image/packages of target build is installed on the
+target hard disk as user requirements.
+
+The image of host build is to run a installer program (anaconda)
+and install image/packages of target build to hard disk.
+
+Dependencies
+------------
+URI: git://github.com/openembedded/openembedded-core.git
+branch: master
+revision: HEAD
+
+URI: git://github.com/openembedded/bitbake.git
+branch: master
+revision: HEAD
+
+URI: git://github.com/openembedded/meta-openembedded.git
+layers: meta-filesystems, meta-gnome, meta-python,
+        meta-oe, meta-networking, and meta-initramfs
+branch: master
+revision: HEAD
+
+Source code
+-----------
+git://git.yoctoproject.org/meta-anaconda
+http://git.yoctoproject.org/git/meta-anaconda
+
+Maintenance
+-----------
+Maintainers: Hongxu Jia <jiahongxujia@163.com> |  <hongxu.jia@windriver.com>
+             Robert Yang <liezhi.yang@windriver.com>
+             Kai Kang <kai.kang@windriver.com>
+
+Contributing
+-----------
+Contributions and patches can be sent to the Yocto Project mailing
+list: yocto@yoctoproject.org"
+
+When sending patches please take a look at the contribution guide available
+here: https://wiki.yoctoproject.org/wiki/Contribution_Guidelines
+
+example:
+git send-email -1 -M --to yocto@yoctoproject.org  --subject-prefix=meta-anaconda][PATCH
+
+Limitation
+-----------
+1) Since OE use grub-efi to generate live image, the compatible host
+   is i.86|x86_64
+   (Set MACHINE = "qemux86-64|qemux86" in default build)
+
+2) The target installer based on fedora 26, so it requires:
+   - systemd as init manager
+   - python3
+   - dnf2/rpm4
+   - gobject-introspection which requires qemu-usermode
+     in MACHINE_FEATURES
+
+Building the target installer
+-----------
+1. Summary
+   The target installer is enabled by including this layer.
+   There are two images in target installer, one is target
+   image which to be installed to target, another is installer image
+   which to do the installation.
+
+   A target image requires specific components to be compatible with
+   the installer. To install these components set
+   DISTRO_FEATURES:append = " anaconda-support" in local.conf
+
+   For installer image, you are not supposed to change the 'DISTRO'
+   setting in target build directory. It may work, but it's not
+   recommended. Instead we should recommend the user run a
+   oe-init-build-env and create a new build directory for the installer.
+   Set DISTRO = 'anaconda' in local.conf file.
+
+   There are two kinds of installer builds: "Image Based Install" and
+   "Package Based Install". The former is to install a prebuilt image,
+   the latter is to install RPM packages.
+
+   For Image Based Install, set INSTALLER_TARGET_BUILD =
+   '<target-build-image>' in local.conf to specify an .ext2, .ext3,
+   or ext4 image file, then the installer will copy this image to the
+   target.
+
+   For Package Based Install,  set INSTALLER_TARGET_BUILD =
+   '<target-build-topdir>' to specify the path to target build directory
+   that will supply RPMs, and INSTALLER_TARGET_IMAGE = '<target-image-pn>'
+   to specify the image recipe name, then the installer will install its
+   RPMs to the target;
+
+2. Two main use cases
+   2.1 Installer image with ext2, ext3 or ext4 image from the target
+       build to be copied to local disk.
+
+   2.2 Installer image with RPMs from the target build to be installed
+       to local disk.
+
+   Note: Each option requires two builds, one is for the target build,
+         the other one is for the installer itself. The build and installer
+         board (BSP) configuration should be the same.
+
+3. Examples for the use cases
+   The following example is to install a target image core-image-minimal
+   by host image core-image-install.
+
+   3.1 Image Based Install
+       3.1.1 Clone away
+
+           $ mkdir <installer-project>
+           $ cd <installer-project>
+           $ git clone git://git.yoctoproject.org/meta-anaconda
+           $ git clone git://git.openembedded.org/meta-openembedded
+           $ git clone git://git.openembedded.org/openembedded-core oe-core
+           $ cd oe-core
+           $ git clone git://git.openembedded.org/bitbake
+
+       3.1.2 Prepare target build
+
+           $ . <installer-project>/oe-core/oe-init-build-env <target_build>
+
+           The build requires 'anaconda-support' in DISTRO_FEATURES to
+           help installation. It also requires pam, RPM packages and systemd
+           init manager. Edit conf/local.conf to use:
+           $ echo 'DISTRO_FEATURES:append = " anaconda-support"' >> conf/local.conf
+           $ echo 'DISTRO_FEATURES:append = " pam"' >> conf/local.conf
+           $ echo 'PACKAGE_CLASSES = "package_rpm"' >> conf/local.conf
+           $ echo 'VIRTUAL-RUNTIME_init_manager = "systemd"' >> conf/local.conf
+           $ echo 'DISTRO_FEATURES:append = " systemd"' >> conf/local.conf
+           $ echo 'DISTRO_FEATURES_BACKFILL_CONSIDERED:append = " sysvinit"' >> conf/local.conf
+
+           Edit conf/bblayers.conf to include other layers
+           BBLAYERS ?= " \
+               <installer-project>/oe-core/meta \
+               <installer-project>/meta-openembedded/meta-python \
+               <installer-project>/meta-openembedded/meta-gnome \
+               <installer-project>/meta-openembedded/meta-filesystems \
+               <installer-project>/meta-openembedded/meta-oe \
+               <installer-project>/meta-openembedded/meta-networking \
+               <installer-project>/meta-openembedded/meta-initramfs \
+               <installer-project>/meta-anaconda \
+           "
+
+       3.1.3 Build target image in <target_build>.
+
+           $ bitbake core-image-minimal
+
+       3.1.4 Prepare installer build.
+           $ . <installer-project>/oe-core/oe-init-build-env <installer_build>
+
+           The build requires DISTRO = "anaconda", location of target image.
+           Edit conf/local.conf to use:
+           $ echo 'PACKAGE_CLASSES = "package_rpm"' >> conf/local.conf
+           $ echo 'DISTRO = "anaconda"' >> conf/local.conf
+           $ echo 'INSTALLER_TARGET_BUILD = "<target_build>/tmp-glibc/deploy/images/qemux86/core-image-minimal-qemux86.ext4"' >> conf/local.conf
+
+           Edit conf/bblayers.conf to include other layers
+           BBLAYERS ?= " \
+               <installer-project>/oe-core/meta \
+               <installer-project>/meta-openembedded/meta-python \
+               <installer-project>/meta-openembedded/meta-gnome \
+               <installer-project>/meta-openembedded/meta-filesystems \
+               <installer-project>/meta-openembedded/meta-oe \
+               <installer-project>/meta-openembedded/meta-networking \
+               <installer-project>/meta-openembedded/meta-initramfs \
+               <installer-project>/meta-anaconda \
+           "
+
+       3.1.5 Build installer image in installer_build.
+
+           $ bitbake core-image-anaconda
+
+   3.2 Package Based Install
+       3.2.1 Clone away
+             The same with 3.1.1
+
+       3.2.2 Prepare target build
+             The same with 3.1.2
+
+       3.2.3 Build target image in <target_build>.
+             The same with 3.1.3
+
+       3.2.4 Prepare installer build.
+           $ . <installer-project>/oe-core/oe-init-build-env <installer_build>
+
+           The build requires DISTRO = "anaconda", location of target build
+           and recipe name of target image.
+           Edit conf/local.conf to use:
+           $ echo 'PACKAGE_CLASSES = "package_rpm"' >> conf/local.conf
+           $ echo 'DISTRO = "anaconda"' >> conf/local.conf
+           $ echo 'INSTALLER_TARGET_BUILD = "<target_build>"' >> conf/local.conf
+           $ echo 'INSTALLER_TARGET_IMAGE = "core-image-minimal"' >> conf/local.conf
+
+           Edit conf/bblayers.conf to include other layers
+           BBLAYERS ?= " \
+               <installer-project>/oe-core/meta \
+               <installer-project>/meta-openembedded/meta-python \
+               <installer-project>/meta-openembedded/meta-gnome \
+               <installer-project>/meta-openembedded/meta-filesystems \
+               <installer-project>/meta-openembedded/meta-oe \
+               <installer-project>/meta-openembedded/meta-networking \
+               <installer-project>/meta-openembedded/meta-initramfs \
+               <installer-project>/meta-anaconda \
+           "
+
+       3.2.4 Build installer image in installer_build.
+             The same with 3.1.4
+
+4. Install
+   4.1 Burn the output ISO to a DVD or dd it to a USB disk, and use it to
+       boot the target board and start the install.
+
+   4.2 Use qemu for testing
+       Build target installer with machine of qemux86
+
+       Create the qemu disk:
+       $ <installer_build>/tmp-glibc/sysroots-components/x86_64/qemu-system-native/usr/bin/qemu-img create -f qcow hd0.vdisk 5000M
+
+       Start qemu with installer image:
+       $ runqemu qemux86 core-image-anaconda iso slirp kvm qemuparams="-drive file=hd0.vdisk,if=virtio,format=qcow"
+
+       Add "-vnc :4" to qemuparams to start a VNC capable session.
+       Add "-m 1024" to qemuparams to allocate enough memory.
+
+       Start qemu with installed target:
+       $ runqemu qemux86 core-image-anaconda iso slirp kvm qemuparams="-drive file=hd0.vdisk,if=virtio,format=qcow -boot menu=on"
+
+       Run vncviewer to connect VNC capable session.
+       $ vncviewer <host-ip-address>:4
+
+       Add "-boot menu=on" to qemuparams and run vncviewer to connect,
+       press ESC key, manually choose "2. Virtio disk" "to boot from hard disk.
+
+       Add kvm to runqemu could speed up the installation, if add failed, please refer
+       https://wiki.yoctoproject.org/wiki/How_to_enable_KVM_for_Poky_qemu
+
+   4.3 Use virtualbox for testing
+       4.3.1 Prepare virtualbox
+             Take Ubuntu 16.04 for example, the virtualbox is 5.0.40
+             sudo apt-get install virtualbox
+
+       4.3.2 Create virtual machine
+             'New'-> Name:***
+                     Type:Linux
+                     Version:Linux 2.6/3.x/4.x(32 bit)
+                     Memory size: 1024MB
+                     Hard disk: Create a virtual hard disk now
+             'Create'-> VDI(Virtualbox Disk Image)
+
+       4.3.3 Add ISO storage to virtual machine
+             Select newly created virtual machine
+             'Setting'-> 'Storage'-> 'Controller:SATA'->
+             'Adds optical drive' -> 'Choose disk' ->
+             'core-image-anaconda-qemux86.iso'
+
+             Remove IDE Empty optical
+             'Setting'-> 'Storage'-> 'Controller:IDE'->
+             'Empyt' -> Removes selected storage attachment
+
+       4.3.4 Config net for virtual machine
+             Select newly created virtual machine
+             'Setting'-> 'Network'-> 'Enable Network Adapter'->
+             'Attached to: Bridged Adapter'-> 'Name: eno1'
+
+       4.3.5 Add serial port to virtual machine
+             Select newly created virtual machine
+             'Setting'-> 'Serial Ports'-> 'Port 1'->
+             'Enable Serial Port'-> Port Number: COM1
+                                    Port Mode: Host Pipe
+                                    Unselect 'Connect to existing pipe/socket'
+                                    Path/Address: /tmp/pipe
+
+       4.3.6 Use minicom to connect virtual machine's serial port
+             sudo minicom -s
+             'Serial port setup'->
+             'A -    Serial Device      : unix#/tmp/pipe'->
+             'Exit'
+
+       4.3.7 Start virtual machine
+             Select newly created virtual machine-> 'Start'
+
+             After the installation finished, delete ISO storage and
+             start virtual machine again to check the installed target.
+
+   4.4 Need 1G memory size at least
+       While starting qemu/virtualbox/vmware for testing, please make
+       sure virtual machine has 1G memory at least.
+
+5. Use custom installer.conf
+   The second build can use installer.conf to help speed up the build
+   process when package based installs, the user can set WRL_INSTALLER_CONF
+   in the conf file, for example:
+
+   edit local.conf
+   WRL_INSTALLER_CONF = "/my/installer.conf"
+
+   You can customize the contents of installer.conf when needed, for example,
+   add packages that you will like to install, but if you do, you must ensure
+   that the added packages are in the target build (target_build).
+
+   To do this, use the file /.buildstamp after the installation and edit it
+   for later installs.
+
+6. Perform the kickstart installation
+   The installer can support kickstart installs. To do this, use the ks file
+   from /root/anaconda-ks.cfg after the installation and edit it for later
+   installs. You can specify the ks file by setting KICKSTART_FILE in the conf
+   file, for example:
+
+   KICKSTART_FILE = "/my/anaconda-ks.cfg"
+
+   Then the second build will take it and start the kickstart installs
+   by default when you start the target with installer image.
+
+7. About Grub version
+   The current installer only supports grub 2.
+
+8. How to create RPM metadata in build
+   bitbake package-index
+
+   There is a repodata in deploy dir:
+   $ find tmp-glibc/deploy/rpm/ -name repodata
+   tmp-glibc/deploy/rpm/repodata
+
+9. Put multiple target builds into one installer image
+   9.1 Create and build multiple target build projects.
+       Refer to section 3.1.1 on how to setup and build each target project.
+       In this example, the projects are named target_build1, target_build2 and
+       target_build3. The target_build1 and target_build2 are build dirs,
+       target_build3 is ext4 file. Build 'core-image-sato' in
+       target_build1 and build 'core-image-minimal' in target_build2.
+
+   9.2 Edit local.conf, use variable INSTALLER_TARGET_BUILD to point to
+       "<target_build1> <target_build2> <target_build3>", and set
+       INSTALLER_TARGET_IMAGE = "core-image-sato core-image-minimal",
+       the space is the separator:
+
+       $ bitbake core-image-anaconda
+
+       Then the installer image will contain all target builds specified,
+       including target_build1, target_build2 and target_build3.
+
+       When you boot the installer image, you will get a selection menu:
+       NOTE: target_buildX is the basename of project
+
+       =============== Found the following products ===============
+       1) DISTRO1    target_build1    DISTRO_NAME1    DISTRO_VERION1
+       2) DISTRO2    target_build2    DISTRO_NAME2    DISTRO_VERION2
+       3) <target_build3-ext4-file>-3
+
+       Please enter your choice (0 to quit):
+
+       NOTE: You need to use a proper name for the target build project
+             since its basename will be used in the selection menus.
+
+       NOTE: The number of the entries in WRL_INSTALLER_CONF or
+             KICKSTART_FILE must be the same as the number of target build
+             projects.
+             For example, if you want to use WRL_INSTALLER_CONF or
+             KICKSTART_FILE for target_build1, target_build2 and
+             target_build3, set each of the three in the conf file.
+
+             WRL_INSTALLER_CONF = "/my/target1.conf /my/target2.conf \
+                                    /my/target3.conf"
+             KICKSTART_FILE = "/my/target1.ks /my/target2.ks \
+                               /my/target3.ks"
+
+             Then target_build1 will use /my/target1.conf and /my/target1.ks,
+             target_build2 and target_build3 will work similarly.
+
+10. OE QA: Selftest
+    10.1 Clone away
+         $ mkdir <installer-project>
+         $ cd <installer-project>
+         $ git clone git://git.yoctoproject.org/meta-anaconda
+         $ git clone git://git.openembedded.org/meta-openembedded
+         $ git clone git://git.openembedded.org/openembedded-core oe-core
+         $ cd oe-core
+         $ git clone git://git.openembedded.org/bitbake
+
+    10.2 Prepare target build
+         $ . <installer-project>/oe-core/oe-init-build-env <target_build>
+
+         Edit conf/bblayers.conf to include other layers
+         BBLAYERS ?= " \
+            <installer-project>/oe-core/meta \
+            <installer-project>/meta-openembedded/meta-python \
+            <installer-project>/meta-openembedded/meta-gnome \
+            <installer-project>/meta-openembedded/meta-filesystems \
+            <installer-project>/meta-openembedded/meta-oe \
+            <installer-project>/meta-openembedded/meta-networking \
+            <installer-project>/meta-openembedded/meta-initramfs \
+            <installer-project>/meta-anaconda \
+         "
+
+    10.3 Run test case
+         $ oe-selftest -r anaconda_oe.TestAnacondaOE
+
+    10.4 Monitor anaconda installation
+         $ vncviewer  <build-host-ip-address>:4
+         $ ssh -p 2222 root@<build-host-ip-address>
+
+11. Download file from http/ftp server to target image
+    Add key in kickstart to support downloading file from http/ftp
+    server to target image:
+    'download --dest=[file://dir/filename|/dir/filename] --src=[http url| ftp url]'
+
+    Here is the example in kickstart file:
+    ---start---
+    download --dest=/etc/rpm/keys/0x100001 --src=http://128.224.162.159/testkey
+    download --dest=file://etc/rpm/keys/0x100002 --src=http://128.224.162.159/testkey2
+    ---end---
+
+    The file be download to target image (/mnt/image/****).
+
+12. How to authenticate while downloading kickstart from web server
+    12.1 We add boot options 'inst.ksuser' and 'inst.kspasswd'(listed in /proc/cmdline)
+         to support authentication while downloading kickstart from web server.
+         You could integrate them to installer image by set APPEND:append =
+         " inst.ks=<url-ks> inst.ksuser=<username> inst.kspasswd=<password>" in
+         local.conf
+
+    12.2 Currently, we support basic/digest authentication, which decided by
+         your web server.
+
+13. How to add the http repository mirror list
+    1. Create the mirror list file, the format is the same with fedora/redhat
+    which based on dnf. The following mirror list contains two repodata.
+    ...
+    http://origin1.url/path_to_repodata1/
+    http://origin2.url/path_to_repodata2/
+    ...
+
+    2. Next, place the mirror list file on the web server.
+
+    3. When starting anaconda, choose to add an http repository, select mirrorlist
+    from `URL type'.
+
+License
+-------
+
+All metadata is MIT licensed unless otherwise stated. Source code included
+in tree for individual recipes is under the LICENSE stated in each recipe
+(.bb file) unless otherwise stated.

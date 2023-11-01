@@ -1,0 +1,53 @@
+Enable root ssh login with kickstart installation
+
+When select the checkbox "Allow root SSH login with password" during the
+installation, there is not related record in the output anaconda-ks.cfg. Work
+with patch for pykickstart to redo user selection of option root ssh login
+during kickstart installation.
+
+Upstream-Status: Pending
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+
+Rebase for anaconda 34.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ pyanaconda/core/kickstart/commands.py | 2 +-
+ pyanaconda/modules/users/users.py     | 3 +++
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/pyanaconda/core/kickstart/commands.py b/pyanaconda/core/kickstart/commands.py
+index 639375ecd..d348217fa 100644
+--- a/pyanaconda/core/kickstart/commands.py
++++ b/pyanaconda/core/kickstart/commands.py
+@@ -63,7 +63,7 @@ from pykickstart.commands.repo import F33_Repo as Repo
+ from pykickstart.commands.reqpart import F23_ReqPart as ReqPart
+ from pykickstart.commands.rescue import F10_Rescue as Rescue
+ from pykickstart.commands.rhsm import RHEL8_RHSM as RHSM
+-from pykickstart.commands.rootpw import F18_RootPw as RootPw
++from pykickstart.commands.rootpw import F32_RootPw as RootPw
+ from pykickstart.commands.selinux import FC3_SELinux as SELinux
+ from pykickstart.commands.services import FC6_Services as Services
+ from pykickstart.commands.skipx import FC3_SkipX as SkipX
+diff --git a/pyanaconda/modules/users/users.py b/pyanaconda/modules/users/users.py
+index 32b46da84..17523074f 100644
+--- a/pyanaconda/modules/users/users.py
++++ b/pyanaconda/modules/users/users.py
+@@ -88,6 +88,8 @@ class UsersService(KickstartService):
+             self.set_can_change_root_password(False)
+             self._rootpw_seen = True
+ 
++        self.set_root_password_ssh_login_allowed(data.rootpw.sshlogin)
++
+         user_data_list = []
+         for user_ksdata in data.user.userList:
+             user_data_list.append(self._ksdata_to_user_data(user_ksdata))
+@@ -115,6 +117,7 @@ class UsersService(KickstartService):
+         data.rootpw.password = self._root_password
+         data.rootpw.isCrypted = self._root_password_is_crypted
+         data.rootpw.lock = self.root_account_locked
++        data.rootpw.sshlogin = self.root_password_ssh_login_allowed
+ 
+         for user_data in self.users:
+             data.user.userList.append(self._user_data_to_ksdata(data.UserData(),

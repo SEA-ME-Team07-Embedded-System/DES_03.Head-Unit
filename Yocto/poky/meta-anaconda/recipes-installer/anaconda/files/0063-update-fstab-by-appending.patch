@@ -1,0 +1,36 @@
+From 7067614673761ddfa0bf6b6ff20dbb1f6883fb77 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Mon, 1 Jul 2019 10:49:44 +0800
+Subject: [PATCH] update fstab by appending
+
+The 'storage.write()' has updated fstab by overwriting
+the original one, we should update fstab by appending
+to keep original tmpfs partitions.
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Rebase for anaconda 34.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ pyanaconda/modules/storage/devicetree/fsset.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyanaconda/modules/storage/devicetree/fsset.py b/pyanaconda/modules/storage/devicetree/fsset.py
+index dc4dab34f..0569bcb95 100644
+--- a/pyanaconda/modules/storage/devicetree/fsset.py
++++ b/pyanaconda/modules/storage/devicetree/fsset.py
+@@ -649,7 +649,7 @@ class FSSet(object):
+         # /etc/fstab
+         fstab_path = os.path.normpath("%s/etc/fstab" % sysroot)
+         fstab = self.fstab()
+-        open(fstab_path, "w").write(fstab)
++        open(fstab_path, "a").write(fstab)
+ 
+         # /etc/crypttab
+         crypttab_path = os.path.normpath("%s/etc/crypttab" % sysroot)
+-- 
+2.7.4
+

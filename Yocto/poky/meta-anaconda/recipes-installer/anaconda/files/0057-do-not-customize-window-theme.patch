@@ -1,0 +1,59 @@
+From 589f06bc02205d6ec3c8b21c463174b3bd81ca4a Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Mon, 30 Jul 2018 14:50:24 +0800
+Subject: [PATCH 57/65] do not customize window theme
+
+The customized window theme may broke metacity.
+...
+|(metacity:2675): metacity-WARNING **: "(null)" found in configuration
+database is not a valid value for mouse button modifier
+...
+
+Also remove install-data-hook, which caused host contamination
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Rebase for anaconda 34.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ data/window-manager/config/Makefile.am | 8 +-------
+ pyanaconda/display.py                  | 2 +-
+ 2 files changed, 2 insertions(+), 8 deletions(-)
+
+diff --git a/data/window-manager/config/Makefile.am b/data/window-manager/config/Makefile.am
+index 48e04ab48..f17ab6a5a 100644
+--- a/data/window-manager/config/Makefile.am
++++ b/data/window-manager/config/Makefile.am
+@@ -27,13 +27,7 @@ dist_schema_DATA = org.gnome.desktop.wm.keybindings.gschema.override \
+ # schemas they modify, so pretend that this is the case with symlinks and
+ # create the compiled schema.
+ install-data-hook:
+-	$(MKDIR_P) $(DESTDIR)$(schemadir)
+-	$(LN_S) -f /usr/share/glib-2.0/schemas/org.gnome.desktop.wm.keybindings.gschema.xml $(DESTDIR)$(schemadir)
+-	$(LN_S) -f /usr/share/glib-2.0/schemas/org.gnome.desktop.wm.preferences.gschema.xml $(DESTDIR)$(schemadir)
+-	$(LN_S) -f /usr/share/glib-2.0/schemas/org.gnome.metacity.gschema.xml $(DESTDIR)$(schemadir)
+-	$(LN_S) -f /usr/share/glib-2.0/schemas/org.gnome.metacity.enums.xml $(DESTDIR)$(schemadir)
+-	$(LN_S) -f /usr/share/glib-2.0/schemas/org.gnome.desktop.enums.xml $(DESTDIR)$(schemadir)
+-	glib-compile-schemas --strict $(DESTDIR)$(schemadir)
++	echo "pass"
+ 
+ uninstall-local:
+ 	rm -f $(DESTDIR)$(schemadir)/*.xml
+diff --git a/pyanaconda/display.py b/pyanaconda/display.py
+index 0353db997..c4608b6df 100644
+--- a/pyanaconda/display.py
++++ b/pyanaconda/display.py
+@@ -193,7 +193,7 @@ def do_startup_x11_actions():
+     if 'XDG_DATA_DIRS' in os.environ:
+         xdg_data_dirs = datadir + '/window-manager:' + os.environ['XDG_DATA_DIRS']
+     else:
+-        xdg_data_dirs = datadir + '/window-manager:/usr/share'
++        xdg_data_dirs = '/usr/share'
+ 
+     childproc = util.startProgram(["metacity", "--display", ":1", "--sm-disable"],
+                                   env_add={'XDG_DATA_DIRS': xdg_data_dirs})
+-- 
+2.7.4

@@ -1,0 +1,77 @@
+From 010deba8daea262d0ffb000f4d8bf96e6b4ddd82 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Sat, 29 Jun 2019 11:17:49 +0800
+Subject: [PATCH] support UEFI boot
+
+- tweak grub efi package name based on oe-core
+
+- tweak efi_dir according to oe-core's EFI layout
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Refactor for anaconda 34. Function config_file() is removed since it is
+not used.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ pyanaconda/modules/storage/bootloader/efi.py | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/pyanaconda/modules/storage/bootloader/efi.py b/pyanaconda/modules/storage/bootloader/efi.py
+index 82f60e4c4..60969bcda 100644
+--- a/pyanaconda/modules/storage/bootloader/efi.py
++++ b/pyanaconda/modules/storage/bootloader/efi.py
+@@ -40,7 +40,7 @@ class EFIBase(object):
+ 
+     @property
+     def _efi_config_dir(self):
+-        return "efi/EFI/{}".format(conf.bootloader.efi_dir)
++        return "efi/EFI/BOOT"
+ 
+     def efibootmgr(self, *args, **kwargs):
+         if not conf.target.is_hardware:
+@@ -129,8 +129,8 @@ class EFIBase(object):
+ 
+ class EFIGRUB(EFIBase, GRUB2):
+     """EFI GRUBv2"""
+-    _packages32 = [ "grub2-efi-ia32", "shim-ia32" ]
+-    _packages_common = [ "efibootmgr", "grub2-tools" ]
++    _packages32 = [ "grub-efi" ]
++    _packages_common = [ "efibootmgr" ]
+     stage2_is_valid_stage1 = False
+     stage2_bootable = False
+ 
+@@ -138,7 +138,7 @@ class EFIGRUB(EFIBase, GRUB2):
+ 
+     def __init__(self):
+         super().__init__()
+-        self._packages64 = [ "grub2-efi-x64", "shim-x64" ]
++        self._packages64 = [ "grub-efi" ]
+ 
+         try:
+             f = open("/sys/firmware/efi/fw_platform_size", "r")
+@@ -153,8 +153,8 @@ class EFIGRUB(EFIBase, GRUB2):
+     @property
+     def _efi_binary(self):
+         if self._is_32bit_firmware:
+-            return "\\shimia32.efi"
+-        return "\\shimx64.efi"
++            return "\\bootia32.efi"
++        return "\\bootx64.efi"
+ 
+     @property
+     def packages(self):
+@@ -180,7 +180,7 @@ class EFIGRUB(EFIBase, GRUB2):
+             if fs_uuid is None:
+                 raise BootLoaderError("Could not get stage2 filesystem UUID")
+ 
+-            grub_dir = util.execWithCapture("grub2-mkrelpath", [grub_dir],
++            grub_dir = util.execWithCapture("grub-mkrelpath", [grub_dir],
+                                             root=conf.target.system_root)
+             if not grub_dir:
+                 raise BootLoaderError("Could not get GRUB directory path")
+-- 
+2.7.4
+

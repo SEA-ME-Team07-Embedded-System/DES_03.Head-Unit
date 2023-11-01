@@ -1,0 +1,65 @@
+From d081c0284d061290b2fe56b78c688a8d133b40b4 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Mon, 1 Jul 2019 10:55:12 +0800
+Subject: [PATCH] bootloader.py: fix UEFI multilib installation
+
+Fix the following UEFI installation errors when installing multilib
+images on intel-x86-64:
+04:17:32,820 INFO program: Running... grub-install --removable --efi-directory=/boot/efi/ --boot-directory=/boot/efi/EFI/BOOT --grub-mkimage=/tmp/grub-mkimage-wrapper.sh /boot/efi/
+04:17:32,838 INFO program: grub-install: error: /usr/lib/grub/x86_64-efi/modinfo.sh doesn't exist. Please specify --target or --directory.
+04:17:32,839 DEBUG program: Return code: 1
+
+Commit b715a54cc4de86c16c49e28a542aa3b41c792169 [anaconda: generate efi fs at runtime]
+added a call to target grub-install binary, which would fail to find grub-efi
+images and modules when trying to install a multilib image on intel-x86-64.
+
+Signed-off-by: Ovidiu Panait <ovidiu.panait@windriver.com>
+
+Imporve the fix which is compatible with OE
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Replace util.getSysroot() with conf.target.system_root.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+
+Rebase for anaconda 34.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ pyanaconda/modules/storage/bootloader/efi.py | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+diff --git a/pyanaconda/modules/storage/bootloader/efi.py b/pyanaconda/modules/storage/bootloader/efi.py
+index 87ae27f2c..d25243173 100644
+--- a/pyanaconda/modules/storage/bootloader/efi.py
++++ b/pyanaconda/modules/storage/bootloader/efi.py
+@@ -134,10 +134,24 @@ class EFIBase(object):
+             f.write('grub-mkimage -c /tmp/load.cfg $@ search_fs_uuid\n')
+         os.chmod(conf.target.system_root + "/tmp/grub-mkimage-wrapper.sh", 0o755)
+ 
++        if self._is_32bit_firmware:
++            if os.path.exists(conf.target.system_root+"/usr/lib/grub/i386-efi"):
++                mod_path = "/usr/lib/grub/i386-efi"
++            else:
++                raise BootLoaderError("GRUB2 32-bit libdir not eixst")
++        else:
++            if os.path.exists(conf.target.system_root+"/usr/lib64/grub/x86_64-efi"):
++                mod_path = "/usr/lib64/grub/x86_64-efi"
++            elif os.path.exists(util.getSysroot()+"/usr/lib/grub/x86_64-efi"):
++                mod_path = "/usr/lib/grub/x86_64-efi"
++            else:
++                raise BootLoaderError("GRUB2 64-bit libdir not eixst")
++
+         rc = util.execInSysroot("grub-install", ["--removable",
+                                                   "--efi-directory=/boot/efi/",
+                                                   "--boot-directory=%s" % self.config_dir,
+                                                   "--grub-mkimage=/tmp/grub-mkimage-wrapper.sh",
++                                                  "--directory=%s" % mod_path,
+                                                   "/boot/efi/"
+                                                  ])
+         if rc:
+-- 
+2.7.4
+

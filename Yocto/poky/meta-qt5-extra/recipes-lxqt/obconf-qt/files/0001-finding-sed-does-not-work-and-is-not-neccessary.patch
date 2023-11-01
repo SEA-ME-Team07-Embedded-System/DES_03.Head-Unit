@@ -1,0 +1,42 @@
+From 19c7b3eaa79eb7d6ed9037d6c9efac422356889d Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Andreas=20M=C3=BCller?= <schnitzeltony@googlemail.com>
+Date: Mon, 28 Jan 2019 00:00:43 +0100
+Subject: [PATCH] finding sed does not work and is not neccessary
+
+Upstream-Status: Pending
+
+Signed-off-by: Andreas Müller <schnitzeltony@gmail.com>
+---
+ CMakeLists.txt     | 2 --
+ src/CMakeLists.txt | 2 +-
+ 2 files changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 49ff915..86de6b9 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -6,8 +6,6 @@ cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
+ # versions.
+ project(obconf-qt)
+ 
+-find_program(SED_PROGRAM sed)
+-
+ include(GNUInstallDirs)
+ 
+ 
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index deff6e8..bbdc191 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -39,7 +39,7 @@ set_property(SOURCE ${obconf-qt_UI_H} PROPERTY SKIP_AUTOMOC ON)
+ # but we don't want that. Fix it with sed.
+ add_custom_command(
+   OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/ui_obconf_fixed.h
+-  COMMAND ${SED_PROGRAM}
++  COMMAND sed
+   ARGS "/connectSlotsByName/d" ${obconf-qt_UI_H} > ${CMAKE_CURRENT_BINARY_DIR}/ui_obconf_fixed.h
+   # DEPENDS
+   MAIN_DEPENDENCY ${obconf-qt_UI_H}
+-- 
+2.20.1
+

@@ -1,0 +1,31 @@
+From ddf59b7c75744cb4bd3d305fcf0c70dff2bfe46c Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Andreas=20M=C3=BCller?= <schnitzeltony@gmail.com>
+Date: Wed, 25 Apr 2018 22:55:13 +0200
+Subject: [PATCH] Do not force my native depends to find gettext
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Upstream-Status: Inappropriate [embedded-specific]
+
+Signed-off-by: Andreas Müller <schnitzeltony@gmail.com>
+---
+ cmake/KF5I18nMacros.cmake.in | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/cmake/KF5I18nMacros.cmake.in b/cmake/KF5I18nMacros.cmake.in
+index 5ec5ffa..f5b5c59 100644
+--- a/cmake/KF5I18nMacros.cmake.in
++++ b/cmake/KF5I18nMacros.cmake.in
+@@ -2,8 +2,6 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
+-find_package(Gettext REQUIRED)
+-
+ # The Python executable used for building ki18n will be used as a fallback
+ # solution if it cannot be found in $PATH when building applications.
+ set(_KI18N_PYTHON_EXECUTABLE "@PYTHON_EXECUTABLE@")
+-- 
+2.21.1
+

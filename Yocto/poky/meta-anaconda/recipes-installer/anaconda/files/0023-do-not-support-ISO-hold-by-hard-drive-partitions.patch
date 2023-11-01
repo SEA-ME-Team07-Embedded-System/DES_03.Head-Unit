@@ -1,0 +1,31 @@
+From 2b351b588a63bff62c22ee916c7b589c056fdb2f Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Sat, 29 Jun 2019 11:42:47 +0800
+Subject: [PATCH] do not support ISO hold by hard drive partitions
+
+We do not plan to have hard drive partitions to hold an ISO.
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+---
+ pyanaconda/ui/gui/spokes/installation_source.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/pyanaconda/ui/gui/spokes/installation_source.py b/pyanaconda/ui/gui/spokes/installation_source.py
+index 74338aa..6fddfd7 100644
+--- a/pyanaconda/ui/gui/spokes/installation_source.py
++++ b/pyanaconda/ui/gui/spokes/installation_source.py
+@@ -939,7 +939,8 @@ class SourceSpoke(NormalSpoke, GUISpokeInputCheckHandler):
+             added = True
+             idx += 1
+ 
+-        # Again, only display these widgets if an HDISO source was found.
++        # Do not support an HDISO source.
++        added = False
+         self._iso_box.set_no_show_all(not added)
+         self._iso_box.set_visible(added)
+         self._iso_button.set_no_show_all(not added)
+-- 
+2.7.4
+

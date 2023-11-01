@@ -1,0 +1,36 @@
+From 1fca80cf33e1564295cbb38c62bd4c7738bc6d02 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Sat, 29 Jun 2019 16:07:56 +0800
+Subject: [PATCH] fix write sysconfig network failed
+
+While target does not have sysconfig, the anaconda should not
+write sysconfig network.
+
+Upstream-Status: Pending
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Update context for anaconda 32.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ pyanaconda/modules/network/installation.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/pyanaconda/modules/network/installation.py b/pyanaconda/modules/network/installation.py
+index 90dde9a7d5..2d1cebaf60 100644
+--- a/pyanaconda/modules/network/installation.py
++++ b/pyanaconda/modules/network/installation.py
+@@ -164,6 +164,9 @@ Name={}
+         :param overwrite: overwrite existing configuration file
+         :type overwrite: bool
+         """
++        if (not os.path.isdir(root + "/etc/sysconfig")):
++            return False
++
+         return _write_config_file(root, self.SYSCONF_NETWORK_FILE_PATH,
+                                   "# Created by anaconda\n",
+                                   "Cannot write {} configuration file".format(
+-- 
+2.7.4
+

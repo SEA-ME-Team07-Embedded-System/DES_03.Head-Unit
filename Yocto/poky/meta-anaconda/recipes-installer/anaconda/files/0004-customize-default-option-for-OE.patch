@@ -1,0 +1,41 @@
+From 06081bd53399b6c71c373a13bffc6ea990e833b0 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Tue, 25 Jun 2019 10:52:52 +0800
+Subject: [PATCH] customize default option for OE
+
+- Do not verify ssl certification by default
+
+- Disable selinux by default
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+---
+ pyanaconda/argument_parsing.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/pyanaconda/argument_parsing.py b/pyanaconda/argument_parsing.py
+index b520509..bd1eda8 100644
+--- a/pyanaconda/argument_parsing.py
++++ b/pyanaconda/argument_parsing.py
+@@ -462,7 +462,7 @@ def getArgumentParser(version_string, boot_cmdline=None):
+                     help=help_parser.help_text("stage2"))
+     ap.add_argument("--addrepo", dest="addRepo", default=[], metavar="NAME,ADDITIONAL_REPO_URL",
+                     action="append", help=help_parser.help_text("addrepo"))
+-    ap.add_argument("--noverifyssl", action="store_true", default=False,
++    ap.add_argument("--noverifyssl", action="store_true", default=True,
+                     help=help_parser.help_text("noverifyssl"))
+     ap.add_argument("--liveinst", action="store_true", default=False,
+                     help=help_parser.help_text("liveinst"))
+@@ -500,7 +500,7 @@ def getArgumentParser(version_string, boot_cmdline=None):
+     from pykickstart.constants import SELINUX_DISABLED, SELINUX_ENFORCING
+     from pyanaconda.core.constants import SELINUX_DEFAULT
+     ap.add_argument("--noselinux", dest="selinux", action="store_const",
+-                    const=SELINUX_DISABLED, default=SELINUX_DEFAULT,
++                    const=SELINUX_DISABLED, default=SELINUX_DISABLED,
+                     help=help_parser.help_text("noselinux"))
+ 
+     # Use a custom action to convert --selinux=0 and --selinux=1 into the
+-- 
+2.7.4
+

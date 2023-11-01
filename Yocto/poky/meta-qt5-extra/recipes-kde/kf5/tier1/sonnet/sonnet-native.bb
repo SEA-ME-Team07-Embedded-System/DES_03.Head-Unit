@@ -1,0 +1,5 @@
+require ${BPN}.inc
+
+inherit native
+
+EXTRA_OECMAKE += "-DBUILD_TESTING=OFF -DSONNET_USE_WIDGETS=OFF"

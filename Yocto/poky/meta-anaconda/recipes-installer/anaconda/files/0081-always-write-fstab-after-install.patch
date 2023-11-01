@@ -1,0 +1,52 @@
+From e39c2490c93943dd2cd47aeaeeb828fada41158f Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Mon, 11 Oct 2021 16:52:15 +0800
+Subject: [PATCH] always write fstab after install
+
+We should write the storage after doing the installation
+which always writes fstab after instal, make sure the generated
+/etc/fstab not overwritten by the one from package install.
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+---
+ pyanaconda/installation.py | 15 +++++----------
+ 1 file changed, 5 insertions(+), 10 deletions(-)
+
+diff --git a/pyanaconda/installation.py b/pyanaconda/installation.py
+index a08c6b1be..4174c3df4 100644
+--- a/pyanaconda/installation.py
++++ b/pyanaconda/installation.py
+@@ -267,10 +267,6 @@ def _prepare_installation(payload, ksdata):
+     early_storage = TaskQueue("Early storage configuration", N_("Configuring storage"))
+     early_storage.append_dbus_tasks(STORAGE, storage_proxy.InstallWithTasks())
+ 
+-    if payload.type == PAYLOAD_TYPE_DNF:
+-        conf_task = storage_proxy.WriteConfigurationWithTask()
+-        early_storage.append_dbus_tasks(STORAGE, [conf_task])
+-
+     installation_queue.append(early_storage)
+ 
+     # Run %pre-install scripts with the filesystem mounted and no packages
+@@ -307,12 +303,11 @@ def _prepare_installation(payload, ksdata):
+     payload_install.append(Task("Install the payload", payload.install))
+     installation_queue.append(payload_install)
+ 
+-    # for some payloads storage is configured after the payload is installed
+-    if payload.type != PAYLOAD_TYPE_DNF:
+-        late_storage = TaskQueue("Late storage configuration", N_("Configuring storage"))
+-        conf_task = storage_proxy.WriteConfigurationWithTask()
+-        late_storage.append_dbus_tasks(STORAGE, [conf_task])
+-        installation_queue.append(late_storage)
++    # Always write configuration at late storage
++    late_storage = TaskQueue("Late storage configuration", N_("Configuring storage"))
++    conf_task = storage_proxy.WriteConfigurationWithTask()
++    late_storage.append_dbus_tasks(STORAGE, [conf_task])
++    installation_queue.append(late_storage)
+ 
+     # Do bootloader.
+     bootloader_proxy = STORAGE.get_proxy(BOOTLOADER)
+-- 
+2.27.0
+

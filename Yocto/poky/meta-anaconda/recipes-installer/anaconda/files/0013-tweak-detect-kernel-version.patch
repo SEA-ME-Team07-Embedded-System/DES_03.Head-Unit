@@ -1,0 +1,78 @@
+From a6ea1bfa11c05082ee061ba1d766f79fbfc77938 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Tue, 25 Jun 2019 15:40:11 +0800
+Subject: [PATCH] tweak detect kernel version
+
+According kernel layout in oe-core, tweak the detection
+rather than using redhat's.
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Rebase for anaconda 34.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ .../modules/payloads/payload/live_os/utils.py       | 12 +++++++++---
+ pyanaconda/modules/storage/bootloader/utils.py      | 21 +++++++++++++--------
+ 2 files changed, 22 insertions(+), 11 deletions(-)
+
+diff --git a/pyanaconda/modules/payloads/payload/live_os/utils.py b/pyanaconda/modules/payloads/payload/live_os/utils.py
+index 9d1223801..33518723e 100644
+--- a/pyanaconda/modules/payloads/payload/live_os/utils.py
++++ b/pyanaconda/modules/payloads/payload/live_os/utils.py
+@@ -31,9 +31,15 @@ def get_kernel_version_list(root_path):
+     :param root_path: a path to the system root
+     :return: a list of kernel versions
+     """
+-    efi_dir = conf.bootloader.efi_dir
+-    files = glob.glob(root_path + "/boot/vmlinuz-*")
+-    files.extend(glob.glob(root_path + "/boot/efi/EFI/{}/vmlinuz-*".format(efi_dir)))
++    for kernel in ["vmlinux", "bzImage"]:
++        files = glob.glob(root_path + "/boot/%s-*" % kernel)
++        files.extend(glob.glob(root_path + "/boot/efi/EFI/%s/%s-*" %
++                                (conf.bootloader.efi_dir, kernel)))
++
++        versions = sorted((f.split("/")[-1][8:] for f in files if os.path.isfile(f)))
++        if versions:
++            log.info("kernel versions: %s", versions)
++            break
+ 
+     kernel_version_list = [
+         f.split("/")[-1][8:] for f in files
+diff --git a/pyanaconda/modules/storage/bootloader/utils.py b/pyanaconda/modules/storage/bootloader/utils.py
+index ec4239ecc..2fdf8b921 100644
+--- a/pyanaconda/modules/storage/bootloader/utils.py
++++ b/pyanaconda/modules/storage/bootloader/utils.py
+@@ -155,14 +155,19 @@ def _write_sysconfig_kernel(sysroot, storage):
+     log.debug("Writing to /etc/sysconfig/kernel.")
+ 
+     # get the name of the default kernel package based on the version
+-    kernel_basename = "vmlinuz-" + storage.bootloader.default.version
+-    kernel_file = "/boot/%s" % kernel_basename
+-    if not os.path.isfile(sysroot + kernel_file):
+-        efi_dir = conf.bootloader.efi_dir
+-        kernel_file = "/boot/efi/EFI/%s/%s" % (efi_dir, kernel_basename)
+-        if not os.path.isfile(sysroot + kernel_file):
+-            log.error("failed to recreate path to default kernel image")
+-            return
++    def _get_kernel_file(kernel_basename):
++        _kernel_file = "/boot/%s" % kernel_basename
++        if not os.path.isfile(sysroot + _kernel_file):
++            efi_dir = conf.bootloader.efi_dir
++            _kernel_file = "/boot/efi/EFI/%s/%s" % (efi_dir, kernel_basename)
++            if not os.path.isfile(sysroot + _kernel_file):
++                return None
++        return _kernel_file
++
++    kernel_file = _get_kernel_file("vmlinux") or _get_kernel_file("bzImage")
++    if kernel_file is None:
++        log.error("failed to recreate path to default kernel image")
++        return
+ 
+     try:
+         import rpm
+-- 
+2.7.4
+

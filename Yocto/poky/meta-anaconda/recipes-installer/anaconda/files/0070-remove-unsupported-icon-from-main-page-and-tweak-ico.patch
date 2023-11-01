@@ -1,0 +1,91 @@
+From cc5272a2946aa99d0442059581336c08d042bf8e Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Sat, 31 Aug 2019 13:20:26 +0800
+Subject: [PATCH] remove unsupported icon from main page and tweak icon layout
+
+Since the pages of Keyboard, Language Support, Network & Host Name
+is not supported, remove icons from main page
+
+Exchange column SYSTEM and column LOCALIZATION, then the icon will
+have enough space to layout correctly
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+
+Update context for anaconda 32.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+
+Rebase for anaconda 34.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+---
+ pyanaconda/ui/categories/localization.py     | 2 +-
+ pyanaconda/ui/categories/system.py           | 2 +-
+ pyanaconda/ui/gui/spokes/keyboard.py         | 2 ++
+ pyanaconda/ui/gui/spokes/language_support.py | 2 ++
+ pyanaconda/ui/gui/spokes/network.py          | 2 ++
+ 5 files changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/pyanaconda/ui/categories/localization.py b/pyanaconda/ui/categories/localization.py
+index 8aeddb3f8..a46eb162d 100644
+--- a/pyanaconda/ui/categories/localization.py
++++ b/pyanaconda/ui/categories/localization.py
+@@ -31,4 +31,4 @@ class LocalizationCategory(SpokeCategory):
+ 
+     @staticmethod
+     def get_sort_order():
+-        return 100
++        return 300
+diff --git a/pyanaconda/ui/categories/system.py b/pyanaconda/ui/categories/system.py
+index c8b9e9f3c..96a7f0953 100644
+--- a/pyanaconda/ui/categories/system.py
++++ b/pyanaconda/ui/categories/system.py
+@@ -31,4 +31,4 @@ class SystemCategory(SpokeCategory):
+ 
+     @staticmethod
+     def get_sort_order():
+-        return 300
++        return 100
+diff --git a/pyanaconda/ui/gui/spokes/keyboard.py b/pyanaconda/ui/gui/spokes/keyboard.py
+index 0071c3925..15d976b5d 100644
+--- a/pyanaconda/ui/gui/spokes/keyboard.py
++++ b/pyanaconda/ui/gui/spokes/keyboard.py
+@@ -294,6 +294,8 @@ class KeyboardSpoke(NormalSpoke):
+     @classmethod
+     def should_run(cls, environment, data):
+         """Should the spoke run?"""
++        return False
++
+         if not is_module_available(LOCALIZATION):
+             return False
+ 
+diff --git a/pyanaconda/ui/gui/spokes/language_support.py b/pyanaconda/ui/gui/spokes/language_support.py
+index d2f3edfa6..de9950a5b 100644
+--- a/pyanaconda/ui/gui/spokes/language_support.py
++++ b/pyanaconda/ui/gui/spokes/language_support.py
+@@ -66,6 +66,8 @@ class LangsupportSpoke(NormalSpoke, LangLocaleHandler):
+     @classmethod
+     def should_run(cls, environment, data):
+         """Should the spoke run?"""
++        return False
++
+         if not is_module_available(LOCALIZATION):
+             return False
+ 
+diff --git a/pyanaconda/ui/gui/spokes/network.py b/pyanaconda/ui/gui/spokes/network.py
+index 3cae5b448..1322bc515 100644
+--- a/pyanaconda/ui/gui/spokes/network.py
++++ b/pyanaconda/ui/gui/spokes/network.py
+@@ -1469,6 +1469,8 @@ class NetworkSpoke(FirstbootSpokeMixIn, NormalSpoke):
+     @classmethod
+     def should_run(cls, environment, data):
+         """Should the spoke run?"""
++        return False
++
+         if not FirstbootSpokeMixIn.should_run(environment, data):
+             return False
+ 
+-- 
+2.7.4

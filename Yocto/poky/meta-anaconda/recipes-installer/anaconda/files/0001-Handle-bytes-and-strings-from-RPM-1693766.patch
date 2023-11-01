@@ -1,0 +1,92 @@
+Upstream-Status: Backport
+
+Backport patch from upstream to fix runtime error. And update patch context
+accordingly.
+
+Signed-off-by: Kai Kang <kai.kang@windriver.com>
+
+From 1c45e7b3af8de8934e25b69b5f86cdbff6c96ffb Mon Sep 17 00:00:00 2001
+From: Vendula Poncova <vponcova@redhat.com>
+Date: Fri, 5 Apr 2019 13:53:27 +0200
+Subject: [PATCH] Handle bytes and strings from RPM (#1693766)
+
+RPM can return bytes or strings, so let's use the function
+decode_bytes that can handle both and always returns a string.
+
+Resolves: rhbz#1693766
+---
+ pyanaconda/bootloader/installation.py |  3 ++-
+ pyanaconda/core/util.py               | 17 +++++++++++++++++
+ pyanaconda/payload/__init__.py        |  4 ++--
+ 3 files changed, 21 insertions(+), 3 deletions(-)
+
+diff --git a/pyanaconda/bootloader/installation.py b/pyanaconda/bootloader/installation.py
+index c2c097f300..b68edb63ff 100644
+--- a/pyanaconda/bootloader/installation.py
++++ b/pyanaconda/bootloader/installation.py
+@@ -22,6 +22,7 @@ from pyanaconda.bootloader.base import BootLoaderError
+ from pyanaconda.bootloader.image import LinuxBootLoaderImage
+ from pyanaconda.core import util
+ from pyanaconda.core.configuration.anaconda import conf
++from pyanaconda.core.util import decode_bytes
+ from pyanaconda.errors import errorHandler, ERROR_RAISE
+ from pyanaconda.product import productName
+ 
+@@ -162,7 +163,7 @@ def _write_sysconfig_kernel(sysroot, storage):
+         log.error("failed to get package name for default kernel")
+         return
+ 
+-    kernel = h.name.decode()
++    kernel = decode_bytes(h.name)
+ 
+     if not os.path.isdir(util.getSysroot() + "/etc/sysconfig"):
+         os.mkdir(util.getSysroot() + "/etc/sysconfig", 755)
+diff --git a/pyanaconda/core/util.py b/pyanaconda/core/util.py
+index ae36f2175d..c9092d08e3 100644
+--- a/pyanaconda/core/util.py
++++ b/pyanaconda/core/util.py
+@@ -1483,3 +1483,20 @@ def synchronized(wrapped):
+         with self._lock:
+             return wrapped(self, *args, **kwargs)
+     return _wrapper
++
++
++def decode_bytes(data):
++    """Decode the given bytes.
++
++    Return the given string or a string decoded from the given bytes.
++
++    :param data: bytes or a string
++    :return: a string
++    """
++    if isinstance(data, str):
++        return data
++
++    if isinstance(data, bytes):
++        return data.decode('utf-8')
++
++    raise ValueError("Unsupported type '{}'.".format(type(data).__name__))
+diff --git a/pyanaconda/payload/__init__.py b/pyanaconda/payload/__init__.py
+index 6b3e5fff9f..1cf7ea82ed 100644
+--- a/pyanaconda/payload/__init__.py
++++ b/pyanaconda/payload/__init__.py
+@@ -36,7 +36,7 @@ from pyanaconda import isys
+ from pyanaconda.image import findFirstIsoImage
+ from pyanaconda.image import mountImage
+ from pyanaconda.image import opticalInstallMedia, verifyMedia, verify_valid_installtree
+-from pyanaconda.core.util import ProxyString, ProxyStringError
++from pyanaconda.core.util import ProxyString, ProxyStringError, decode_bytes
+ from pyanaconda.core.regexes import VERSION_DIGITS
+ from pyanaconda.payload.errors import PayloadError, PayloadSetupError, NoSuchGroup
+ from pyanaconda.payload import utils as payload_utils
+@@ -739,7 +739,7 @@ class PackagePayload(Payload, metaclass=ABCMeta):
+         mi.pattern('name', rpm.RPMMIRE_GLOB, 'kernel-image*')
+         for hdr in mi:
+             log.info("hdr.filenames %s" % hdr.filenames)
+-            unicode_fnames = (f.decode("utf-8") for f in hdr.filenames)
++            unicode_fnames = (decode_bytes(f) for f in hdr.filenames)
+             # Find all /boot/vmlinuz- files and strip off vmlinuz-
+             files.extend((f.split("/")[-1][8:] for f in unicode_fnames
+                          if(fnmatch(f, "/boot/*") or fnmatch(f, "/boot/efi/EFI/%s/*" % conf.bootloader.efi_dir))
+-- 
+2.25.1

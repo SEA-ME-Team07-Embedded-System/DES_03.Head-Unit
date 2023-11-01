@@ -1,0 +1,63 @@
+From f29cc09d8f84014694ca13d4d3e59ec237f65e24 Mon Sep 17 00:00:00 2001
+From: Hongxu Jia <hongxu.jia@windriver.com>
+Date: Mon, 24 Jun 2019 11:14:43 +0800
+Subject: [PATCH] do not build po and doc
+
+Upstream-Status: Inappropriate [oe specific]
+
+Signed-off-by: Hongxu Jia <hongxu.jia@windriver.com>
+---
+ Makefile.am         | 2 +-
+ configure.ac        | 2 --
+ widgets/Makefile.am | 2 +-
+ 3 files changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 6f580f4..5c505b4 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -19,7 +19,7 @@ include ./branch-config.mk
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-SUBDIRS = data docs dracut po pyanaconda scripts tests widgets utils
++SUBDIRS = data dracut pyanaconda scripts tests widgets utils
+ 
+ EXTRA_DIST = COPYING .coveragerc
+ 
+diff --git a/configure.ac b/configure.ac
+index c1af6e2..2321b62 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -117,7 +117,6 @@ AC_CONFIG_FILES([Makefile
+                  anaconda.spec
+                  data/Makefile
+                  data/command-stubs/Makefile
+-                 docs/Makefile
+                  dracut/Makefile
+                  data/conf.d/Makefile
+                  data/product.d/Makefile
+@@ -129,7 +128,6 @@ AC_CONFIG_FILES([Makefile
+                  data/dbus/Makefile
+                  data/window-manager/Makefile
+                  data/window-manager/config/Makefile
+-                 po/Makefile
+                  scripts/Makefile
+                  pyanaconda/Makefile
+                  pyanaconda/version.py
+diff --git a/widgets/Makefile.am b/widgets/Makefile.am
+index 6478ce8..222aeaa 100644
+--- a/widgets/Makefile.am
++++ b/widgets/Makefile.am
+@@ -19,7 +19,7 @@
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-SUBDIRS = src python glade doc
++SUBDIRS = src python glade
+ 
+ MAINTAINERCLEANFILES = Makefile.in aclocal.m4 config.guess config.h.in config.sub \
+ 	configure depcomp install-sh ltmain.sh missing py-compile \
+-- 
+2.7.4
+
