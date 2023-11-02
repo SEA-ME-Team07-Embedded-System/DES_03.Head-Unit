@@ -19,10 +19,6 @@ Window {
         id: valueSource
     }
 
-    DBusManager {
-        id: dbusHandler
-    }
-
     //center bar
     Rectangle{
         id: centerBar
@@ -32,6 +28,11 @@ Window {
             top: topBar.bottom
             bottom: parent.bottom
         }
+
+        DBusManager {
+            id: dbusHandler
+        }
+        
         StackLayout{
             id: centerStack
             anchors.fill: parent
