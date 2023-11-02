@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard
+CMAKE_SOURCE_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build
+CMAKE_BINARY_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Dashboard.dir/depend.make
@@ -75,112 +75,112 @@ Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp: ../src/images/arrow_grey.png
 Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp: ../src/images/fuel-icon.png
 Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp: ../src/fonts/DejaVuSans.ttf
 Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp: /usr/lib/qt5/bin/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for src/dashboard.qrc"
-	/usr/bin/cmake -E cmake_autorcc /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles/Dashboard_autogen.dir/AutoRcc_dashboard_UVLADIE3JM_Info.json 
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for src/dashboard.qrc"
+	/usr/bin/cmake -E cmake_autorcc /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard_autogen.dir/AutoRcc_dashboard_UVLADIE3JM_Info.json 
 
 CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.o: CMakeFiles/Dashboard.dir/flags.make
 CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.o: Dashboard_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/Dashboard_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/Dashboard_autogen/mocs_compilation.cpp
 
 CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/Dashboard_autogen/mocs_compilation.cpp > CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/Dashboard_autogen/mocs_compilation.cpp > CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/Dashboard_autogen/mocs_compilation.cpp -o CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/Dashboard_autogen/mocs_compilation.cpp -o CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/Dashboard.dir/src/main.cpp.o: CMakeFiles/Dashboard.dir/flags.make
 CMakeFiles/Dashboard.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Dashboard.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/src/main.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Dashboard.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/src/main.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/main.cpp
 
 CMakeFiles/Dashboard.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/src/main.cpp > CMakeFiles/Dashboard.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/main.cpp > CMakeFiles/Dashboard.dir/src/main.cpp.i
 
 CMakeFiles/Dashboard.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/src/main.cpp -o CMakeFiles/Dashboard.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/main.cpp -o CMakeFiles/Dashboard.dir/src/main.cpp.s
 
 CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.o: CMakeFiles/Dashboard.dir/flags.make
 CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.o: ../src/dbusmanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/src/dbusmanager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/dbusmanager.cpp
 
 CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/src/dbusmanager.cpp > CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/dbusmanager.cpp > CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.i
 
 CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/src/dbusmanager.cpp -o CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/dbusmanager.cpp -o CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.s
 
 CMakeFiles/Dashboard.dir/src/someipmanager.cpp.o: CMakeFiles/Dashboard.dir/flags.make
 CMakeFiles/Dashboard.dir/src/someipmanager.cpp.o: ../src/someipmanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Dashboard.dir/src/someipmanager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/src/someipmanager.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/src/someipmanager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Dashboard.dir/src/someipmanager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/src/someipmanager.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/someipmanager.cpp
 
 CMakeFiles/Dashboard.dir/src/someipmanager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/src/someipmanager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/src/someipmanager.cpp > CMakeFiles/Dashboard.dir/src/someipmanager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/someipmanager.cpp > CMakeFiles/Dashboard.dir/src/someipmanager.cpp.i
 
 CMakeFiles/Dashboard.dir/src/someipmanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/src/someipmanager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/src/someipmanager.cpp -o CMakeFiles/Dashboard.dir/src/someipmanager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/someipmanager.cpp -o CMakeFiles/Dashboard.dir/src/someipmanager.cpp.s
 
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o: CMakeFiles/Dashboard.dir/flags.make
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o: /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o: CMakeFiles/Dashboard.dir/flags.make
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o: /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp
 
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp > CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp > CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
 
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
 
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o: CMakeFiles/Dashboard.dir/flags.make
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o: /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o: CMakeFiles/Dashboard.dir/flags.make
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o: /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp
 
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp > CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp > CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i
 
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s
 
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o: CMakeFiles/Dashboard.dir/flags.make
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o: /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o: CMakeFiles/Dashboard.dir/flags.make
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o: /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp
 
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp > CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp > CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i
 
-CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s
+CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp -o CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s
 
 CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.o: CMakeFiles/Dashboard.dir/flags.make
 CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.o: Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.o -c /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp
 
 CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp > CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp > CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.i
 
 CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp -o CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp -o CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.s
 
 # Object files for target Dashboard
 Dashboard_OBJECTS = \
@@ -188,9 +188,9 @@ Dashboard_OBJECTS = \
 "CMakeFiles/Dashboard.dir/src/main.cpp.o" \
 "CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.o" \
 "CMakeFiles/Dashboard.dir/src/someipmanager.cpp.o" \
-"CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o" \
-"CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o" \
-"CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o" \
+"CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o" \
+"CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o" \
+"CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o" \
 "CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.o"
 
 # External object files for target Dashboard
@@ -200,9 +200,9 @@ Dashboard: CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/src/main.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/src/someipmanager.cpp.o
-Dashboard: CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
-Dashboard: CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o
-Dashboard: CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o
+Dashboard: CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
+Dashboard: CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o
+Dashboard: CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.o
 Dashboard: CMakeFiles/Dashboard.dir/build.make
 Dashboard: /usr/lib/x86_64-linux-gnu/libQt5DBus.so.5.12.8
@@ -215,7 +215,7 @@ Dashboard: /usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.12.8
 Dashboard: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
 Dashboard: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 Dashboard: CMakeFiles/Dashboard.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Dashboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Dashboard"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Dashboard.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -228,6 +228,6 @@ CMakeFiles/Dashboard.dir/clean:
 .PHONY : CMakeFiles/Dashboard.dir/clean
 
 CMakeFiles/Dashboard.dir/depend: Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp
-	cd /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles/Dashboard.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Dashboard.dir/depend
 

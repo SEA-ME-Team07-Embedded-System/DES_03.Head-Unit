@@ -11,6 +11,7 @@ Window {
     width: 1024
     height: 600
     visible: true
+    //visibility: Window.FullScreen
     title: qsTr("Head Unit")
     property color leftbutton_colors : "#383838"
 

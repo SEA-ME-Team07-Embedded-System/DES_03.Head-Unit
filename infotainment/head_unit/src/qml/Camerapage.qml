@@ -1,4 +1,5 @@
 import QtQuick 2.12
+import QtMultimedia 5.12
 
 Rectangle { // Main container
     color: "#dfe4ea"
@@ -10,13 +11,30 @@ Rectangle { // Main container
         height: parent.height
         color: "#dfe4ea"
 
-        Rectangle {
+        // Camera
+        Camera {
+            id: camera
+            imageProcessing.whiteBalanceMode: CameraImageProcessing.WhiteBalanceFlash
+        }
+
+        VideoOutput {
             id: cameraView
-            width: 640  // Set to the width of the camera
-            height: 480 // Set to the height of the camera
+            source: camera
+            width: 640
+            height: 480
+            scale: 0.65
             anchors.centerIn: parent
-            color: "black"
-            scale : 0.65
+            focus: visible
+            MouseArea {
+                anchors.fill: cameraView;
+                onClicked: {
+                    if (camera.active) {
+                        camera.stop() // This stops the camera if it's active
+                    } else {
+                        camera.start() // This starts the camera if it's not active
+                    }
+                }
+            }
         }
 
         Text {
@@ -45,7 +63,7 @@ Rectangle { // Main container
 
         Image {
             id: distanceAlertImage
-            
+
             anchors.top: carImage.top
             anchors.topMargin: 400
             anchors.horizontalCenter: parent.horizontalCenter

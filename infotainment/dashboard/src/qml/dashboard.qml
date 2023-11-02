@@ -13,6 +13,7 @@ Window {
     property int x_gap : 30
     id: root
     visible: true //"FullScreen"
+    visibility: Window.FullScreen
     width: 1280
     height: 400
     title: qsTr("Team07 dashboard")
