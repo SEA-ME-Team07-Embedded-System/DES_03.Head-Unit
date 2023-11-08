@@ -7,6 +7,7 @@
 int main() {
     
     // if can0 is down, set it up
+    //system(ifconfig can0 down);
     system("ip link show can0 | grep 'DOWN' && ip link set can0 up type can bitrate 125000");
 
     int s;
