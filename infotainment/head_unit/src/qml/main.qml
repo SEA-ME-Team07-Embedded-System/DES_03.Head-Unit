@@ -11,15 +11,12 @@ Window {
     width: 1024
     height: 600
     visible: true
+    //visibility: Window.FullScreen
     title: qsTr("Head Unit")
     property color leftbutton_colors : "#383838"
 
     ValueSource {
         id: valueSource
-    }
-
-    DBusManager {
-        id: dbusHandler
     }
 
     //center bar
@@ -31,6 +28,11 @@ Window {
             top: topBar.bottom
             bottom: parent.bottom
         }
+
+        DBusManager {
+            id: dbusHandler
+        }
+        
         StackLayout{
             id: centerStack
             anchors.fill: parent

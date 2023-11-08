@@ -47,8 +47,9 @@ CANSomeIPProxy::CANSomeIPProxy(
     const CommonAPI::SomeIP::Address &_address,
     const std::shared_ptr<CommonAPI::SomeIP::ProxyConnection> &_connection)
         : CommonAPI::SomeIP::Proxy(_address, _connection),
-          dis_(*this, CommonAPI::SomeIP::eventgroup_id_t(0x80f3), CommonAPI::SomeIP::event_id_t(0x80f3), CommonAPI::SomeIP::method_id_t(0xbba), true, CommonAPI::SomeIP::reliability_type_e::RT_RELIABLE, false, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr)),
-          rpm_(*this, CommonAPI::SomeIP::eventgroup_id_t(0x80f4), CommonAPI::SomeIP::event_id_t(0x80f4), CommonAPI::SomeIP::method_id_t(0xbbc), true, CommonAPI::SomeIP::reliability_type_e::RT_RELIABLE, false, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr))
+          fdis_(*this, CommonAPI::SomeIP::eventgroup_id_t(0x80f3), CommonAPI::SomeIP::event_id_t(0x80f3), CommonAPI::SomeIP::method_id_t(0xbba), true, CommonAPI::SomeIP::reliability_type_e::RT_RELIABLE, false, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr)),
+          rpm_(*this, CommonAPI::SomeIP::eventgroup_id_t(0x80f4), CommonAPI::SomeIP::event_id_t(0x80f4), CommonAPI::SomeIP::method_id_t(0xbbc), true, CommonAPI::SomeIP::reliability_type_e::RT_RELIABLE, false, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr)),
+          rdis_(*this, CommonAPI::SomeIP::eventgroup_id_t(0x80f5), CommonAPI::SomeIP::event_id_t(0x80f5), CommonAPI::SomeIP::method_id_t(0xbbe), true, CommonAPI::SomeIP::reliability_type_e::RT_RELIABLE, false, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr))
 {
 }
 
@@ -56,11 +57,14 @@ CANSomeIPProxy::~CANSomeIPProxy() {
     completed_.set_value();
 }
 
-CANSomeIPProxy::DisAttribute& CANSomeIPProxy::getDisAttribute() {
-    return dis_;
+CANSomeIPProxy::FdisAttribute& CANSomeIPProxy::getFdisAttribute() {
+    return fdis_;
 }
 CANSomeIPProxy::RpmAttribute& CANSomeIPProxy::getRpmAttribute() {
     return rpm_;
+}
+CANSomeIPProxy::RdisAttribute& CANSomeIPProxy::getRdisAttribute() {
+    return rdis_;
 }
 
 

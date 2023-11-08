@@ -54,17 +54,20 @@ public:
 
     virtual ~CANSomeIPProxy();
 
-    virtual DisAttribute& getDisAttribute();
+    virtual FdisAttribute& getFdisAttribute();
 
     virtual RpmAttribute& getRpmAttribute();
+
+    virtual RdisAttribute& getRdisAttribute();
 
     virtual void getOwnVersion(uint16_t &_major, uint16_t &_minor) const;
 
     virtual std::future<void> getCompletionFuture();
 
 private:
-    CommonAPI::SomeIP::ObservableAttribute<CommonAPI::SomeIP::ReadonlyAttribute<DisAttribute, CommonAPI::SomeIP::IntegerDeployment<uint8_t>>> dis_;
+    CommonAPI::SomeIP::ObservableAttribute<CommonAPI::SomeIP::ReadonlyAttribute<FdisAttribute, CommonAPI::SomeIP::IntegerDeployment<uint8_t>>> fdis_;
     CommonAPI::SomeIP::ObservableAttribute<CommonAPI::SomeIP::ReadonlyAttribute<RpmAttribute, CommonAPI::SomeIP::IntegerDeployment<uint8_t>>> rpm_;
+    CommonAPI::SomeIP::ObservableAttribute<CommonAPI::SomeIP::ReadonlyAttribute<RdisAttribute, CommonAPI::SomeIP::IntegerDeployment<uint8_t>>> rdis_;
 
     std::promise<void> completed_;
 };

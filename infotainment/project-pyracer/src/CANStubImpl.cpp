@@ -2,17 +2,26 @@
 #include "CANStubImpl.hpp"
 
 CANStubImpl::CANStubImpl() { 
-    _dis = 0;
+    _rdis = 0;
+    _fdis = 0;
     _rpm = 0;
 }
 
 CANStubImpl::~CANStubImpl() {}
 
-void CANStubImpl::disPublisher(const uint8_t  dis) {
-  if (_dis != dis) {
-    _dis = dis;
-    setDisAttribute(_dis);
-    std::cout <<  "New CAN Distance Data = " << int(_dis) << "!" << std::endl;
+void CANStubImpl::rdisPublisher(const uint8_t  rdis) {
+  if (_rdis != rdis) {
+    _rdis = rdis;
+    setRdisAttribute(_rdis);
+    std::cout <<  "New CAN Rear Distance Data = " << int(_rdis) << "!" << std::endl;
+  }
+}
+
+void CANStubImpl::fdisPublisher(const uint8_t  fdis) {
+  if (_fdis != fdis) {
+    _fdis = fdis;
+    setFdisAttribute(_fdis);
+    std::cout <<  "New CAN Front Distance Data = " << int(_fdis) << "!" << std::endl;
   }
 }
 
