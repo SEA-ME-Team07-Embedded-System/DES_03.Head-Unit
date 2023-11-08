@@ -1,7 +1,7 @@
 #include "someipmanager.h"
 
 SomeIPManager::SomeIPManager(QObject *parent)
-    : QObject{parent}, m_rpm(0), m_dis(0), m_odo(0), m_latitude(0), m_longitude(0)
+    : QObject{parent}, m_rpm(0), m_fdis(0), m_rdis(0), m_odo(0), m_latitude(0), m_longitude(0)
 {
     std::cout << "can client initialize" << std::endl;
     qRegisterMetaType<uint8_t>("uint8_t");
@@ -24,16 +24,28 @@ void SomeIPManager::setRpm(uint8_t newRpm)
     //std::cout << "setRpm: " << int(m_rpm) << std::endl;
 }
 
-uint8_t SomeIPManager::dis() const
+uint8_t SomeIPManager::fdis() const
 {
-    return m_dis;
+    return m_fdis;
 }
 
-void SomeIPManager::setDis(uint8_t newDis)
+uint8_t SomeIPManager::rdis() const
 {
-    m_dis = newDis;
-    emit disChanged(m_rpm);
-    //std::cout << "setDis: " << int(m_dis) << std::endl;
+    return m_rdis;
+}
+
+void SomeIPManager::setFDis(uint8_t newFDis)
+{
+    m_fdis = newFDis;
+    emit fdisChanged(m_fdis);
+    //std::cout << "setFDis: " << int(m_fdis) << std::endl;
+}
+
+void SomeIPManager::setRDis(uint8_t newRDis)
+{
+    m_rdis = newRDis;
+    emit rdisChanged(m_rdis);
+    //std::cout << "setRDis: " << int(m_rdis) << std::endl;
 }
 
 void SomeIPManager::initVsomeipClient()
@@ -52,7 +64,7 @@ void SomeIPManager::initVsomeipClient()
     }
 }
 
-void SomeIPManager::startSubscribeDis()
+void SomeIPManager::startSubscribeRPM()
 {
     proxy->getRpmAttribute().getChangedEvent().subscribe([&](const uint8_t& rpm) {
         setRpm(rpm);
@@ -64,11 +76,19 @@ void SomeIPManager::startSubscribeDis()
     });
 }
 
-void SomeIPManager::startSubscribeRPM()
+void SomeIPManager::startSubscribeRDis()
 {
-    proxy->getDisAttribute().getChangedEvent().subscribe([&](const uint8_t& dis) {
-        setDis(dis);
-        //std::cout << "Received change Distance message: " << int(dis) << std::endl;
+    proxy->getRdisAttribute().getChangedEvent().subscribe([&](const uint8_t& rdis) {
+        setRDis(rdis);
+        //std::cout << "Received change Rear Distance message: " << int(dis) << std::endl;
+    });
+}
+
+void SomeIPManager::startSubscribeFDis()
+{
+    proxy->getFdisAttribute().getChangedEvent().subscribe([&](const uint8_t& fdis) {
+        setFDis(fdis);
+        //std::cout << "Received change Front Distance message: " << int(dis) << std::endl;
     });
 }
 

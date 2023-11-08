@@ -46,19 +46,21 @@ class CANStubAdapter
     : public virtual CommonAPI::StubAdapter,
       public virtual CAN {
  public:
-    ///Notifies all remote listeners about a change of value of the attribute dis.
-    virtual void fireDisAttributeChanged(const uint8_t &dis) = 0;
+    ///Notifies all remote listeners about a change of value of the attribute fdis.
+    virtual void fireFdisAttributeChanged(const uint8_t &fdis) = 0;
     ///Notifies all remote listeners about a change of value of the attribute rpm.
     virtual void fireRpmAttributeChanged(const uint8_t &rpm) = 0;
+    ///Notifies all remote listeners about a change of value of the attribute rdis.
+    virtual void fireRdisAttributeChanged(const uint8_t &rdis) = 0;
 
 
     virtual void deactivateManagedInstances() = 0;
 
-    void lockDisAttribute(bool _lockAccess) {
+    void lockFdisAttribute(bool _lockAccess) {
         if (_lockAccess) {
-            disMutex_.lock();
+            fdisMutex_.lock();
         } else {
-            disMutex_.unlock();
+            fdisMutex_.unlock();
         }
     }
     void lockRpmAttribute(bool _lockAccess) {
@@ -68,14 +70,22 @@ class CANStubAdapter
             rpmMutex_.unlock();
         }
     }
+    void lockRdisAttribute(bool _lockAccess) {
+        if (_lockAccess) {
+            rdisMutex_.lock();
+        } else {
+            rdisMutex_.unlock();
+        }
+    }
 
 protected:
     /**
      * Defines properties for storing the ClientIds of clients / proxies that have
      * subscribed to the selective broadcasts
      */
-    std::recursive_mutex disMutex_;
+    std::recursive_mutex fdisMutex_;
     std::recursive_mutex rpmMutex_;
+    std::recursive_mutex rdisMutex_;
 
 };
 
@@ -112,22 +122,22 @@ public:
     virtual ~CANStub() {}
     void lockInterfaceVersionAttribute(bool _lockAccess) { static_cast<void>(_lockAccess); }
     bool hasElement(const uint32_t _id) const {
-        return (_id < 2);
+        return (_id < 3);
     }
     virtual const CommonAPI::Version& getInterfaceVersion(std::shared_ptr<CommonAPI::ClientId> _client) = 0;
 
-    /// Provides getter access to the attribute dis
-    virtual const uint8_t &getDisAttribute(const std::shared_ptr<CommonAPI::ClientId> _client) = 0;
+    /// Provides getter access to the attribute fdis
+    virtual const uint8_t &getFdisAttribute(const std::shared_ptr<CommonAPI::ClientId> _client) = 0;
     /// sets attribute with the given value and propagates it to the adapter
-    virtual void fireDisAttributeChanged(uint8_t _value) {
+    virtual void fireFdisAttributeChanged(uint8_t _value) {
     auto stubAdapter = CommonAPI::Stub<CANStubAdapter, CANStubRemoteEvent>::stubAdapter_.lock();
     if (stubAdapter)
-        stubAdapter->fireDisAttributeChanged(_value);
+        stubAdapter->fireFdisAttributeChanged(_value);
     }
-    void lockDisAttribute(bool _lockAccess) {
+    void lockFdisAttribute(bool _lockAccess) {
         auto stubAdapter = CommonAPI::Stub<CANStubAdapter, CANStubRemoteEvent>::stubAdapter_.lock();
         if (stubAdapter)
-            stubAdapter->lockDisAttribute(_lockAccess);
+            stubAdapter->lockFdisAttribute(_lockAccess);
     }
     /// Provides getter access to the attribute rpm
     virtual const uint8_t &getRpmAttribute(const std::shared_ptr<CommonAPI::ClientId> _client) = 0;
@@ -141,6 +151,19 @@ public:
         auto stubAdapter = CommonAPI::Stub<CANStubAdapter, CANStubRemoteEvent>::stubAdapter_.lock();
         if (stubAdapter)
             stubAdapter->lockRpmAttribute(_lockAccess);
+    }
+    /// Provides getter access to the attribute rdis
+    virtual const uint8_t &getRdisAttribute(const std::shared_ptr<CommonAPI::ClientId> _client) = 0;
+    /// sets attribute with the given value and propagates it to the adapter
+    virtual void fireRdisAttributeChanged(uint8_t _value) {
+    auto stubAdapter = CommonAPI::Stub<CANStubAdapter, CANStubRemoteEvent>::stubAdapter_.lock();
+    if (stubAdapter)
+        stubAdapter->fireRdisAttributeChanged(_value);
+    }
+    void lockRdisAttribute(bool _lockAccess) {
+        auto stubAdapter = CommonAPI::Stub<CANStubAdapter, CANStubRemoteEvent>::stubAdapter_.lock();
+        if (stubAdapter)
+            stubAdapter->lockRdisAttribute(_lockAccess);
     }
 
 

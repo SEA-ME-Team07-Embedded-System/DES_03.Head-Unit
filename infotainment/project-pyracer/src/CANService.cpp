@@ -1,14 +1,10 @@
 #include <thread>
-#include <cstdlib>
 #include <CommonAPI/CommonAPI.hpp>
 #include "CANStubImpl.hpp"
 #define CAN_ID 0x36
 
 int main() {
     
-    // if can0 is down, set it up
-    system("ip link show can0 | grep 'DOWN' && ip link set can0 up type can bitrate 125000");
-
     int s;
     int nbytes;
     struct sockaddr_can addr;
@@ -16,7 +12,7 @@ int main() {
     struct can_frame frame;
 
     s = socket(PF_CAN, SOCK_RAW, CAN_RAW);
-    strcpy(ifr.ifr_name, "can0");
+    strcpy(ifr.ifr_name, "vcan0");
     ioctl(s, SIOCGIFINDEX, &ifr);
 
     addr.can_family = AF_CAN;
@@ -45,7 +41,8 @@ int main() {
         nbytes = read(s, &frame, sizeof(struct can_frame));
         if (nbytes > 0) {
             junhoService->rpmPublisher(frame.data[0]);
-            junhoService->disPublisher(frame.data[1]);
+            junhoService->rdisPublisher(frame.data[1]);
+            junhoService->fdisPublisher(frame.data[2]);
         }
 
         for (int i = 0; i <= frame.can_dlc; i++)

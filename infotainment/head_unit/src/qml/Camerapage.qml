@@ -61,18 +61,38 @@ Rectangle { // Main container
             scale: 0.5
         }
 
+
         Image {
-            id: distanceAlertImage
+            id: fdistanceAlertImage
+
+            anchors.top: carImage.top
+            anchors.horizontalCenter: parent.horizontalCenter
+            source: {
+                if (valueSource.f_dis <= 10) {
+                    return "qrc:/image/fdistance_alert_1.png";
+                } else if (valueSource.f_dis <= 20) {
+                    return "qrc:/image/fdistance_alert_2.png";
+                } else if (valueSource.f_dis <= 30) {
+                    return "qrc:/image/fdistance_alert_3.png";
+                } else {
+                    return "qrc:/image/fdistance_alert_4.png";
+                }
+            }
+            scale: 0.5
+        }
+
+        Image {
+            id: rdistanceAlertImage
 
             anchors.top: carImage.top
             anchors.topMargin: 400
             anchors.horizontalCenter: parent.horizontalCenter
             source: {
-                if (valueSource.temperature <= 10) {
+                if (valueSource.r_dis <= 10) {
                     return "qrc:/image/distance_alert_1.png";
-                } else if (valueSource.temperature <= 20) {
+                } else if (valueSource.r_dis <= 20) {
                     return "qrc:/image/distance_alert_2.png";
-                } else if (valueSource.temperature <= 30) {
+                } else if (valueSource.r_dis <= 30) {
                     return "qrc:/image/distance_alert_3.png";
                 } else {
                     return "qrc:/image/distance_alert_4.png";
@@ -83,7 +103,7 @@ Rectangle { // Main container
 
         Text {
             anchors.bottom: parent.bottom
-            text: "Distance : " + valueSource.temperature + "cm"
+            text: "Distance : " + valueSource.r_dis + "cm"
             font.pixelSize: 20
         }
     }

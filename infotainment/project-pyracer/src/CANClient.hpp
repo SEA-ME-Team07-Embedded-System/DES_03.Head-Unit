@@ -21,7 +21,8 @@ public:
   // CommonAPI vSomeIP func()
   void initVsomeipClient();
 
-  void startSubscribeDis();
+  void startSubscribeRDis();
+  void startSubscribeFDis();
   void startSubscribeRPM();
 
 private:
@@ -30,7 +31,8 @@ private:
   std::shared_ptr<CANProxy<>> proxy;
   CommonAPI::CallStatus callStatus;
 
-  uint8_t _dis;
+  uint8_t _rdis;
+  uint8_t _fdis;
   uint8_t _rpm;
 };
 

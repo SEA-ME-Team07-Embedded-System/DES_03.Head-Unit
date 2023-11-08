@@ -7,7 +7,6 @@
 #include <QCoreApplication>
 #include <QtDBus/QDBusConnection>
 #include <QtDBus/QDBusInterface>
-#include <QtWebEngine/QtWebEngine>
 
 
 
@@ -19,7 +18,6 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
     QGuiApplication app(argc, argv);
-    QtWebEngine::initialize();
 
     //DBus
     qmlRegisterType<DBusManager>("com.example", 1, 0, "DBusManager");
@@ -29,7 +27,8 @@ int main(int argc, char *argv[])
     SomeIPManager someipManager;
     someipManager.initVsomeipClient();
     someipManager.startSubscribeRPM();
-    someipManager.startSubscribeDis();
+    someipManager.startSubscribeFDis();
+    someipManager.startSubscribeRDis();
     qmlRegisterType<SomeIPManager>("someip", 1, 0, "SomeIPManager");
 
     QQmlApplicationEngine engine;

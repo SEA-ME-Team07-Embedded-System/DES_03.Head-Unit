@@ -34,12 +34,14 @@ namespace commonapi {
 class CANProxyBase
     : virtual public CommonAPI::Proxy {
 public:
-    typedef CommonAPI::ObservableReadonlyAttribute<uint8_t> DisAttribute;
+    typedef CommonAPI::ObservableReadonlyAttribute<uint8_t> FdisAttribute;
     typedef CommonAPI::ObservableReadonlyAttribute<uint8_t> RpmAttribute;
+    typedef CommonAPI::ObservableReadonlyAttribute<uint8_t> RdisAttribute;
 
 
-    virtual DisAttribute& getDisAttribute() = 0;
+    virtual FdisAttribute& getFdisAttribute() = 0;
     virtual RpmAttribute& getRpmAttribute() = 0;
+    virtual RdisAttribute& getRdisAttribute() = 0;
 
     virtual std::future<void> getCompletionFuture() = 0;
 };
