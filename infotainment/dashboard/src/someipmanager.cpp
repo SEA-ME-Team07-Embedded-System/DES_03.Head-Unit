@@ -58,10 +58,10 @@ void SomeIPManager::initVsomeipClient()
         return;
     }
 
-    std::cout << "Checking availability!" << std::endl;
-    while (!proxy->isAvailable()){
-        std::this_thread::sleep_for(std::chrono::microseconds(10));
-    }
+    // std::cout << "Checking availability!" << std::endl;
+    // while (!proxy->isAvailable()){
+    //     std::this_thread::sleep_for(std::chrono::microseconds(10));
+    // }
 }
 
 void SomeIPManager::startSubscribeRPM()

@@ -1,10 +1,13 @@
 #include <thread>
 #include <CommonAPI/CommonAPI.hpp>
 #include "CANStubImpl.hpp"
-#define CAN_ID 0x36
+#define RCAN_ID 0x36
+#define FCAN_ID 0x63
 
 int main() {
-    
+
+    system("ip link set can0 up type can bitrate 125000");
+
     int s;
     int nbytes;
     struct sockaddr_can addr;
@@ -39,9 +42,13 @@ int main() {
 
     while (true) {
         nbytes = read(s, &frame, sizeof(struct can_frame));
-        if (nbytes > 0) {
+
+        if (nbytes > 0 && frame.can_id == RCAN_ID) {
             junhoService->rpmPublisher(frame.data[0]);
             junhoService->rdisPublisher(frame.data[1]);
+        }
+         
+        if (nbytes > 0 && frame.can_id == FCAN_ID) {
             junhoService->fdisPublisher(frame.data[2]);
         }
 
