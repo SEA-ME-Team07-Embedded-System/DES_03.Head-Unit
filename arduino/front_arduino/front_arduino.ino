@@ -18,6 +18,8 @@ int ultrasonic() {
   int distance_cm = duration * 0.0343 / 2;
   Serial.print("Distance :");
   Serial.println(distance_cm);
+
+  
   
   return distance_cm;
 }
@@ -41,9 +43,6 @@ void setup()
   pinMode(TRIG_PIN, OUTPUT); //Ultra sonic
   pinMode(ECHO_PIN, INPUT); //Ultra sonic
 
-  SPI.begin();               //Begins SPI communication
-  attachInterrupt(digitalPinToInterrupt(3), Pulse_Event, RISING);
-
   mcp2515.reset();
   mcp2515.setBitrate(CAN_125KBPS, MCP_8MHZ); //Sets CAN at speed 125KBPS
   mcp2515.setNormalMode();
@@ -53,6 +52,7 @@ void setup()
   delay(1000);
 }
 void loop() {
+
   //ultra sonic
   int d = ultrasonic();
 
