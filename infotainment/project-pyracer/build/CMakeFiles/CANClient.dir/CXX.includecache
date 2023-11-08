@@ -44,21 +44,21 @@ CommonAPI/SomeIP/Attribute.hpp
 string
 -
 
-/home/seame-workstation05/Desktop/DES03_HeadUnit/someip/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp
+/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp
 v1/commonapi/CANSomeIPDeployment.hpp
 -
 
-/home/seame-workstation05/Desktop/DES03_HeadUnit/someip/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp
+/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp
 v1/commonapi/CANSomeIPProxy.hpp
 -
 CommonAPI/SomeIP/AddressTranslator.hpp
 -
 
-/home/seame-workstation05/Desktop/DES03_HeadUnit/someip/project-pyracer/src/CANClient.cpp
+/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src/CANClient.cpp
 CANClient.hpp
-/home/seame-workstation05/Desktop/DES03_HeadUnit/someip/project-pyracer/src/CANClient.hpp
+/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src/CANClient.hpp
 
-/home/seame-workstation05/Desktop/DES03_HeadUnit/someip/project-pyracer/src/CANClient.hpp
+/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src/CANClient.hpp
 iostream
 -
 string

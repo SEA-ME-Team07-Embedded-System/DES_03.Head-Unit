@@ -39,17 +39,20 @@ class dbusService(object):
             throttle = gamepad_input.analog_stick_right.y * self.mode
             steering = -gamepad_input.analog_stick_left.x
             #print(f'mode={self.mode}, gear={self.gear}')
-            print(f'throttle={throttle}, steering={steering}')
+            # throttle > 0 : forward, steering > 0 : left
+            #print(f'throttle={throttle}, steering={steering}')
 
             # P R N D = 0 1 2 3
-            if throttle == 0: # Park
-                if steering:
+            if throttle == 0: 
+                if steering > 0 or steering < 0:
                     self.gear = 2 # Neutral
-                self.gear = 0
-            elif throttle < 0: # Rear
-                self.gear = 1
-            elif throttle > 0: # Drive
-                self.gear = 3
+                else:
+                    self.gear = 0 # Park
+            elif throttle < 0: 
+                self.gear = 1 # Rear
+            elif throttle > 0: 
+                self.gear = 3 # Drive
+                
             
             # Gear Select
             if gamepad_input.button_y + gamepad_input.button_x + gamepad_input.button_a + gamepad_input.button_b == 1:
