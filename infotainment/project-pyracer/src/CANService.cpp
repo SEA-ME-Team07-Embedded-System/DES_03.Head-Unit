@@ -1,7 +1,8 @@
 #include <thread>
 #include <CommonAPI/CommonAPI.hpp>
 #include "CANStubImpl.hpp"
-#define CAN_ID 0x36
+#define RCAN_ID 0x36
+#define FCAN_ID 0x63
 
 int main() {
 
@@ -41,9 +42,13 @@ int main() {
 
     while (true) {
         nbytes = read(s, &frame, sizeof(struct can_frame));
-        if (nbytes > 0) {
+
+        if (nbytes > 0 && frame.can_id == RCAN_ID) {
             junhoService->rpmPublisher(frame.data[0]);
             junhoService->rdisPublisher(frame.data[1]);
+        }
+         
+        if (nbytes > 0 && frame.can_id == FCAN_ID) {
             junhoService->fdisPublisher(frame.data[2]);
         }
 

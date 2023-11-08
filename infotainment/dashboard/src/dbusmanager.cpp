@@ -27,11 +27,11 @@ DBusManager::DBusManager(QObject* parent) : QObject(parent),
     //connect to dbus
     m_interface = new QDBusInterface("com.example.dbusService", "/com/example/dbusService", "com.example.dbusService");
 
-    //check if dbus is valid
-    if(!m_interface->isValid()){
-        qDebug() << "Interface not valid: " << qPrintable(m_interface->lastError().message());
-        exit(1);
-    }
+    // //check if dbus is valid
+    // if(!m_interface->isValid()){
+    //     qDebug() << "Interface not valid: " << qPrintable(m_interface->lastError().message());
+    //     exit(1);
+    // }
 
 }
 
@@ -45,12 +45,12 @@ void DBusManager::fetchData() {
 
 
     // check if the call was successful
-    if(mode.type() == QDBusMessage::ErrorMessage || gear.type() == QDBusMessage::ErrorMessage || battery.type() == QDBusMessage::ErrorMessage ) {
-        qDebug() << "Error: " << qPrintable(battery.errorMessage());
-        qDebug() << "Error: " << qPrintable(gear.errorMessage());
-        qDebug() << "Error: " << qPrintable(mode.errorMessage());
-        exit(1);
-    }
+    // if(mode.type() == QDBusMessage::ErrorMessage || gear.type() == QDBusMessage::ErrorMessage || battery.type() == QDBusMessage::ErrorMessage ) {
+    //     qDebug() << "Error: " << qPrintable(battery.errorMessage());
+    //     qDebug() << "Error: " << qPrintable(gear.errorMessage());
+    //     qDebug() << "Error: " << qPrintable(mode.errorMessage());
+    //     exit(1);
+    // }
 
     //calculate raw data
     m_battery = battery.arguments().at(0).toInt();
