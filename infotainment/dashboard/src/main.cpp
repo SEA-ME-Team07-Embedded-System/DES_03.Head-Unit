@@ -22,7 +22,8 @@ int main(int argc, char *argv[])
     SomeIPManager someipManager;
     someipManager.initVsomeipClient();
     someipManager.startSubscribeRPM();
-    someipManager.startSubscribeDis();
+    someipManager.startSubscribeFDis();
+    someipManager.startSubscribeRDis();
     qmlRegisterType<SomeIPManager>("someip", 1, 0, "SomeIPManager");
 
     QFontDatabase::addApplicationFont(":/fonts/DejaVuSans.ttf");

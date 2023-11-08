@@ -7,7 +7,8 @@ Item {
     property real kph: 0 //speed(cm/s)
     property real rpm: 0 //piracer wheel rpm
     property real fuel: 0 //battery
-    property real temperature: 0 //distance
+    property real f_dis: 0 //distance
+    property real r_dis: 0
     property real odo: 0
     property real travelableDis:0
     property real lati:52.424455
@@ -22,8 +23,11 @@ Item {
             valueSource.kph = Math.round(rpm * 0.35); // Update kph property when speed changes
             valueSource.rpm = rpm;
         }
-        onDisChanged: {
-            valueSource.temperature = dis; // Update kph property when speed changes
+        onFdisChanged: {
+            valueSource.f_dis = fdis; // Update kph property when speed changes
+        }
+        onRdisChanged: {
+            valueSource.r_dis = rdis; // Update kph property when speed changes
         }
         onOdoChanged: {
             //console.log("onOdoChanged")

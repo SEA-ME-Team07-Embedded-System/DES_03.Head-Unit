@@ -96,28 +96,6 @@ UVLADIE3JM/moc_dbusmanager.cpp
 UVLADIE3JM/moc_someipmanager.cpp
 /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/Dashboard_autogen/UVLADIE3JM/moc_someipmanager.cpp
 
-/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/dbusmanager.cpp
-dbusmanager.h
-/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/dbusmanager.h
-QObject
--
-QDebug
--
-QTimer
--
-QString
--
-QQmlEngine
--
-QtDBus/QDBusInterface
--
-QtDBus/QDBusConnection
--
-QtDBus/QDBusMessage
--
-QtDBus/QDBusPendingCall
--
-
 /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/dbusmanager.h
 QObject
 -
@@ -1040,21 +1018,9 @@ vsomeip/trace.hpp
 qcoreapplication.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
-qdebug.h
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
 qobject.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QString
-qstring.h
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
-qtimer.h
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 QtCore/qglobal.h
@@ -1096,12 +1062,6 @@ QtCore/qatomic_bootstrap.h
 QtCore/qatomic_cxx11.h
 -
 QtCore/qatomic_msvc.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
-QtCore/qglobal.h
--
-QtCore/qnamespace.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
@@ -1628,16 +1588,6 @@ QtCore/qscopedpointer.h
 stdio.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h
-QtCore/qglobal.h
--
-QtCore/qbasictimer.h
--
-QtCore/qobject.h
--
-chrono
--
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
 QtCore/qglobal.h
 -
@@ -1752,14 +1702,6 @@ qdbusconnection.h
 qdbusinterface.h
 /usr/include/x86_64-linux-gnu/qt5/QtDBus/qdbusinterface.h
 
-/usr/include/x86_64-linux-gnu/qt5/QtDBus/QDBusMessage
-qdbusmessage.h
-/usr/include/x86_64-linux-gnu/qt5/QtDBus/qdbusmessage.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtDBus/QDBusPendingCall
-qdbuspendingcall.h
-/usr/include/x86_64-linux-gnu/qt5/QtDBus/qdbuspendingcall.h
-
 /usr/include/x86_64-linux-gnu/qt5/QtDBus/qdbusabstractinterface.h
 QtDBus/qtdbusglobal.h
 -
@@ -1820,16 +1762,6 @@ QtDBus/qdbuserror.h
 QtCore/qlist.h
 -
 QtCore/qvariant.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtDBus/qdbuspendingcall.h
-QtDBus/qtdbusglobal.h
--
-QtDBus/qdbusmessage.h
--
-QtCore/qobject.h
--
-QtCore/qshareddata.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtDBus/qtdbusglobal.h
@@ -1939,10 +1871,6 @@ qqmlapplicationengine.h
 /usr/include/x86_64-linux-gnu/qt5/QtQml/QQmlContext
 qqmlcontext.h
 /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlcontext.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtQml/QQmlEngine
-qqmlengine.h
-/usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlengine.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtQml/qjsengine.h
 QtCore/qmetatype.h
