@@ -20,7 +20,8 @@ public:
     explicit SomeIPManager(QObject *parent = nullptr);
 
     Q_PROPERTY(uint8_t rpm READ rpm WRITE setRpm NOTIFY rpmChanged FINAL)
-    Q_PROPERTY(uint8_t dis READ dis WRITE setDis NOTIFY disChanged FINAL)
+    Q_PROPERTY(uint8_t dis READ fdis WRITE setFDis NOTIFY fdisChanged FINAL)
+    Q_PROPERTY(uint8_t dis READ rdis WRITE setRDis NOTIFY rdisChanged FINAL)
     Q_PROPERTY(uint8_t speed READ speed WRITE setSpeed NOTIFY speedChanged FINAL)
     Q_PROPERTY(qreal odo READ odo WRITE setOdo NOTIFY odoChanged FINAL)
     Q_PROPERTY(qreal latitude READ latitude WRITE setLatitude NOTIFY latitudeChanged FINAL)
@@ -29,7 +30,8 @@ public:
 
     //getter
     uint8_t rpm() const;
-    uint8_t dis() const;
+    uint8_t fdis() const;
+    uint8_t rdis() const;
     uint8_t speed() const;
     qreal odo() const;
     //    qreal travelableDis() const;
@@ -38,7 +40,8 @@ public:
 
     //setter
     void setRpm(uint8_t newRpm);
-    void setDis(uint8_t newDis);
+    void setFDis(uint8_t newFDis);
+    void setRDis(uint8_t newRDis);
     void setSpeed(uint8_t newSpeed);
     void setOdo(qreal newOdo);
     void setLatitude(qreal newLatitude);
@@ -47,12 +50,14 @@ public:
 
     // CommonAPI vSomeIP func()
     void initVsomeipClient();
-    void startSubscribeDis();
+    void startSubscribeFDis();
+    void startSubscribeRDis();
     void startSubscribeRPM();
 
 signals:
     void rpmChanged(uint8_t rpm);
-    void disChanged(uint8_t dis);
+    void fdisChanged(uint8_t fdis);
+    void rdisChanged(uint8_t rdis);
     void speedChanged(uint8_t speed);
     void odoChanged(qreal odo);
     void latitudeChanged(qreal latitude);
@@ -65,7 +70,8 @@ private:
     CommonAPI::CallStatus callStatus;
 
     uint8_t m_rpm;
-    uint8_t m_dis;
+    uint8_t m_fdis;
+    uint8_t m_rdis;
     uint8_t m_speed;
     qreal m_odo;
     qreal m_latitude;

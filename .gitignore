@@ -1,1 +1,4 @@
-/.vscode
+tmp/
+cache/
+downloads/
+sstate-cache/

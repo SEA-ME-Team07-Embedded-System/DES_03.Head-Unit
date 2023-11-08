@@ -3,7 +3,8 @@
 
 CANClient::CANClient() {
 	_rpm = 0;
-	_dis = 0;
+	_rdis = 0;
+	_fdis = 0;
 	std::cout << "success init can client" << std::endl;
 }
 
@@ -32,15 +33,28 @@ void CANClient::startSubscribeRPM() {
 	}
 }
 
-void CANClient::startSubscribeDis() {
-	proxy->getDisAttribute().getValue(callStatus, _dis);
+void CANClient::startSubscribeRDis() { 
+	proxy->getRdisAttribute().getValue(callStatus, _rdis);
 	if (callStatus != CommonAPI::CallStatus::SUCCESS) {
-        std::cout << "Error to get attribute Distance value: " << std::endl;
+        std::cout << "Error to get attribute Rear Distance value: " << std::endl;
     }
     else {
-		std::cout << "Got attribute Distance value: " << int(_dis) << std::endl;
-		proxy->getDisAttribute().getChangedEvent().subscribe([&](const uint8_t& dis) {
-			std::cout << "Received change Distance message: " << int(dis) << std::endl;
+		std::cout << "Got attribute Rear Distance value: " << int(_rdis) << std::endl;
+		proxy->getRdisAttribute().getChangedEvent().subscribe([&](const uint8_t& rdis) {
+			std::cout << "Received change Rear Distance message: " << int(rdis) << std::endl;
+		});
+	}
+}
+
+void CANClient::startSubscribeFDis() {
+	proxy->getFdisAttribute().getValue(callStatus, _fdis);
+	if (callStatus != CommonAPI::CallStatus::SUCCESS) {
+        std::cout << "Error to get attribute Front Distance value: " << std::endl;
+    }
+    else {
+		std::cout << "Got attribute Front Distance value: " << int(_fdis) << std::endl;
+		proxy->getFdisAttribute().getChangedEvent().subscribe([&](const uint8_t& fdis) {
+			std::cout << "Received change Front Distance message: " << int(fdis) << std::endl;
 		});
 	}
 }
@@ -50,7 +64,8 @@ int main() {
 	CANClient canClient;
 	canClient.initVsomeipClient();
 
-	canClient.startSubscribeDis();
+	canClient.startSubscribeRDis();
+	canClient.startSubscribeFDis();
 	canClient.startSubscribeRPM();
 
 	while (true) {

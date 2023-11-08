@@ -41,7 +41,8 @@ int main() {
         nbytes = read(s, &frame, sizeof(struct can_frame));
         if (nbytes > 0) {
             junhoService->rpmPublisher(frame.data[0]);
-            junhoService->disPublisher(frame.data[1]);
+            junhoService->rdisPublisher(frame.data[1]);
+            junhoService->fdisPublisher(frame.data[2]);
         }
 
         for (int i = 0; i <= frame.can_dlc; i++)
