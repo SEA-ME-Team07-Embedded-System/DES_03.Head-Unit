@@ -71,16 +71,22 @@ public:
     virtual std::future<void> getCompletionFuture();
 
     /**
-     * Returns the wrapper class that provides access to the attribute dis.
+     * Returns the wrapper class that provides access to the attribute fdis.
      */
-    virtual DisAttribute& getDisAttribute() {
-        return delegate_->getDisAttribute();
+    virtual FdisAttribute& getFdisAttribute() {
+        return delegate_->getFdisAttribute();
     }
     /**
      * Returns the wrapper class that provides access to the attribute rpm.
      */
     virtual RpmAttribute& getRpmAttribute() {
         return delegate_->getRpmAttribute();
+    }
+    /**
+     * Returns the wrapper class that provides access to the attribute rdis.
+     */
+    virtual RdisAttribute& getRdisAttribute() {
+        return delegate_->getRdisAttribute();
     }
 
 
@@ -93,17 +99,17 @@ typedef CANProxy<> CANProxyDefault;
 
 namespace CANExtensions {
     template <template <typename > class _ExtensionType>
-    class DisAttributeExtension {
+    class FdisAttributeExtension {
      public:
-        typedef _ExtensionType< CANProxyBase::DisAttribute> extension_type;
+        typedef _ExtensionType< CANProxyBase::FdisAttribute> extension_type;
     
-        static_assert(std::is_base_of<typename CommonAPI::AttributeExtension< CANProxyBase::DisAttribute>, extension_type>::value,
+        static_assert(std::is_base_of<typename CommonAPI::AttributeExtension< CANProxyBase::FdisAttribute>, extension_type>::value,
                       "Not CommonAPI Attribute Extension!");
     
-        DisAttributeExtension(CANProxyBase& proxy): attributeExtension_(proxy.getDisAttribute()) {
+        FdisAttributeExtension(CANProxyBase& proxy): attributeExtension_(proxy.getFdisAttribute()) {
         }
     
-        inline extension_type& getDisAttributeExtension() {
+        inline extension_type& getFdisAttributeExtension() {
             return attributeExtension_;
         }
     
@@ -123,6 +129,25 @@ namespace CANExtensions {
         }
     
         inline extension_type& getRpmAttributeExtension() {
+            return attributeExtension_;
+        }
+    
+     private:
+        extension_type attributeExtension_;
+    };
+
+    template <template <typename > class _ExtensionType>
+    class RdisAttributeExtension {
+     public:
+        typedef _ExtensionType< CANProxyBase::RdisAttribute> extension_type;
+    
+        static_assert(std::is_base_of<typename CommonAPI::AttributeExtension< CANProxyBase::RdisAttribute>, extension_type>::value,
+                      "Not CommonAPI Attribute Extension!");
+    
+        RdisAttributeExtension(CANProxyBase& proxy): attributeExtension_(proxy.getRdisAttribute()) {
+        }
+    
+        inline extension_type& getRdisAttributeExtension() {
             return attributeExtension_;
         }
     
@@ -185,8 +210,9 @@ template<template<typename > class _AttributeExtension>
 struct DefaultAttributeProxyHelper< ::v1::commonapi::CANProxy,
     _AttributeExtension> {
     typedef typename ::v1::commonapi::CANProxy<
-            ::v1::commonapi::CANExtensions::DisAttributeExtension<_AttributeExtension>, 
-            ::v1::commonapi::CANExtensions::RpmAttributeExtension<_AttributeExtension>
+            ::v1::commonapi::CANExtensions::FdisAttributeExtension<_AttributeExtension>, 
+            ::v1::commonapi::CANExtensions::RpmAttributeExtension<_AttributeExtension>, 
+            ::v1::commonapi::CANExtensions::RdisAttributeExtension<_AttributeExtension>
     > class_t;
 };
 }

@@ -176,7 +176,7 @@ Rectangle { //centerstack : 4
                 anchors.right: parent.left
                 height: parent.height // 선 두께
                 width: 2
-                color: "red"
+                color: "blue"
                 opacity:1
                 Behavior on opacity {
                     NumberAnimation {
@@ -195,7 +195,7 @@ Rectangle { //centerstack : 4
                 anchors.left : parent.right
                 height: parent.height // 선 두께
                 width: 2
-                color: "red"
+                color: "blue"
                 opacity:1
                 Behavior on opacity {
                     NumberAnimation {
@@ -247,7 +247,7 @@ Rectangle { //centerstack : 4
                 anchors.right: parent.left
                 height: parent.height // 선 두께
                 width: 2
-                color: "red"
+                color: "green"
                 Behavior on opacity {
                     NumberAnimation {
                         duration: 500  // 1초 동안 애니메이션 진행
@@ -265,7 +265,7 @@ Rectangle { //centerstack : 4
                 anchors.left : parent.right
                 height: parent.height // 선 두께
                 width: 2
-                color: "red"
+                color: "green"
                 Behavior on opacity {
                     NumberAnimation {
                         duration: 500  // 1초 동안 애니메이션 진행
@@ -322,7 +322,7 @@ Rectangle { //centerstack : 4
                 anchors.right: parent.left
                 height: parent.height // 선 두께
                 width: 2
-                color: "red"
+                color: "white"
                 Behavior on opacity {
                     NumberAnimation {
                         duration: 500  // 1초 동안 애니메이션 진행
@@ -340,7 +340,7 @@ Rectangle { //centerstack : 4
                 anchors.left: parent.right
                 height: parent.height // 선 두께
                 width: 2
-                color: "red"
+                color: "white"
                 Behavior on opacity {
                     NumberAnimation {
                         duration: 500  // 1초 동안 애니메이션 진행

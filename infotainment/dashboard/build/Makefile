@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard
+CMAKE_SOURCE_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build
+CMAKE_BINARY_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seame-workstation05/Desktop/DES03_HeadUnit/qt/dashboard/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -190,86 +190,86 @@ Dashboard_autogen/mocs_compilation.cpp.s:
 	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.s
 .PHONY : Dashboard_autogen/mocs_compilation.cpp.s
 
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.o: home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.o: home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o
 
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.o
-
-# target to build an object file
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o
-
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.i: home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i
-
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.i
-
-# target to preprocess a source file
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i
-
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.s: home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s
-
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.s
-
-# target to generate assembly for a file
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s
-
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.o: home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o
-
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.o
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.o
 
 # target to build an object file
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o
 
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.i: home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.i: home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i
 
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.i
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.i
 
 # target to preprocess a source file
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.i
 
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.s: home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.s: home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s
 
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.s
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.s
 
 # target to generate assembly for a file
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.s
 
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.o: home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.o: home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o
 
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.o
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.o
 
 # target to build an object file
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o
 
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.i: home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.i: home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i
 
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.i
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.i
 
 # target to preprocess a source file
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.i
 
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.s: home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.s: home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s
 
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.s
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.s
 
 # target to generate assembly for a file
-home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
-.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s
+
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.o: home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
+
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.o
+
+# target to build an object file
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
+
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.i: home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
+
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.i
+
+# target to preprocess a source file
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
+
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.s: home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
+
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.s
+
+# target to generate assembly for a file
+home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
+.PHONY : home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
 
 src/dbusmanager.o: src/dbusmanager.cpp.o
 
@@ -368,15 +368,15 @@ help:
 	@echo "... Dashboard_autogen/mocs_compilation.o"
 	@echo "... Dashboard_autogen/mocs_compilation.i"
 	@echo "... Dashboard_autogen/mocs_compilation.s"
-	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.o"
-	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.i"
-	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.s"
-	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.o"
-	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.i"
-	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.s"
-	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.o"
-	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.i"
-	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.s"
+	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.o"
+	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.i"
+	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.s"
+	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.o"
+	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.i"
+	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.s"
+	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.o"
+	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.i"
+	@echo "... home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.s"
 	@echo "... src/dbusmanager.o"
 	@echo "... src/dbusmanager.i"
 	@echo "... src/dbusmanager.s"

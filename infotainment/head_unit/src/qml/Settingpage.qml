@@ -589,7 +589,8 @@ Rectangle { //centerstack : 3
                 anchors.fill: parent
                 onClicked: {
                     battey_light.visible=true
-                    distance_light.visible=false
+                    rdistance_light.visible=false
+                    fdistance_light.visible=false
                     temperature_light.visible=false
                 }
             }
@@ -603,42 +604,10 @@ Rectangle { //centerstack : 3
                 color: "red"
             }
         }
-//                    ProgressBar{
-//                        id:progressBar
-//                        width : battery.width * 1
-//                        height:battery.height * 1
-//                        anchors.left: battery.right
-//                        value : 68 //valueSource.fuel / 100
-//                        background: Rectangle {
-//                            color: "#e6e6e6"
-//                            radius: 7
-//                        }
-//                        contentItem: Item {
-//                            Rectangle {
-//                                width: progressBar.visualPosition*0.85
-//                                height: parent.height
-//                                radius: 7
-//                                color: "#00ffc3"//"#5bfa50"//"#17a81a"
-//                            }
-//                            Rectangle{
-//                                visible: true
-//                                width: parent.width //1200//progressBar.width
-//                                height: parent.height*0.9 //200 //progressBar.heigth
-//                                radius: 7
-//                                gradient: Gradient{
-//                                    GradientStop{position: 0.0; color: "#d0ffffff"}
-//                                    GradientStop{position: 0.3; color: "#30efefef"}
-//                                    GradientStop{position: 0.65; color: "#3d000000"}
-//                                    GradientStop{position: 0.85; color: "#3d000000"}
-//                                    GradientStop{position: 1.0; color: "#30efefef"}
-//                                }
-//                            }
-//                        }
-//                    }
 
-      // Distance
+      // Rear Distance
         Button {
-            id: distance
+            id: rdistance
             Layout.preferredWidth: 200  // Adjust according to your needs
             Layout.preferredHeight: 70  // Adjust according to your needs
             background: Rectangle {
@@ -646,29 +615,73 @@ Rectangle { //centerstack : 3
                 anchors.fill: parent
             }
             Text{
-                text:"DISTANCE: " + valueSource.temperature + " M"
+                text:"Rear DISTANCE: " + valueSource.r_dis + " M"
                 color: "white"
                 font.pointSize: parent.width*0.06
                 anchors.centerIn:parent
             }
             // Animation Effect
-            scale: distance_Area.pressed ? 0.95 : 1.0
+            scale: rdistance_Area.pressed ? 0.95 : 1.0
             Behavior on scale {
                 PropertyAnimation {
                     duration: 100
                 }
             }
             MouseArea {
-                id: distance_Area
+                id: rdistance_Area
                 anchors.fill: parent
                 onClicked: {
                     battey_light.visible=false
-                    distance_light.visible=true
+                    rdistance_light.visible=true
+                    fdistance_light.visible=false
                     temperature_light.visible=false
                 }
             }
             Rectangle {
-                id:distance_light
+                id:rdistance_light
+                visible: false
+                anchors.top: parent.bottom
+                anchors.left: parent.left
+                width: parent.width
+                height: 1 // 선 두께
+                color: "red"
+            }
+        }
+
+        // front Distance
+        Button {
+            id: fdistance
+            Layout.preferredWidth: 200  // Adjust according to your needs
+            Layout.preferredHeight: 70  // Adjust according to your needs
+            background: Rectangle {
+                color: "#6e6e75"  // Change this color for your button background color
+                anchors.fill: parent
+            }
+            Text{
+                text:"Front DISTANCE: " + valueSource.f_dis + " M"
+                color: "white"
+                font.pointSize: parent.width*0.06
+                anchors.centerIn:parent
+            }
+            // Animation Effect
+            scale: fdistance_Area.pressed ? 0.95 : 1.0
+            Behavior on scale {
+                PropertyAnimation {
+                    duration: 100
+                }
+            }
+            MouseArea {
+                id: fdistance_Area
+                anchors.fill: parent
+                onClicked: {
+                    battey_light.visible=false
+                    rdistance_light.visible=false
+                    fdistance_light.visible=true
+                    temperature_light.visible=false
+                }
+            }
+            Rectangle {
+                id:fdistance_light
                 visible: false
                 anchors.top: parent.bottom
                 anchors.left: parent.left
@@ -705,7 +718,8 @@ Rectangle { //centerstack : 3
                 anchors.fill: parent
                 onClicked: {
                     battey_light.visible=false
-                    distance_light.visible=false
+                    rdistance_light.visible=false
+                    fdistance_light.visible=false
                     temperature_light.visible=true
                     // Logic for video button
                 }

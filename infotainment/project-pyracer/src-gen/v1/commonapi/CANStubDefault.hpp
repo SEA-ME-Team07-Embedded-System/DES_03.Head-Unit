@@ -60,17 +60,17 @@ public:
         return &remoteEventHandler_;
     }
 
-    COMMONAPI_EXPORT virtual const uint8_t &getDisAttribute() {
-        return disAttributeValue_;
+    COMMONAPI_EXPORT virtual const uint8_t &getFdisAttribute() {
+        return fdisAttributeValue_;
     }
-    COMMONAPI_EXPORT virtual const uint8_t &getDisAttribute(const std::shared_ptr<CommonAPI::ClientId> _client) {
+    COMMONAPI_EXPORT virtual const uint8_t &getFdisAttribute(const std::shared_ptr<CommonAPI::ClientId> _client) {
         (void)_client;
-        return getDisAttribute();
+        return getFdisAttribute();
     }
-    COMMONAPI_EXPORT virtual void setDisAttribute(uint8_t _value) {
-        const bool valueChanged = trySetDisAttribute(std::move(_value));
+    COMMONAPI_EXPORT virtual void setFdisAttribute(uint8_t _value) {
+        const bool valueChanged = trySetFdisAttribute(std::move(_value));
         if (valueChanged) {
-            fireDisAttributeChanged(disAttributeValue_);
+            fireFdisAttributeChanged(fdisAttributeValue_);
         }
     }
     COMMONAPI_EXPORT virtual const uint8_t &getRpmAttribute() {
@@ -86,28 +86,41 @@ public:
             fireRpmAttributeChanged(rpmAttributeValue_);
         }
     }
+    COMMONAPI_EXPORT virtual const uint8_t &getRdisAttribute() {
+        return rdisAttributeValue_;
+    }
+    COMMONAPI_EXPORT virtual const uint8_t &getRdisAttribute(const std::shared_ptr<CommonAPI::ClientId> _client) {
+        (void)_client;
+        return getRdisAttribute();
+    }
+    COMMONAPI_EXPORT virtual void setRdisAttribute(uint8_t _value) {
+        const bool valueChanged = trySetRdisAttribute(std::move(_value));
+        if (valueChanged) {
+            fireRdisAttributeChanged(rdisAttributeValue_);
+        }
+    }
 
 
 protected:
-    COMMONAPI_EXPORT virtual bool trySetDisAttribute(uint8_t _value) {
-        if (!validateDisAttributeRequestedValue(_value))
+    COMMONAPI_EXPORT virtual bool trySetFdisAttribute(uint8_t _value) {
+        if (!validateFdisAttributeRequestedValue(_value))
             return false;
 
         bool valueChanged;
         std::shared_ptr<CANStubAdapter> stubAdapter = CommonAPI::Stub<CANStubAdapter, CANStubRemoteEvent>::stubAdapter_.lock();
         if(stubAdapter) {
-            stubAdapter->lockDisAttribute(true);
-            valueChanged = (disAttributeValue_ != _value);
-            disAttributeValue_ = std::move(_value);
-            stubAdapter->lockDisAttribute(false);
+            stubAdapter->lockFdisAttribute(true);
+            valueChanged = (fdisAttributeValue_ != _value);
+            fdisAttributeValue_ = std::move(_value);
+            stubAdapter->lockFdisAttribute(false);
         } else {
-            valueChanged = (disAttributeValue_ != _value);
-            disAttributeValue_ = std::move(_value);
+            valueChanged = (fdisAttributeValue_ != _value);
+            fdisAttributeValue_ = std::move(_value);
         }
 
        return valueChanged;
     }
-    COMMONAPI_EXPORT virtual bool validateDisAttributeRequestedValue(const uint8_t &_value) {
+    COMMONAPI_EXPORT virtual bool validateFdisAttributeRequestedValue(const uint8_t &_value) {
         (void)_value;
         return true;
     }
@@ -133,6 +146,28 @@ protected:
         (void)_value;
         return true;
     }
+    COMMONAPI_EXPORT virtual bool trySetRdisAttribute(uint8_t _value) {
+        if (!validateRdisAttributeRequestedValue(_value))
+            return false;
+
+        bool valueChanged;
+        std::shared_ptr<CANStubAdapter> stubAdapter = CommonAPI::Stub<CANStubAdapter, CANStubRemoteEvent>::stubAdapter_.lock();
+        if(stubAdapter) {
+            stubAdapter->lockRdisAttribute(true);
+            valueChanged = (rdisAttributeValue_ != _value);
+            rdisAttributeValue_ = std::move(_value);
+            stubAdapter->lockRdisAttribute(false);
+        } else {
+            valueChanged = (rdisAttributeValue_ != _value);
+            rdisAttributeValue_ = std::move(_value);
+        }
+
+       return valueChanged;
+    }
+    COMMONAPI_EXPORT virtual bool validateRdisAttributeRequestedValue(const uint8_t &_value) {
+        (void)_value;
+        return true;
+    }
     class COMMONAPI_EXPORT_CLASS_EXPLICIT RemoteEventHandler: public virtual CANStubRemoteEvent {
     public:
         COMMONAPI_EXPORT RemoteEventHandler(CANStubDefault *_defaultStub)
@@ -149,8 +184,9 @@ protected:
 
 private:
 
-    uint8_t disAttributeValue_ {};
+    uint8_t fdisAttributeValue_ {};
     uint8_t rpmAttributeValue_ {};
+    uint8_t rdisAttributeValue_ {};
 
     CommonAPI::Version interfaceVersion_;
 };

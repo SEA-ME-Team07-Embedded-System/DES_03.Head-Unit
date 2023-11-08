@@ -74,9 +74,9 @@ Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/distance_alert_1.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/car.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/setting_icon.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/The\ Nigths.jpeg
-Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/shuffle.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/arrow_grey.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/next.png
+Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/shuffle.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/ASAP.jpeg
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/theater_icon.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/playing_icon.png
@@ -93,17 +93,21 @@ Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/ETA.jpeg
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/I\ Like\ Me\ Better.jpeg
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/Every\ Second.jpeg
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/previous.png
+Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/fdistance_alert_4.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/pause.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/new_cay.jpg
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/ABCDEFU.jpeg
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/porsche_emblem.jpg
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/light_icon.png
+Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/fdistance_alert_3.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/distance_alert_4.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/video_icon.png
+Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/fdistance_alert_2.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/distance_alert_3.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/caynne.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/Im\ not\ the\ only\ one.jpeg
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/Seven.jpeg
+Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/fdistance_alert_1.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/distance_alert_2.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../src/image/stop.png
 Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: /usr/lib/qt5/bin/rcc
