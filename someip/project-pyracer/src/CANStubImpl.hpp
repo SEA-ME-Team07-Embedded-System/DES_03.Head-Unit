@@ -16,10 +16,12 @@ public:
   CANStubImpl();
   virtual ~CANStubImpl();
   virtual void rpmPublisher(const uint8_t rpm);
-  virtual void disPublisher(const uint8_t  dis);
+  virtual void rdisPublisher(const uint8_t  rdis);
+  virtual void fdisPublisher(const uint8_t  fdis);
 
 private:
-  uint8_t  _dis;
+  uint8_t  _rdis;
+  uint8_t  _fdis;
   uint8_t  _rpm;
 };
 #endif /* CANSTUBIMPL_H_ */

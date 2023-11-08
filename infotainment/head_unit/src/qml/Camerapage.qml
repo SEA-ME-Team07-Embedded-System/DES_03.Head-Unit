@@ -1,4 +1,5 @@
 import QtQuick 2.12
+import QtMultimedia 5.12
 
 Rectangle { // Main container
     color: "#dfe4ea"
@@ -10,13 +11,30 @@ Rectangle { // Main container
         height: parent.height
         color: "#dfe4ea"
 
-        Rectangle {
+        // Camera
+        Camera {
+            id: camera
+            imageProcessing.whiteBalanceMode: CameraImageProcessing.WhiteBalanceFlash
+        }
+
+        VideoOutput {
             id: cameraView
-            width: 640  // Set to the width of the camera
-            height: 480 // Set to the height of the camera
+            source: camera
+            width: 640
+            height: 480
+            scale: 0.65
             anchors.centerIn: parent
-            color: "black"
-            scale : 0.65
+            focus: visible
+            MouseArea {
+                anchors.fill: cameraView;
+                onClicked: {
+                    if (camera.active) {
+                        camera.stop() // This stops the camera if it's active
+                    } else {
+                        camera.start() // This starts the camera if it's not active
+                    }
+                }
+            }
         }
 
         Text {
@@ -43,18 +61,38 @@ Rectangle { // Main container
             scale: 0.5
         }
 
+
         Image {
-            id: distanceAlertImage
-            
+            id: fdistanceAlertImage
+
+            anchors.top: carImage.top
+            anchors.horizontalCenter: parent.horizontalCenter
+            source: {
+                if (valueSource.f_dis <= 10) {
+                    return "qrc:/image/fdistance_alert_1.png";
+                } else if (valueSource.f_dis <= 20) {
+                    return "qrc:/image/fdistance_alert_2.png";
+                } else if (valueSource.f_dis <= 30) {
+                    return "qrc:/image/fdistance_alert_3.png";
+                } else {
+                    return "qrc:/image/fdistance_alert_4.png";
+                }
+            }
+            scale: 0.5
+        }
+
+        Image {
+            id: rdistanceAlertImage
+
             anchors.top: carImage.top
             anchors.topMargin: 400
             anchors.horizontalCenter: parent.horizontalCenter
             source: {
-                if (valueSource.temperature <= 10) {
+                if (valueSource.r_dis <= 10) {
                     return "qrc:/image/distance_alert_1.png";
-                } else if (valueSource.temperature <= 20) {
+                } else if (valueSource.r_dis <= 20) {
                     return "qrc:/image/distance_alert_2.png";
-                } else if (valueSource.temperature <= 30) {
+                } else if (valueSource.r_dis <= 30) {
                     return "qrc:/image/distance_alert_3.png";
                 } else {
                     return "qrc:/image/distance_alert_4.png";
@@ -65,7 +103,7 @@ Rectangle { // Main container
 
         Text {
             anchors.bottom: parent.bottom
-            text: "Distance : " + valueSource.temperature + "cm"
+            text: "Distance : " + valueSource.r_dis + "cm"
             font.pixelSize: 20
         }
     }

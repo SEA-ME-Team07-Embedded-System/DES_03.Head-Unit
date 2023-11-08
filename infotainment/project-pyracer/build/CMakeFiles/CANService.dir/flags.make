@@ -6,5 +6,5 @@ CXX_FLAGS =  -pthread -std=c++0x
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/seame-workstation05/Desktop/DES03_HeadUnit/qt/project-pyracer/src-gen -I/home/seame-workstation05/build-commonapi/capicxx-core-runtime/include -I/home/seame-workstation05/build-commonapi/capicxx-someip-runtime/include -I/home/seame-workstation05/build-commonapi/vsomeip/interface 
+CXX_INCLUDES = -I/home/seame-workstation05/Desktop/DES03_HeadUnit/someip/project-pyracer/src-gen -I/home/seame-workstation05/build-commonapi/capicxx-core-runtime/include -I/home/seame-workstation05/build-commonapi/capicxx-someip-runtime/include -I/home/seame-workstation05/build-commonapi/vsomeip/interface 
 

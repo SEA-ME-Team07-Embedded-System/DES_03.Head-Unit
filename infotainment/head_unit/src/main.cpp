@@ -27,7 +27,8 @@ int main(int argc, char *argv[])
     SomeIPManager someipManager;
     someipManager.initVsomeipClient();
     someipManager.startSubscribeRPM();
-    someipManager.startSubscribeDis();
+    someipManager.startSubscribeFDis();
+    someipManager.startSubscribeRDis();
     qmlRegisterType<SomeIPManager>("someip", 1, 0, "SomeIPManager");
 
     QQmlApplicationEngine engine;
@@ -38,7 +39,7 @@ int main(int argc, char *argv[])
                 QCoreApplication::exit(-1);
         }, Qt::QueuedConnection);
 
-    //connect qml with someipmanager
+    //connect qml with c++ class
     engine.rootContext()->setContextProperty("someipManager", &someipManager);
     engine.load(url);
 

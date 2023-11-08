@@ -46,9 +46,11 @@ public:
         CANSomeIPStubAdapterHelper::deinit();
     }
 
-    void fireDisAttributeChanged(const uint8_t &_value);
+    void fireFdisAttributeChanged(const uint8_t &_value);
     
     void fireRpmAttributeChanged(const uint8_t &_value);
+    
+    void fireRdisAttributeChanged(const uint8_t &_value);
     
     void deactivateManagedInstances() {}
     
@@ -61,13 +63,19 @@ public:
         ::v1::commonapi::CANStub,
         uint8_t,
         CommonAPI::SomeIP::IntegerDeployment<uint8_t>
-    > getDisAttributeStubDispatcher;
+    > getFdisAttributeStubDispatcher;
     
     CommonAPI::SomeIP::GetAttributeStubDispatcher<
         ::v1::commonapi::CANStub,
         uint8_t,
         CommonAPI::SomeIP::IntegerDeployment<uint8_t>
     > getRpmAttributeStubDispatcher;
+    
+    CommonAPI::SomeIP::GetAttributeStubDispatcher<
+        ::v1::commonapi::CANStub,
+        uint8_t,
+        CommonAPI::SomeIP::IntegerDeployment<uint8_t>
+    > getRdisAttributeStubDispatcher;
     
     CANSomeIPStubAdapterInternal(
         const CommonAPI::SomeIP::Address &_address,
@@ -79,9 +87,9 @@ public:
             _connection,
             std::dynamic_pointer_cast< CANStub>(_stub)),
         getCANInterfaceVersionStubDispatcher(&CANStub::lockInterfaceVersionAttribute, &CANStub::getInterfaceVersion, false, true),
-        getDisAttributeStubDispatcher(
-            &::v1::commonapi::CANStub::lockDisAttribute,
-            &::v1::commonapi::CANStub::getDisAttribute,
+        getFdisAttributeStubDispatcher(
+            &::v1::commonapi::CANStub::lockFdisAttribute,
+            &::v1::commonapi::CANStub::getFdisAttribute,
             false,
             _stub->hasElement(0))
         ,
@@ -90,9 +98,16 @@ public:
             &::v1::commonapi::CANStub::getRpmAttribute,
             false,
             _stub->hasElement(1))
+        ,
+        getRdisAttributeStubDispatcher(
+            &::v1::commonapi::CANStub::lockRdisAttribute,
+            &::v1::commonapi::CANStub::getRdisAttribute,
+            false,
+            _stub->hasElement(2))
     {
-        CANSomeIPStubAdapterHelper::addStubDispatcher( { CommonAPI::SomeIP::method_id_t(0xbba) }, &getDisAttributeStubDispatcher );
+        CANSomeIPStubAdapterHelper::addStubDispatcher( { CommonAPI::SomeIP::method_id_t(0xbba) }, &getFdisAttributeStubDispatcher );
         CANSomeIPStubAdapterHelper::addStubDispatcher( { CommonAPI::SomeIP::method_id_t(0xbbc) }, &getRpmAttributeStubDispatcher );
+        CANSomeIPStubAdapterHelper::addStubDispatcher( { CommonAPI::SomeIP::method_id_t(0xbbe) }, &getRdisAttributeStubDispatcher );
         std::shared_ptr<CommonAPI::SomeIP::ClientId> itsClient = std::make_shared<CommonAPI::SomeIP::ClientId>(0xFFFF, 0xFFFFFFFF, 0xFFFFFFFF);
 
         // Provided events/fields
@@ -100,7 +115,7 @@ public:
             std::set<CommonAPI::SomeIP::eventgroup_id_t> itsEventGroups;
             itsEventGroups.insert(CommonAPI::SomeIP::eventgroup_id_t(CommonAPI::SomeIP::eventgroup_id_t(0x80f3)));
             CommonAPI::SomeIP::StubAdapter::registerEvent(CommonAPI::SomeIP::event_id_t(0x80f3), itsEventGroups, CommonAPI::SomeIP::event_type_e::ET_FIELD, CommonAPI::SomeIP::reliability_type_e::RT_RELIABLE);
-            fireDisAttributeChanged(std::dynamic_pointer_cast< ::v1::commonapi::CANStub>(_stub)->getDisAttribute(itsClient));
+            fireFdisAttributeChanged(std::dynamic_pointer_cast< ::v1::commonapi::CANStub>(_stub)->getFdisAttribute(itsClient));
         }
 
         if (_stub->hasElement(1)) {
@@ -108,6 +123,13 @@ public:
             itsEventGroups.insert(CommonAPI::SomeIP::eventgroup_id_t(CommonAPI::SomeIP::eventgroup_id_t(0x80f4)));
             CommonAPI::SomeIP::StubAdapter::registerEvent(CommonAPI::SomeIP::event_id_t(0x80f4), itsEventGroups, CommonAPI::SomeIP::event_type_e::ET_FIELD, CommonAPI::SomeIP::reliability_type_e::RT_RELIABLE);
             fireRpmAttributeChanged(std::dynamic_pointer_cast< ::v1::commonapi::CANStub>(_stub)->getRpmAttribute(itsClient));
+        }
+
+        if (_stub->hasElement(2)) {
+            std::set<CommonAPI::SomeIP::eventgroup_id_t> itsEventGroups;
+            itsEventGroups.insert(CommonAPI::SomeIP::eventgroup_id_t(CommonAPI::SomeIP::eventgroup_id_t(0x80f5)));
+            CommonAPI::SomeIP::StubAdapter::registerEvent(CommonAPI::SomeIP::event_id_t(0x80f5), itsEventGroups, CommonAPI::SomeIP::event_type_e::ET_FIELD, CommonAPI::SomeIP::reliability_type_e::RT_RELIABLE);
+            fireRdisAttributeChanged(std::dynamic_pointer_cast< ::v1::commonapi::CANStub>(_stub)->getRdisAttribute(itsClient));
         }
 
     }
@@ -119,7 +141,7 @@ public:
 };
 
 template <typename _Stub, typename... _Stubs>
-void CANSomeIPStubAdapterInternal<_Stub, _Stubs...>::fireDisAttributeChanged(const uint8_t &_value) {
+void CANSomeIPStubAdapterInternal<_Stub, _Stubs...>::fireFdisAttributeChanged(const uint8_t &_value) {
     CommonAPI::Deployable< uint8_t, CommonAPI::SomeIP::IntegerDeployment<uint8_t>> deployedValue(_value, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr));
     CommonAPI::SomeIP::StubEventHelper<
         CommonAPI::SomeIP::SerializableArguments<
@@ -149,6 +171,24 @@ void CANSomeIPStubAdapterInternal<_Stub, _Stubs...>::fireRpmAttributeChanged(con
     >::sendEvent(
         *this,
         CommonAPI::SomeIP::event_id_t(0x80f4),
+        false,
+        deployedValue
+    );
+}
+
+template <typename _Stub, typename... _Stubs>
+void CANSomeIPStubAdapterInternal<_Stub, _Stubs...>::fireRdisAttributeChanged(const uint8_t &_value) {
+    CommonAPI::Deployable< uint8_t, CommonAPI::SomeIP::IntegerDeployment<uint8_t>> deployedValue(_value, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr));
+    CommonAPI::SomeIP::StubEventHelper<
+        CommonAPI::SomeIP::SerializableArguments<
+            CommonAPI::Deployable<
+                uint8_t,
+                CommonAPI::SomeIP::IntegerDeployment<uint8_t>
+            >
+            >
+    >::sendEvent(
+        *this,
+        CommonAPI::SomeIP::event_id_t(0x80f5),
         false,
         deployedValue
     );

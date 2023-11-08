@@ -38,6 +38,7 @@ int main()
     {
     frame.data[0] = cnt;
     frame.data[1] = cnt;
+    frame.data[2] = cnt;
     int bytes_sent = write(s, &frame, sizeof(frame));
     std::cout << "Sent " << cnt << "&" << bytes_sent << " bytes" << std::endl;
 

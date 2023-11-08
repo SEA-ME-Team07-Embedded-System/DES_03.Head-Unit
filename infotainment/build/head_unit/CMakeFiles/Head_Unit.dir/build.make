@@ -67,39 +67,44 @@ head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/qml/Setting
 head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/qml/MusicDeatil.qml
 head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/qml/ValueSource.qml
 head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/qml/main.qml
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/Seven.jpeg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/theater_icon.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/video_icon.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/car.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/pause.png
 head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/Super\ Shy.jpeg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/porsche_emblem.jpg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/ASAP.jpeg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/shuffle.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/caynne3.jpg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/caynne4.jpg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/I\ Like\ Me\ Better.jpeg
 head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/front.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/The\ Nigths.jpeg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/Im\ not\ the\ only\ one.jpeg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/ETA.jpeg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/caynne_new.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/arrow_grey.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/information.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/music_icon.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/ABCDEFU.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/porsche_upview.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/distance_alert_1.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/car.png
 head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/setting_icon.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/previous.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/house_icon.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/new_cay.jpg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/light_icon.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/Every\ Second.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/The\ Nigths.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/shuffle.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/arrow_grey.png
 head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/next.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/Paris\ In\ The\ Rain.jpeg
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/gear.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/caynne.png
-head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/navigate_icon.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/ASAP.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/theater_icon.png
 head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/playing_icon.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/caynne4.jpg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/music_icon.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/Paris\ In\ The\ Rain.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/house_icon.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/caynne3.jpg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/caynne_new.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/information.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/gear.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/navigate_icon.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/ETA.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/I\ Like\ Me\ Better.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/Every\ Second.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/previous.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/pause.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/new_cay.jpg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/ABCDEFU.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/porsche_emblem.jpg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/light_icon.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/distance_alert_4.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/video_icon.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/distance_alert_3.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/caynne.png
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/Im\ not\ the\ only\ one.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/Seven.jpeg
+head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/distance_alert_2.png
 head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: ../head_unit/src/image/stop.png
 head_unit/Head_Unit_autogen/UVLADIE3JM/qrc_qml.cpp: /usr/lib/qt5/bin/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for src/qml.qrc"
