@@ -19,66 +19,6 @@ Window {
         id: valueSource
     }
 
-    //center bar
-    Rectangle{
-        id: centerBar
-        anchors {
-            left: leftBar.right
-            right: parent.right
-            top: topBar.bottom
-            bottom: parent.bottom
-        }
-
-        DBusManager {
-            id: dbusHandler
-        }
-        
-        StackLayout{
-            id: centerStack
-            anchors.fill: parent
-            Rectangle { //centerstack : 0
-                id: naviPage
-                color: "red"
-                Plugin {
-                    id: mapPlugin
-                    name: "mapboxgl" // Mapbox plugin name
-                    PluginParameter { name: "mapbox.access_token"; value: "file:/home/seame-workstation07/QT/Examples/Qt-5.15.2/quickcontrols/extras/dashboard_new/qml/mapbox/api-key.txt" }
-                }
-                Map {
-                    id: map
-                    anchors.fill: parent
-                    plugin: mapPlugin
-                    center: QtPositioning.coordinate(valueSource.lati, valueSource.longi) //valueSource.lati, valueSource.longi
-                    zoomLevel: 18
-
-                tilt:85
-                activeMapType: map.supportedMapTypes[0]
-                }
-
-                Image{
-                    id:arrow
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    y: parent.height*0.5
-                    width: parent.height*0.1
-                    height: arrow.width
-                    rotation:180
-                    source:"qrc:/image/arrow_grey.png"
-                }
-                //feature : 1. map 2. destination 3. favorite
-                //when goes to naviPage refresh map with current position and possible change map position by touch
-                //when compass icon touched go to current Position
-            }
-            Musicpage{
-            }
-            Camerapage{
-            }
-            Settingpage{
-            }
-            Lightpage{
-            }
-        }
-    }
-
     //top bar
     Rectangle {
         //left top there is house icon & right top there is current time
@@ -88,7 +28,7 @@ Window {
             right: parent.right
             top: parent.top
         }
-        height: parent.height / 12
+        height: parent.height / 12   //50
         color: "#6d7485"
 
         Image {
@@ -126,6 +66,68 @@ Window {
         }
     }
 
+    //centerar b
+    Rectangle{
+        id: centerBar
+        anchors {
+            top: topBar.bottom
+            bottom: leftBar.bottom
+            left: leftBar.right
+            right: topBar.right
+        }
+
+        DBusManager {
+            id: dbusHandler
+        }
+        
+        StackLayout{
+            id: centerStack
+            anchors.fill: parent
+            Rectangle { //centerstack : 0
+                id: naviPage
+                color: "red"
+                Plugin {
+                    id: mapPlugin
+                    name: "mapboxgl" // Mapbox plugin name //osm
+                    PluginParameter { name: "mapbox.access_token"; value: "file:/home/seame-workstation07/QT/Examples/Qt-5.15.2/quickcontrols/extras/dashboard_new/qml/mapbox/api-key.txt" }
+                }
+                Map {
+                    id: map
+                    anchors.fill: parent
+                    plugin: mapPlugin
+                    center: QtPositioning.coordinate(valueSource.lati, valueSource.longi) //valueSource.lati, valueSource.longi
+                    zoomLevel: 18
+
+                tilt:85
+                activeMapType: map.supportedMapTypes[0]
+                }
+
+                Image{
+                    id:arrow
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    y: parent.height*0.5
+                    width: parent.height*0.1
+                    height: arrow.width
+                    rotation:180
+                    source:"qrc:/image/arrow_grey.png"
+                }
+                //feature : 1. map 2. destination 3. favorite
+                //when goes to naviPage refresh map with current position and possible change map position by touch
+                //when compass icon touched go to current Position
+            }
+            Musicpage{
+            }
+            Camerapage{
+            }
+            Settingpage{
+            }
+            Lightpage{
+            }
+        }
+    }
+
+
+
     //left bar
     Rectangle {
         id: leftBar
@@ -134,7 +136,7 @@ Window {
             top: topBar.bottom
             bottom: parent.bottom
         }
-        width: parent.width / 10
+        width: parent.width / 10  // 124
         color: "black"
 
 

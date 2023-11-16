@@ -4,7 +4,6 @@ import QtWebEngine 1.7
 import QtQuick.VirtualKeyboard 2.1
 
 Rectangle {
-
     InputPanel {
         id: inputPanel
         z: 99
@@ -12,13 +11,12 @@ Rectangle {
         anchors.bottom: parent.bottom
         visible: Qt.inputMethod.visible  // Important modification
     }
-
     Rectangle {
         id: videopage
         width: parent.width
         height: parent.height
+        anchors.fill:parent
         color: "#dfe4ea"
-
         TextField {
             id: searchField
             width: parent.width - searchButton.width - 100
@@ -33,7 +31,6 @@ Rectangle {
                 }
             }
         }
-
         Button {
             id: searchButton
             width: 100
@@ -46,7 +43,6 @@ Rectangle {
                 searchField.focus = false; // Hide the keyboard when searching
             }
         }
-
         WebEngineView {
             id: webView
             anchors.top: searchField.bottom

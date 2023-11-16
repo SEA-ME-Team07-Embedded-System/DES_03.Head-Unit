@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.12
 
 Rectangle { //centerstack : 1
        id: playPage
+//       anchors.fill: parent
        //feature : 1. music 2. video
        StackLayout{
            id: playpageStack
@@ -17,13 +18,15 @@ Rectangle { //centerstack : 1
        ColumnLayout {
            anchors.top: parent.top
            anchors.left: parent.left
-           spacing: 0
+           width:parent.height*0.15
+           height: parent.height*0.3
+           spacing: 1
 
            // Music Button
            Button {
                id: playMusicButton
-               Layout.preferredWidth: 70  // Adjust according to your needs
-               Layout.preferredHeight: 70  // Adjust according to your needs
+               Layout.preferredWidth: parent.width         // Adjust according to your needs
+               Layout.preferredHeight: parent.height*0.495  // Adjust according to your needs
                background: Rectangle {
                    color: "#242323"  // Change this color for your button background color
                    anchors.fill: parent
@@ -53,8 +56,8 @@ Rectangle { //centerstack : 1
            // Video Button
            Button {
                id: playVideoButton
-               Layout.preferredWidth: 70  // Adjust according to your needs
-               Layout.preferredHeight: 70  // Adjust according to your needs
+               Layout.preferredWidth: parent.width         // Adjust according to your needs
+               Layout.preferredHeight: parent.height*0.495  // Adjust according to your needs
                background: Rectangle {
                    color: "#242323"  // Change this color for your button background color
                    anchors.fill: parent

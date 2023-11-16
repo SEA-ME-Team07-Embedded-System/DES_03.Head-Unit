@@ -16,12 +16,11 @@ Rectangle { // Main container
             id: camera
             imageProcessing.whiteBalanceMode: CameraImageProcessing.WhiteBalanceFlash
         }
-
         VideoOutput {
             id: cameraView
             source: camera
-            width: 640
-            height: 480
+            width: parent.height*0.7
+            height: parent.height*0.5
             scale: 0.65
             anchors.centerIn: parent
             focus: visible
@@ -36,7 +35,6 @@ Rectangle { // Main container
                 }
             }
         }
-
         Text {
             anchors.bottom: cameraView.top
             anchors.horizontalCenter: parent.horizontalCenter
@@ -53,19 +51,18 @@ Rectangle { // Main container
         height: parent.height
         anchors.right: parent.right
         color: "grey"
-
         Image {
             id: carImage
+            width: parent.width*0.4
+            height: parent.width*0.7
             anchors.centerIn: parent
             source: "qrc:/image/porsche_upview.png"
-            scale: 0.5
+//            scale: 0.1
         }
-
-
         Image {
             id: fdistanceAlertImage
-
-            anchors.top: carImage.top
+            anchors.bottom: carImage.top
+            anchors.topMargin: parent.height*30
             anchors.horizontalCenter: parent.horizontalCenter
             source: {
                 if (valueSource.f_dis <= 10) {
@@ -83,9 +80,8 @@ Rectangle { // Main container
 
         Image {
             id: rdistanceAlertImage
-
-            anchors.top: carImage.top
-            anchors.topMargin: 400
+            anchors.top: carImage.bottom
+            anchors.bottomMargin: parent.height*30
             anchors.horizontalCenter: parent.horizontalCenter
             source: {
                 if (valueSource.r_dis <= 10) {
