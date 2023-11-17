@@ -58,26 +58,33 @@ Rectangle { //centerstack : 1
 
 
 
+
+
+
        ////////////////////////////////////////////////////////////MUSIC PAGE
        Rectangle{ //musicpage
            id: musicdeatil
            color: "#dfe4ea"
            anchors.fill:parent
+
+
+
            ColumnLayout {
                id:left_page_music
                anchors.top:parent.top
                anchors.topMargin: parent.height*0.1
-               anchors.left: parent.left
-               anchors.leftMargin: parent.width*0.05
                anchors.bottom: parent.bottom
                anchors.bottomMargin: parent.height*0.1
-               width: parent.width*0.4
-//               height:parent.height*0.8
+               anchors.left: parent.left
+               anchors.leftMargin: parent.width*0.05
+               width: parent.width*0.3
                spacing: parent.height*0.03
+               ////MUSIC_LEFT_01.SONG IMAGE
                Item {
                    id:songImage_Item
+//
                    Layout.alignment: Qt.AlignHCenter
-                   Layout.preferredWidth: parent.width*0.7             //250 // Adjust according to your needs
+                   Layout.preferredWidth: parent.height*0.65             //250 // Adjust according to your needs
                    Layout.preferredHeight: parent.height*0.65          //250  // Adjust according to your needs
                    //Layout.fillWidth: true
                    //Layout.fillHeight: true
@@ -167,7 +174,7 @@ Rectangle { //centerstack : 1
                    Label {
                        id: songNameLabel
                        text: ""
-                       font.pixelSize: Qt.application.font.pixelSize * 1.4
+                       font.pixelSize: Qt.application.font.pixelSize * 0.8
                    }
                    Rectangle {
                        id: rightGradient
@@ -209,14 +216,16 @@ Rectangle { //centerstack : 1
                ////MUSIC_LEFT_04.BUTTON
                RowLayout {
                    id:buttons_Item
-                   spacing: parent.width*0.1
-                   Layout.fillWidth: true
+                   spacing: parent.height*0.04
+//                   Layout.fillWidth: true
+//                   Layout.preferredHeight: parent.height*0.03
+                   height: parent.height*0.01
                    Layout.alignment: Qt.AlignHCenter
                    RoundButton {
                        icon.name: "stop!"
-                       icon.width: 32
-                       icon.height: 32
                        icon.source: "qrc:/image/stop.png"
+                       icon.width: parent.height*0.6
+                       icon.height: parent.height+0.4
                        onClicked: {
                            mediaPlayer.stop();
                            songNameLabel.text = "";
@@ -225,8 +234,8 @@ Rectangle { //centerstack : 1
                    }
                    RoundButton {
                        icon.name: "previous!"
-                       icon.width: 32
-                       icon.height: 32
+                       icon.width: parent.height*0.6
+//                       icon.height: parent.height+0.8
                        icon.source: "qrc:/image/previous.png"
                        onClicked: {
                            // Decrease currentSongIndex if it's not the first song, otherwise wrap around to the last song
@@ -241,8 +250,7 @@ Rectangle { //centerstack : 1
                    }
                    RoundButton {
                        icon.name: "pause!"
-                       icon.width: 32
-                       icon.height: 32
+                       icon.width: parent.height*0.6
                        icon.source: "qrc:/image/pause.png"
                        onClicked: {
                            if (mediaPlayer.playbackState === MediaPlayer.PlayingState) {
@@ -255,8 +263,7 @@ Rectangle { //centerstack : 1
                    }
                    RoundButton {
                        icon.name: "next!"
-                       icon.width: 32
-                       icon.height: 32
+                       icon.width: parent.height*0.6
                        icon.source: "qrc:/image/next.png"
                        onClicked: {
                            // Increase currentSongIndex if it's not the last song, otherwise wrap around to the first song
@@ -271,8 +278,7 @@ Rectangle { //centerstack : 1
                    }
                    RoundButton {
                        icon.name: "shuffle!"
-                       icon.width: 32
-                       icon.height: 32
+                       icon.width: parent.height*0.6
                        icon.source: "qrc:/image/shuffle.png"
                        onClicked: {
                            // Generate a random index between 0 and the number of songs minus one
@@ -291,11 +297,13 @@ Rectangle { //centerstack : 1
            ColumnLayout {
                anchors.top:parent.top
                anchors.topMargin: parent.height*0.1
-               anchors.left: left_page_music.right
-               anchors.leftMargin: parent.width*0.05
+               anchors.bottom: parent.bottom
+               anchors.bottomMargin: parent.height*0.1
+               anchors.left: parent.left    /*left_page_music.right*/
+               anchors.leftMargin: parent.width*0.5 //left 0.35
                width: parent.width*0.45
                height:parent.height*0.8
-               spacing: parent.height*0.15
+    //               spacing: parent.height*0.15
        //        Layout.preferredWidth: parent.width*0.5
                Frame {
                    id: filesFrame
@@ -315,6 +323,8 @@ Rectangle { //centerstack : 1
                        delegate: ItemDelegate {
                            text: model.title
                            width: filesListView.width
+                           height: filesListView.height*0.15
+//                           font.pixelSize: filesListView.heaight*2
                            onClicked: {
                                mediaPlayer.source = model.source;
                                songNameLabel.text = model.title;
