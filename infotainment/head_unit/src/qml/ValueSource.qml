@@ -18,7 +18,6 @@ Item {
 
     Connections{
         target: someipManager
-
         onRpmChanged: {
             valueSource.kph = Math.round(rpm * 0.35); // Update kph property when speed changes
             valueSource.rpm = rpm;
@@ -45,7 +44,6 @@ Item {
 
     DBusManager {
         id: dbusmanager
-
         onBatteryChanged: {
             //console.log("onBatteryChanged")
             valueSource.fuel = dbusmanager.getBattery() // Update kph property when speed changes
