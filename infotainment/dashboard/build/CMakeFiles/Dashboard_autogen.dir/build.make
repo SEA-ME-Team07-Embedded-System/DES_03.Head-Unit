@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard
+CMAKE_SOURCE_DIR = /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build
+CMAKE_BINARY_DIR = /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build
 
 # Utility rule file for Dashboard_autogen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment
 include CMakeFiles/Dashboard_autogen.dir/progress.make
 
 CMakeFiles/Dashboard_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target Dashboard"
-	/usr/bin/cmake -E cmake_autogen /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target Dashboard"
+	/usr/bin/cmake -E cmake_autogen /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard_autogen.dir/AutogenInfo.json ""
 
 Dashboard_autogen: CMakeFiles/Dashboard_autogen
 Dashboard_autogen: CMakeFiles/Dashboard_autogen.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/Dashboard_autogen.dir/clean:
 .PHONY : CMakeFiles/Dashboard_autogen.dir/clean
 
 CMakeFiles/Dashboard_autogen.dir/depend:
-	cd /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Dashboard_autogen.dir/depend
 

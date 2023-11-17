@@ -433,8 +433,8 @@ Window {
                     height: right_circle*0.5
                     color: "#222"
 
-                    DBusManager {
-                        id: dbusHandler
+                    PiracerSomeIPManager {
+                        id: piracerHandler
                     }
 
                     Column {
@@ -469,7 +469,7 @@ Window {
                             MouseArea {
                                 anchors.fill: sports
                                 onClicked: {
-                                    dbusHandler.mode_select(9);
+                                    piracerHandler.modeSelectCall(9);
                                 }
                             }
 
@@ -501,7 +501,7 @@ Window {
                             MouseArea {
                                 anchors.fill: normal
                                 onClicked: {
-                                    dbusHandler.mode_select(5);
+                                    piracerHandler.modeSelectCall(5);
                                 }
                             }
 
@@ -532,7 +532,7 @@ Window {
                             MouseArea {
                                 anchors.fill: eco
                                 onClicked: {
-                                    dbusHandler.mode_select(3);
+                                    piracerHandler.modeSelectCall(3);
                                 }
                             }
 

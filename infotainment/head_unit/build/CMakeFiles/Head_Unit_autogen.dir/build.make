@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit
+CMAKE_SOURCE_DIR = /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/head_unit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit/build
+CMAKE_BINARY_DIR = /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/head_unit/build
 
 # Utility rule file for Head_Unit_autogen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment
 include CMakeFiles/Head_Unit_autogen.dir/progress.make
 
 CMakeFiles/Head_Unit_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target Head_Unit"
-	/usr/bin/cmake -E cmake_autogen /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit/build/CMakeFiles/Head_Unit_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/head_unit/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target Head_Unit"
+	/usr/bin/cmake -E cmake_autogen /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/head_unit/build/CMakeFiles/Head_Unit_autogen.dir/AutogenInfo.json ""
 
 Head_Unit_autogen: CMakeFiles/Head_Unit_autogen
 Head_Unit_autogen: CMakeFiles/Head_Unit_autogen.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/Head_Unit_autogen.dir/clean:
 .PHONY : CMakeFiles/Head_Unit_autogen.dir/clean
 
 CMakeFiles/Head_Unit_autogen.dir/depend:
-	cd /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit/build /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit/build /home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/head_unit/build/CMakeFiles/Head_Unit_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/head_unit/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/head_unit /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/head_unit /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/head_unit/build /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/head_unit/build /home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/head_unit/build/CMakeFiles/Head_Unit_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Head_Unit_autogen.dir/depend
 

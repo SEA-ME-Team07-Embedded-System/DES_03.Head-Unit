@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SomeIPManager_t {
-    QByteArrayData data[18];
-    char stringdata0[162];
+    QByteArrayData data[17];
+    char stringdata0[158];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -47,15 +47,14 @@ QT_MOC_LITERAL(12, 102, 3), // "odo"
 QT_MOC_LITERAL(13, 106, 15), // "latitudeChanged"
 QT_MOC_LITERAL(14, 122, 8), // "latitude"
 QT_MOC_LITERAL(15, 131, 16), // "longitudeChanged"
-QT_MOC_LITERAL(16, 148, 9), // "longitude"
-QT_MOC_LITERAL(17, 158, 3) // "dis"
+QT_MOC_LITERAL(16, 148, 9) // "longitude"
 
     },
     "SomeIPManager\0rpmChanged\0\0uint8_t\0rpm\0"
     "fdisChanged\0fdis\0rdisChanged\0rdis\0"
     "speedChanged\0speed\0odoChanged\0odo\0"
     "latitudeChanged\0latitude\0longitudeChanged\0"
-    "longitude\0dis"
+    "longitude"
 };
 #undef QT_MOC_LITERAL
 
@@ -92,8 +91,8 @@ static const uint qt_meta_data_SomeIPManager[] = {
 
  // properties: name, type, flags
        4, 0x80000000 | 3, 0x0049590b,
-      17, 0x80000000 | 3, 0x0049580b,
-      17, 0x80000000 | 3, 0x0049580b,
+       8, 0x80000000 | 3, 0x0049580b,
+       6, 0x80000000 | 3, 0x0049580b,
       10, 0x80000000 | 3, 0x0049590b,
       12, QMetaType::QReal, 0x00495903,
       14, QMetaType::QReal, 0x00495903,
