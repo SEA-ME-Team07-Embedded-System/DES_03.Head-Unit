@@ -682,7 +682,7 @@ Rectangle { //centerstack : 3
             anchors.bottomMargin: parent.height*0.2
             width: parent.width*0.22
             height: parent.width*0.4
-            spacing: 25//
+            spacing: parent.height*0.1//
             opacity:1
             Behavior on opacity {
                 NumberAnimation {

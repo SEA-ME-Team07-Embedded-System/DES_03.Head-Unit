@@ -128,11 +128,14 @@ Window {
 
     Rectangle{
         id:centerScreen
-        anchors{
-            top: parent.top
-            bottom: parent.bottom
-        }
-        width: center_width //parent.width/2.5
+        rotation: -90
+        anchors.centerIn: parent
+//        anchors{
+//            top: parent.top
+//            bottom: parent.bottom
+//        }
+        width: 1280 //parent.width/2.5
+        height:480
         color: white //"#d6d6d6"
 
         Rectangle { //bar
@@ -148,7 +151,7 @@ Window {
         Rectangle { //map
             id:map_main
             visible: true
-            width: center_width
+            width: 1280
             height: 480
 
             Plugin {
@@ -181,17 +184,17 @@ Window {
                 anchors.fill: map_main
                 onClicked: {
                     if (left_view.visible) {
-                        left_view.opacity = 0;
-                        right_view.opacity = 0;
+//                        left_view.opacity = 0;
+//                        right_view.opacity = 0;
                         map_gradation.opacity=0;
                         map_gradation_2.visible = true;
                         map_gradation_2.opacity=1;
 
                     } else {
-                        left_view.visible = true;
-                        left_view.opacity = 1;
-                        right_view.visible = true;
-                        right_view.opacity = 1;
+//                        left_view.visible = true;
+//                        left_view.opacity = 1;
+//                        right_view.visible = true;
+//                        right_view.opacity = 1;
                         map_gradation.visible = true;
                         map_gradation.opacity=1;
                         map_gradation_2.opacity=0;
@@ -204,7 +207,7 @@ Window {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             width: 480  //640 480
-            height: center_width
+            height: 1280
             rotation:90
             visible: true
             opacity:1
@@ -219,13 +222,15 @@ Window {
                 }
             }
             gradient: Gradient{
-                GradientStop{position: 0.0; color: "#4f4f4f"}
-                GradientStop{position: 0.35; color: "#664f4f4f"}
-                GradientStop{position: 0.45; color: "#334f4f4f"}
-                GradientStop{position: 0.5; color: "#224f4f4f"}
-                GradientStop{position: 0.55; color: "#334f4f4f"}
-                GradientStop{position: 0.65; color: "#664f4f4f"}
-                GradientStop{position: 1.0; color: "#4f4f4f"}
+                GradientStop{position: 0.0; color: "#00000000"}
+                GradientStop{position: 1.0; color: "#00000000"}
+//                GradientStop{position: 0.0; color: "#4f4f4f"}
+//                GradientStop{position: 0.35; color: "#664f4f4f"}
+//                GradientStop{position: 0.45; color: "#334f4f4f"}
+//                GradientStop{position: 0.5; color: "#224f4f4f"}
+//                GradientStop{position: 0.55; color: "#334f4f4f"}
+//                GradientStop{position: 0.65; color: "#664f4f4f"}
+//                GradientStop{position: 1.0; color: "#4f4f4f"}
             }
         }
         Rectangle{
@@ -233,7 +238,7 @@ Window {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             width: 480  //640 480
-            height: center_width
+            height: 1280
             rotation:90
             visible: false
             opacity:1
@@ -248,13 +253,15 @@ Window {
                 }
             }
             gradient: Gradient{
-                GradientStop{position: 0.0; color: side} //"#afafaf"
-                GradientStop{position: 0.15; color: "#44afafaf"}
-                GradientStop{position: 0.25; color: "#33afafaf"}
-                GradientStop{position: 0.5; color: "#11afafaf"}
-                GradientStop{position: 0.75; color: "#33afafaf"}
-                GradientStop{position: 0.85; color: "#44afafaf"}
-                GradientStop{position: 1.0; color: side}
+                GradientStop{position: 0.0; color: "#00000000"}
+                GradientStop{position: 1.0; color: "#00000000"}               //for yocto display
+//                GradientStop{position: 0.0; color: side} //"#afafaf"
+//                GradientStop{position: 0.15; color: "#44afafaf"}
+//                GradientStop{position: 0.25; color: "#33afafaf"}
+//                GradientStop{position: 0.5; color: "#11afafaf"}
+//                GradientStop{position: 0.75; color: "#33afafaf"}
+//                GradientStop{position: 0.85; color: "#44afafaf"}
+//                GradientStop{position: 1.0; color: side}
             }
         }
 

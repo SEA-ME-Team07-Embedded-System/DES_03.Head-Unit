@@ -1,0 +1,36 @@
+{
+	"BUILD_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-dashboard-Desktop-Debug/Dashboard_autogen",
+	"CMAKE_BINARY_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-dashboard-Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-dashboard-Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard",
+	"CMAKE_SOURCE_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard",
+	"INCLUDE_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-dashboard-Desktop-Debug/Dashboard_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/qml/dashboard.qml",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/qml/ValueSource.qml",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/car_park.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/tesla_frame.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/minute.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/clock_hour2.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/temperature-icon.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/distance-icon.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/clock_minute2.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/car_upview.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/second.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/hour.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/arrow_grey.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/images/fuel-icon.png",
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/fonts/DejaVuSans.ttf"
+	],
+	"LOCK_FILE" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-dashboard-Desktop-Debug/CMakeFiles/Dashboard_autogen.dir/AutoRcc_dashboard_UVLADIE3JM_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "dashboard" ],
+	"OUTPUT_CHECKSUM" : "UVLADIE3JM",
+	"OUTPUT_NAME" : "qrc_dashboard.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-dashboard-Desktop-Debug/CMakeFiles/Dashboard_autogen.dir/AutoRcc_dashboard_UVLADIE3JM_Used.txt",
+	"SOURCE" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/dashboard/src/dashboard.qrc",
+	"VERBOSITY" : 0
+}
