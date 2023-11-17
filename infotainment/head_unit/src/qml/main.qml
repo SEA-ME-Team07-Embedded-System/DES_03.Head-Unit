@@ -36,7 +36,7 @@ Window {
             source: "qrc:/image/house_icon.png"
             anchors {
                 left: parent.left
-                leftMargin: 36
+                leftMargin: parent.height*0.7
             }
             anchors.verticalCenter: parent.verticalCenter
             width: parent.height*.6
@@ -48,14 +48,13 @@ Window {
             id: digitalClock
             anchors {
                 right: parent.right
-                rightMargin: 20
+                rightMargin: parent.height*0.4
                 verticalCenter: parent.verticalCenter
             }
             text: Qt.formatDateTime(new Date(), "hh:mm")
             color: "white"
-            font.pixelSize: 25
+            font.pixelSize: parent.height*0.5
         }
-
         Timer {
             interval: 1000
             running: true
@@ -75,7 +74,6 @@ Window {
             left: leftBar.right
             right: topBar.right
         }
-
         DBusManager {
             id: dbusHandler
         }

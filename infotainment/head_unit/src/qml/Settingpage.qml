@@ -63,8 +63,6 @@ Rectangle { //centerstack : 3
             }
         }
     }
-
-
     Image{
         id:car_image
         anchors.fill:parent
@@ -679,7 +677,9 @@ Rectangle { //centerstack : 3
             anchors.top: parent.top
             anchors.topMargin: parent.height*0.2
             anchors.right: parent.right
-            anchors.rightMargin: parent.height*0.3 //parent.height*0.15가 button size
+            anchors.rightMargin: parent.height*0.2 //parent.height*0.15가 button size
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: parent.height*0.2
             width: parent.width*0.22
             height: parent.width*0.4
             spacing: 25//

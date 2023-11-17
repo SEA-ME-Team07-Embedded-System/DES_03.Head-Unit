@@ -33,7 +33,7 @@ Rectangle {
         }
         Button {
             id: searchButton
-            width: 100
+            width: parent.width*0.11
             text: "Search"
             anchors.top: searchField.top
             anchors.left: searchField.right

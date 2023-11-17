@@ -4,7 +4,6 @@ import QtQuick.Layouts 1.12
 
 Rectangle { //centerstack : 1
        id: playPage
-//       anchors.fill: parent
        //feature : 1. music 2. video
        StackLayout{
            id: playpageStack
@@ -62,8 +61,6 @@ Rectangle { //centerstack : 1
                    color: "#242323"  // Change this color for your button background color
                    anchors.fill: parent
                }
-
-
                Image {
                    anchors.centerIn: parent
                    width: playVideoButton.width * 0.5
