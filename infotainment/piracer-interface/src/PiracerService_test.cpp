@@ -22,7 +22,6 @@ int main() {
     }
     std::cout << "Successfully Registered Service!" << std::endl;
 
-    PiracerClass piracer;
     uint8_t gear = 0;
     uint8_t mode = 0; // Start with mode 3
     uint8_t battery = 0;
@@ -45,4 +44,3 @@ int main() {
 
     return 0;
 }
-

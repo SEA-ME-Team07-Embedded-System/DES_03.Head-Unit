@@ -1,35 +1,41 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include "someipmanager.h"
+#include "methodcallsomeipmanager.h"
+#include "piracersomeipmanager.h"
 #include <QQmlContext>
-#include "dbusmanager.h"
-#include "someipmanager.h"
 #include <QCoreApplication>
-#include <QtDBus/QDBusConnection>
-#include <QtDBus/QDBusInterface>
-
+#include <QtWebEngine/QtWebEngine>
 
 
 int main(int argc, char *argv[])
 {
+    qputenv("QSG_RENDER_LOOP","threaded");
     qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
     QGuiApplication app(argc, argv);
+    QtWebEngine::initialize();
 
-    //DBus
-    qmlRegisterType<DBusManager>("com.example", 1, 0, "DBusManager");
-    DBusManager dbusManager; // Create an instance of the RPMManager class
-
-    //SOMEIP
+    //SOMEIP for CAN
     SomeIPManager someipManager;
     someipManager.initVsomeipClient();
     someipManager.startSubscribeRPM();
     someipManager.startSubscribeFDis();
     someipManager.startSubscribeRDis();
-    qmlRegisterType<SomeIPManager>("someip", 1, 0, "SomeIPManager");
+
+    //SOMEIP Attribute for Piracer
+    PiracerSomeIPManager piracersomeipManager;
+    piracersomeipManager.initVsomeipClient();
+    piracersomeipManager.startSubscribeBattery();
+    piracersomeipManager.startSubscribeGear();
+    piracersomeipManager.startSubscribeMode();
+
+    //SOMEIP MethodCall for Piracer
+    MethodCallSomeIPManager methodcallsomeipmanager;
+    qmlRegisterType<MethodCallSomeIPManager>("com.example", 1, 0, "PiracerSomeIPManager");
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
@@ -39,11 +45,11 @@ int main(int argc, char *argv[])
                 QCoreApplication::exit(-1);
         }, Qt::QueuedConnection);
 
-    //connect qml with c++ class
+    // Expose objects to QML
     engine.rootContext()->setContextProperty("someipManager", &someipManager);
+    engine.rootContext()->setContextProperty("piracersomeipManager", &piracersomeipManager);
+
     engine.load(url);
-
-
 
     return app.exec();
 }

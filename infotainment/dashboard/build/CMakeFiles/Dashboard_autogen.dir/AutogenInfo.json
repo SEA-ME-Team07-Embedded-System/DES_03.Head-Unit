@@ -18,11 +18,6 @@
 			"65Z2EJC3X5/moc_CANSomeIPProxy.cpp"
 		],
 		[
-			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/dbusmanager.h",
-			"MU",
-			"UVLADIE3JM/moc_dbusmanager.cpp"
-		],
-		[
 			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/methodcallsomeipmanager.h",
 			"MU",
 			"UVLADIE3JM/moc_methodcallsomeipmanager.cpp"
@@ -54,7 +49,6 @@
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
-		"QT_DBUS_LIB",
 		"QT_GUI_LIB",
 		"QT_LOCATION_LIB",
 		"QT_NETWORK_LIB",
@@ -85,7 +79,6 @@
 		"/usr/include/x86_64-linux-gnu/qt5/QtQml",
 		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
-		"/usr/include/x86_64-linux-gnu/qt5/QtDBus",
 		"/usr/include/x86_64-linux-gnu/qt5/QtLocation",
 		"/usr/include/x86_64-linux-gnu/qt5/QtPositioningQuick",
 		"/usr/include/x86_64-linux-gnu/qt5/QtPositioning",
@@ -126,10 +119,6 @@
 		],
 		[
 			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPProxy.cpp",
-			"MU"
-		],
-		[
-			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/dbusmanager.cpp",
 			"MU"
 		],
 		[

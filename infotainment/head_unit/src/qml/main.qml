@@ -74,8 +74,9 @@ Window {
             left: leftBar.right
             right: topBar.right
         }
-        DBusManager {
-            id: dbusHandler
+
+        PiracerSomeIPManager {
+            id: piracerHandler
         }
         
         StackLayout{

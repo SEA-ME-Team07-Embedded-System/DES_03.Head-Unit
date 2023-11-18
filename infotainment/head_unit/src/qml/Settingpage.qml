@@ -371,7 +371,7 @@ Rectangle { //centerstack : 3
 //                    sportsmode_light.visible=true
 //                    normalmode_light.visible=false
 //                    ecomode_light.visible=false
-                    dbusHandler.mode_select(9);
+                    piracerHandler.modeSelectCall(9);
                 }
             }
             Rectangle {
@@ -414,7 +414,7 @@ Rectangle { //centerstack : 3
 //                    sportsmode_light.visible=false
 //                    normalmode_light.visible=true
 //                    ecomode_light.visible=false
-                    dbusHandler.mode_select(5);
+                    piracerHandler.modeSelectCall(5);
                 }
             }
             Rectangle {
@@ -458,7 +458,7 @@ Rectangle { //centerstack : 3
 //                    sportsmode_light.visible=false
 //                    normalmode_light.visible=false
 //                    ecomode_light.visible=true
-                    dbusHandler.mode_select(3);
+                    piracerHandler.modeSelectCall(3);
                 }
             }
             Rectangle {
@@ -714,9 +714,6 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: p_Area
                     anchors.fill: parent
-                    onClicked: {
-                        dbusHandler.gear_select(0);
-                    }
                 }
                 Rectangle {
                     id:p_light
@@ -760,9 +757,6 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: r_Area
                     anchors.fill: parent
-                    onClicked: {
-                        dbusHandler.gear_select(1);
-                    }
                 }
                 Rectangle {
                     id:r_light
@@ -805,9 +799,6 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: n_Area
                     anchors.fill: parent
-                    onClicked: {
-                        dbusHandler.gear_select(2);
-                    }
                 }
                 Rectangle {
                     id:n_light
@@ -849,9 +840,6 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: d_Area
                     anchors.fill: parent
-                    onClicked: {
-                        dbusHandler.gear_select(3);
-                    }
                 }
                 Rectangle {
                     id:d_light

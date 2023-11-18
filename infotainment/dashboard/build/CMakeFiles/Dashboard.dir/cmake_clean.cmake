@@ -8,7 +8,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o"
   "CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp.o"
   "CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp.o"
-  "CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.o"
   "CMakeFiles/Dashboard.dir/src/main.cpp.o"
   "CMakeFiles/Dashboard.dir/src/methodcallsomeipmanager.cpp.o"
   "CMakeFiles/Dashboard.dir/src/piracersomeipmanager.cpp.o"

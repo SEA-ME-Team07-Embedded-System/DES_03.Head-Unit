@@ -7,8 +7,8 @@ Item {
     property real kph: 0 //speed(cm/s)
     property real rpm: 0 //piracer wheel rpm
     property real fuel: 0 //battery
-    property real f_dis: 0 //front distance
-    property real r_dis: 0 //rear distance
+    property real f_dis: 0 //distance
+    property real r_dis: 0
     property real odo: 0
     property real travelableDis:0
     property real lati:52.424455
@@ -18,6 +18,7 @@ Item {
 
     Connections{
         target: someipManager
+
         onRpmChanged: {
             valueSource.kph = Math.round(rpm * 0.35); // Update kph property when speed changes
             valueSource.rpm = rpm;
@@ -42,23 +43,20 @@ Item {
         }
     }
 
-    DBusManager {
-        id: dbusmanager
+    Connections{
+        target: piracersomeipManager
+
         onBatteryChanged: {
             //console.log("onBatteryChanged")
-            valueSource.fuel = dbusmanager.getBattery() // Update kph property when speed changes
-        }
-        onTravelableDisChanged: {
-            //console.log("onTraevelChanged")
-            valueSource.travelableDis = dbusmanager.getTravelableDis()
+            valueSource.fuel = battery; // Update kph property when speed changes
         }
         onGearChanged: {
-            console.log("onGearChanged")
-            valueSource.gear = dbusmanager.getGear()
+            //console.log("onGearChanged")
+            valueSource.gear = gear;
         }
         onModeChanged: {
             console.log("onModeChanged")
-            valueSource.mode = dbusmanager.getMode()
+            valueSource.mode = mode;
         }
     }
  }

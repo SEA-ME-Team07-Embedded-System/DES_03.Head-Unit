@@ -1,9 +1,9 @@
 #include "piracersomeipmanager.h"
 
 PiracerSomeIPManager::PiracerSomeIPManager(QObject *parent)
-    : QObject{parent}, m_battery(0), m_gear(0), m_mode(0), newMode(0)
+    : QObject{parent}, m_battery(0), m_gear(0), m_mode(0)
 {
-    std::cout << "piracer client initialize" << std::endl;
+    std::cout << "piracer attribute client initialize" << std::endl;
     qRegisterMetaType<uint8_t>("uint8_t");
 }
 
@@ -45,7 +45,7 @@ void PiracerSomeIPManager::initVsomeipClient()
     runtime = CommonAPI::Runtime::get();
 
     proxy = runtime->buildProxy<PiracerProxy>("local", "Piracer");
-//    std::cout << "Checking availability from PiracerProxy!" << std::endl;
+    std::cout << "Checking availability from PiracerProxy!" << std::endl;
 
 //    while (!proxy->isAvailable())
 //        std::this_thread::sleep_for(std::chrono::microseconds(10));
@@ -73,11 +73,5 @@ void PiracerSomeIPManager::startSubscribeMode()
         setMode(mode);
         //std::cout << "Received change Mode message: " << int(mode) << std::endl;
     });
-}
-
-void PiracerSomeIPManager::modeSelectCall(const quint8 &data)
-{
-    proxy->modeSelect(data, callStatus, returnMessage);
-    std::cout << "Got Return Message: '" << returnMessage << "Sent Message: "<< (int)data << "'\n";
 }
 

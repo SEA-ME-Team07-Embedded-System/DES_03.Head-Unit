@@ -22,21 +22,16 @@ link_directories(
     ~/build-commonapi/vsomeip/build
 )
 
-find_package(Qt5 COMPONENTS Core Quick Gui DBus Location Positioning REQUIRED)
+find_package(Qt5 COMPONENTS Core Quick Gui Location Positioning REQUIRED)
 
 add_executable(Dashboard
         src/main.cpp
-        src/dbusmanager.cpp
         src/someipmanager.cpp
         src/dashboard.qrc
         src/piracersomeipmanager.cpp
-        src/piracersomeipmanager.h
-        src/someipmanager.h
-        src/dbusmanager.h
-        ../can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp
+        src/methodcallsomeipmanager.cpp
         ../can-interface/src-gen/v1/commonapi/CANSomeIPDeployment.cpp
         ../can-interface/src-gen/v1/commonapi/CANSomeIPProxy.cpp
-        ../piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp
         ../piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp
         ../piracer-interface/src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp
         )
@@ -49,7 +44,6 @@ PRIVATE
     Qt5::Core 
     Qt5::Quick 
     Qt5::Gui 
-    Qt5::DBus 
     Qt5::Location 
     Qt5::Positioning 
     CommonAPI 

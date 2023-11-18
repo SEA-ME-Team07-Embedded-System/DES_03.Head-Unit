@@ -59,25 +59,4 @@ Item {
             valueSource.mode = mode;
         }
     }
-
-//    DBusManager {
-//        id: dbusmanager
-
-//        onBatteryChanged: {
-//            //console.log("onBatteryChanged")
-//            valueSource.fuel = dbusmanager.getBattery() // Update kph property when speed changes
-//        }
-//        onTravelableDisChanged: {
-//            //console.log("onTraevelChanged")
-//            valueSource.travelableDis = dbusmanager.getTravelableDis()
-//        }
-//        onGearChanged: {
-//            //console.log("onGearChanged")
-//            valueSource.gear = dbusmanager.getGear()
-//        }
-//        onModeChanged: {
-//            //console.log("onModeChanged")
-//            valueSource.mode = dbusmanager.getMode()
-//        }
-//    }
  }
