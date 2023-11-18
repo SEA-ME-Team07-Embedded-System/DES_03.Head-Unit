@@ -41,6 +41,8 @@ QObject
 -
 QVariant
 -
+QDebug
+-
 iostream
 -
 string
@@ -48,6 +50,8 @@ string
 unistd.h
 -
 thread
+-
+typeinfo
 -
 CommonAPI/CommonAPI.hpp
 -
@@ -251,6 +255,10 @@ CommonAPI/Version.hpp
 /home/seame-workstation05/build-commonapi/capicxx-core-runtime/include/CommonAPI/Version.hpp
 cstdint
 -
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
+qdebug.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
 qobject.h

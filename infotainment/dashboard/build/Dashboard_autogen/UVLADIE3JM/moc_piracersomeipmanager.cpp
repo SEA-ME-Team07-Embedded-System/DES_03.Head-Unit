@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_PiracerSomeIPManager_t {
-    QByteArrayData data[11];
-    char stringdata0[107];
+    QByteArrayData data[9];
+    char stringdata0[87];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,14 +39,12 @@ QT_MOC_LITERAL(4, 45, 7), // "battery"
 QT_MOC_LITERAL(5, 53, 11), // "gearChanged"
 QT_MOC_LITERAL(6, 65, 4), // "gear"
 QT_MOC_LITERAL(7, 70, 11), // "modeChanged"
-QT_MOC_LITERAL(8, 82, 4), // "mode"
-QT_MOC_LITERAL(9, 87, 14), // "modeSelectCall"
-QT_MOC_LITERAL(10, 102, 4) // "data"
+QT_MOC_LITERAL(8, 82, 4) // "mode"
 
     },
     "PiracerSomeIPManager\0batteryChanged\0"
     "\0uint8_t\0battery\0gearChanged\0gear\0"
-    "modeChanged\0mode\0modeSelectCall\0data"
+    "modeChanged\0mode"
 };
 #undef QT_MOC_LITERAL
 
@@ -56,28 +54,22 @@ static const uint qt_meta_data_PiracerSomeIPManager[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
-       3,   46, // properties
+       3,   14, // methods
+       3,   38, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x06 /* Public */,
-       5,    1,   37,    2, 0x06 /* Public */,
-       7,    1,   40,    2, 0x06 /* Public */,
-
- // slots: name, argc, parameters, tag, flags
-       9,    1,   43,    2, 0x0a /* Public */,
+       1,    1,   29,    2, 0x06 /* Public */,
+       5,    1,   32,    2, 0x06 /* Public */,
+       7,    1,   35,    2, 0x06 /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
     QMetaType::Void, 0x80000000 | 3,    6,
     QMetaType::Void, 0x80000000 | 3,    8,
-
- // slots: parameters
-    QMetaType::Void, QMetaType::UChar,   10,
 
  // properties: name, type, flags
        4, 0x80000000 | 3, 0x0049590b,
@@ -101,7 +93,6 @@ void PiracerSomeIPManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
         case 0: _t->batteryChanged((*reinterpret_cast< uint8_t(*)>(_a[1]))); break;
         case 1: _t->gearChanged((*reinterpret_cast< uint8_t(*)>(_a[1]))); break;
         case 2: _t->modeChanged((*reinterpret_cast< uint8_t(*)>(_a[1]))); break;
-        case 3: _t->modeSelectCall((*reinterpret_cast< const quint8(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -183,13 +174,13 @@ int PiracerSomeIPManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 4;
+        _id -= 3;
     }
 #ifndef QT_NO_PROPERTIES
     else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty

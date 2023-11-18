@@ -18,14 +18,14 @@
 			"65Z2EJC3X5/moc_CANSomeIPProxy.cpp"
 		],
 		[
-			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.hpp",
-			"MU",
-			"65Z2EJC3X5/moc_CANSomeIPStubAdapter.cpp"
-		],
-		[
 			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/dbusmanager.h",
 			"MU",
 			"UVLADIE3JM/moc_dbusmanager.cpp"
+		],
+		[
+			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/methodcallsomeipmanager.h",
+			"MU",
+			"UVLADIE3JM/moc_methodcallsomeipmanager.cpp"
 		],
 		[
 			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/piracersomeipmanager.h",
@@ -46,11 +46,6 @@
 			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.hpp",
 			"MU",
 			"33IOQ32ZPK/moc_PiracerSomeIPProxy.cpp"
-		],
-		[
-			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.hpp",
-			"MU",
-			"33IOQ32ZPK/moc_PiracerSomeIPStubAdapter.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -134,15 +129,15 @@
 			"MU"
 		],
 		[
-			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp",
-			"MU"
-		],
-		[
 			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/dbusmanager.cpp",
 			"MU"
 		],
 		[
 			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/main.cpp",
+			"MU"
+		],
+		[
+			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/methodcallsomeipmanager.cpp",
 			"MU"
 		],
 		[
@@ -159,10 +154,6 @@
 		],
 		[
 			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp",
-			"MU"
-		],
-		[
-			"/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp",
 			"MU"
 		]
 	],

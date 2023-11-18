@@ -244,33 +244,6 @@ home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src
 	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s
 .PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPProxy.cpp.s
 
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.o: home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
-
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.o
-
-# target to build an object file
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o
-
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.i: home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
-
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.i
-
-# target to preprocess a source file
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.i
-
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.s: home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
-
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.s
-
-# target to generate assembly for a file
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.s
-
 home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPDeployment.o: home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp.o
 
 .PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPDeployment.o
@@ -325,33 +298,6 @@ home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface
 	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp.s
 .PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp.s
 
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.o: home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.o
-
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.o
-
-# target to build an object file
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.o:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.o
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.o
-
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.i: home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.i
-
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.i
-
-# target to preprocess a source file
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.i:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.i
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.i
-
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.s: home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.s
-
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.s
-
-# target to generate assembly for a file
-home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.s:
-	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.s
-.PHONY : home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.s
-
 src/dbusmanager.o: src/dbusmanager.cpp.o
 
 .PHONY : src/dbusmanager.o
@@ -405,6 +351,33 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/methodcallsomeipmanager.o: src/methodcallsomeipmanager.cpp.o
+
+.PHONY : src/methodcallsomeipmanager.o
+
+# target to build an object file
+src/methodcallsomeipmanager.cpp.o:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/src/methodcallsomeipmanager.cpp.o
+.PHONY : src/methodcallsomeipmanager.cpp.o
+
+src/methodcallsomeipmanager.i: src/methodcallsomeipmanager.cpp.i
+
+.PHONY : src/methodcallsomeipmanager.i
+
+# target to preprocess a source file
+src/methodcallsomeipmanager.cpp.i:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/src/methodcallsomeipmanager.cpp.i
+.PHONY : src/methodcallsomeipmanager.cpp.i
+
+src/methodcallsomeipmanager.s: src/methodcallsomeipmanager.cpp.s
+
+.PHONY : src/methodcallsomeipmanager.s
+
+# target to generate assembly for a file
+src/methodcallsomeipmanager.cpp.s:
+	$(MAKE) -f CMakeFiles/Dashboard.dir/build.make CMakeFiles/Dashboard.dir/src/methodcallsomeipmanager.cpp.s
+.PHONY : src/methodcallsomeipmanager.cpp.s
 
 src/piracersomeipmanager.o: src/piracersomeipmanager.cpp.o
 
@@ -482,24 +455,21 @@ help:
 	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPProxy.o"
 	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPProxy.i"
 	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPProxy.s"
-	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.o"
-	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.i"
-	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPStubAdapter.s"
 	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPDeployment.o"
 	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPDeployment.i"
 	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPDeployment.s"
 	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.o"
 	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.i"
 	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.s"
-	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.o"
-	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.i"
-	@echo "... home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.s"
 	@echo "... src/dbusmanager.o"
 	@echo "... src/dbusmanager.i"
 	@echo "... src/dbusmanager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/methodcallsomeipmanager.o"
+	@echo "... src/methodcallsomeipmanager.i"
+	@echo "... src/methodcallsomeipmanager.s"
 	@echo "... src/piracersomeipmanager.o"
 	@echo "... src/piracersomeipmanager.i"
 	@echo "... src/piracersomeipmanager.s"
