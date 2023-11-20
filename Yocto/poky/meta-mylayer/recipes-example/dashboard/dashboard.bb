@@ -36,3 +36,5 @@ EXTRA_OECMAKE += " \
                 -DCMAKE_INCLUDE_PATH=${STAGING_INCDIR} \
                 -DCMAKE_LIBRARY_PATH=${STAGING_LIBDIR} \
 "
+
+FILESEXTRAPATHS:prepend := "${THISDIR}/Dashboard:"
