@@ -125,7 +125,7 @@ Window {
 
     Rectangle{
         id:centerScreen
-        rotation: -90
+//        rotation: -90
         anchors.fill: parent
 //        anchors{
 //            top: parent.top
@@ -147,10 +147,11 @@ Window {
         Rectangle { //map
             id:map_main
             visible: true
+            anchors.fill: parent
 //            anchors.horizontalCenter: parent.horizontalCenter
 //            anchors.verticalCenter: parent.verticalCenter
-            width: center_width
-            height: 480
+//            width: center_width
+//            height: 480
 
             Plugin {
                 id: mapPlugin
@@ -269,7 +270,9 @@ Window {
             id:left_view
             color:"#00000000"
             visible:true
-            x:120
+            anchors.left: parent.left
+            anchors.leftMargin: parent.width*0.12
+//            x:120
             anchors.verticalCenter: parent.verticalCenter
             opacity: 1
             Behavior on opacity {
@@ -764,7 +767,11 @@ Window {
 
         Rectangle{
             id:right_view
+//            anchors.right: parent.right
+//            anchors.rightMargin: parent.width*0.2
             x:300
+//            anchors.left: parent.left
+//            anchors.leftMargin: parent.width*0.1
             anchors.verticalCenter: parent.verticalCenter
             color:"#00000000"
             visible:true

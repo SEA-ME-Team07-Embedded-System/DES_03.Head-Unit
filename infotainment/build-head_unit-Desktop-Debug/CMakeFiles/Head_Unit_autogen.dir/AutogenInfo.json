@@ -1,0 +1,147 @@
+{
+	"BUILD_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-head_unit-Desktop-Debug/Head_Unit_autogen",
+	"CMAKE_BINARY_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-head_unit-Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-head_unit-Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/head_unit",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/head_unit",
+	"HEADERS" : 
+	[
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/head_unit/src/dbusmanager.h",
+			"MU",
+			"UVLADIE3JM/moc_dbusmanager.cpp"
+		],
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/head_unit/src/someipmanager.h",
+			"MU",
+			"UVLADIE3JM/moc_someipmanager.cpp"
+		],
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.hpp",
+			"MU",
+			"LMF45GQUJE/moc_CANSomeIPDeployment.cpp"
+		],
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.hpp",
+			"MU",
+			"LMF45GQUJE/moc_CANSomeIPProxy.cpp"
+		],
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.hpp",
+			"MU",
+			"LMF45GQUJE/moc_CANSomeIPStubAdapter.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-head_unit-Desktop-Debug/Head_Unit_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-head_unit-Desktop-Debug/Head_Unit_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_DBUS_LIB",
+		"QT_GUI_LIB",
+		"QT_LOCATION_LIB",
+		"QT_MULTIMEDIA_LIB",
+		"QT_NETWORK_LIB",
+		"QT_POSITIONINGQUICK_LIB",
+		"QT_POSITIONING_LIB",
+		"QT_QML_DEBUG",
+		"QT_QML_LIB",
+		"QT_QUICK_LIB",
+		"QT_VIRTUALKEYBOARD_LIB",
+		"QT_WEBCHANNEL_LIB",
+		"QT_WEBENGINECORE_LIB",
+		"QT_WEBENGINE_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/project-pyracer/src-gen",
+		"/home/daekyung/build-commonapi/capicxx-core-runtime/include",
+		"/home/daekyung/build-commonapi/capicxx-someip-runtime/include",
+		"/home/daekyung/build-commonapi/vsomeip/interface",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtQuick",
+		"/usr/include/x86_64-linux-gnu/qt5/QtQml",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtMultimedia",
+		"/usr/include/x86_64-linux-gnu/qt5/QtDBus",
+		"/usr/include/x86_64-linux-gnu/qt5/QtLocation",
+		"/usr/include/x86_64-linux-gnu/qt5/QtPositioningQuick",
+		"/usr/include/x86_64-linux-gnu/qt5/QtPositioning",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWebEngine",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWebEngineCore",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWebChannel",
+		"/usr/include/x86_64-linux-gnu/qt5/QtVirtualKeyboard",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/g++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-head_unit-Desktop-Debug/Head_Unit_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-head_unit-Desktop-Debug/CMakeFiles/Head_Unit_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-head_unit-Desktop-Debug/CMakeFiles/Head_Unit_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/head_unit/src/dbusmanager.cpp",
+			"MU"
+		],
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/head_unit/src/main.cpp",
+			"MU"
+		],
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/head_unit/src/someipmanager.cpp",
+			"MU"
+		],
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp",
+			"MU"
+		],
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp",
+			"MU"
+		],
+		[
+			"/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp",
+			"MU"
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}
