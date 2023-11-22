@@ -4,8 +4,8 @@ LICENSE = "CLOSED"
 
 SRC_URI += " \
         file://CMakeLists.txt \
-        file://can-interface/ \
-        file://piracer-interface/ \
+        file://canfeeder/ \
+        file://piracerfeeder/ \
 "
 
 S = "${WORKDIR}"
