@@ -16,14 +16,14 @@ if __name__ == '__main__':
         
         print(f'throttle={throttle}, steering={steering}')
        
-        if gamepad_input.button_y:
-            print("Y pressed")
-        if gamepad_input.button_x:
-            print("X pressed")
-        if gamepad_input.button_a:
-            print("A pressed")
-        if gamepad_input.button_b:
-            print("B pressed")
+        #if gamepad_input.button_y:
+        #    print("Y pressed")
+        #if gamepad_input.button_x:
+        #    print("X pressed")
+        #if gamepad_input.button_a:
+        #    print("A pressed")
+        #if gamepad_input.button_b:
+        #    print("B pressed")
 
         piracer.set_throttle_percent(throttle)
         piracer.set_steering_percent(steering)
