@@ -15,15 +15,26 @@ terminate() {
 # Trap the SIGINT signal and call the terminate function
 trap 'terminate' SIGINT
 
-# Navigate to the second directory and execute the program in the background
-cd /home/team07/Desktop/DES03_HeadUnit/infotainment
-python3 dbus_send.py &
+# Navigate to the first directory and execute the programs in the background
+cd someip/vcan
+./vcan.sh &
+child_pids+=($!)
+./can_sender1 &
+child_pids+=($!)
+./can_sender2 &
 child_pids+=($!)
 
 # Navigate to the third directory and execute the program in the background
-cd /home/team07/Desktop/DES03_HeadUnit/infotainment/project-pyracer/build
+cd ../..
+cd infotainment/can-interface/build
 ./CANService &
 child_pids+=($!)
+cd ../../
+cd piracer-interface/build
+./PiracerService_test &
+child_pids+=($!)
+
+
 
 # Optionally, wait for all background jobs to complete
 wait
