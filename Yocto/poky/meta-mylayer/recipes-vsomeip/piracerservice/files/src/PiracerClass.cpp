@@ -3,7 +3,7 @@
 PiracerClass::PiracerClass()
 {
     Py_Initialize();
-    pVehicleModule = PyImport_ImportModule("seame_piracer.vehicles");
+    pVehicleModule = PyImport_ImportModule("piracer.vehicles");
     pVehicleClass = PyObject_GetAttrString(pVehicleModule, "PiRacerStandard");
     pVehicleInstance = PyObject_CallObject(pVehicleClass, NULL);
 
