@@ -1,6 +1,6 @@
-inherit populate_sdk populate_sdk_qt5
-
 SUMMARY = "A basic Qt5 dev image"
+
+#inherit populate_sdk populate_sdk_qt5
     
 include recipes-core/images/core-image-base.bb
 
