@@ -20,15 +20,21 @@ https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/7374888
 
 ## Hardware Architecture
 
-![DES03_hardwarearichitecture drawio](https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/73748884/4d9710af-88d0-4060-ba2c-95ff1299cfbe)
+<div align="center">
+    <img src="https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/73748884/4d9710af-88d0-4060-ba2c-95ff1299cfbe" style="width: 70%; height: auto;">
+</div>
 
 ## Data Flow
 
-![DES03_Dataflow drawio](https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/73748884/fd5095f4-0e6e-4763-a675-de7eda0e4e17)
+<div align="center">
+    <img src="https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/73748884/fd5095f4-0e6e-4763-a675-de7eda0e4e17" style="width: 70%; height: auto;">
+</div>
 
 ## Software Architecture
 
-![DES03_softwarearchitecture drawio](https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/73748884/117686e4-ed3a-49b3-b2d2-4a8b19b238bb)
+<div align="center">
+    <img src="https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/73748884/117686e4-ed3a-49b3-b2d2-4a8b19b238bb" style="width: 70%; height: auto;">
+</div>
 
 1. **Microcontroller (MCU)**: An Arduino board collecting sensor data like RPM and distances.
 2. **Microcontroller Abstraction Layer**: Contains Arduino software (.ino files) that provides an interface to the hardware functionalities.
@@ -41,7 +47,10 @@ https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/7374888
 
 ## Application architecture
 
-![DES03_Dash Head_flow drawio](https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/73748884/1813efdf-9925-4e8d-8f97-ff29885a72d9)
+<div align="center">
+    <img src="https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/73748884/1813efdf-9925-4e8d-8f97-ff29885a72d9">
+</div>
+
 This represents the flow within the Dashboard and Head Unit Qt application. Let's focus on the Feeder component. The 'getDataAttribute' functions retrieve data from the middleware, which publishes data via someip services. Subsequently, the application's backend, including the someip client, receives and stores this data using 'setData' functions. When the 'setData' function is executed, it triggers a signal and slot interaction. 
 
 Simultaneously, within 'valuesource.qml,' which manages all data for GUI display, the 'onDataChange' function activates to fetch and store the data. It's then presented within the application. If you touch the screen to modify the car mode and adjust the throttle rate, an 'onClicked' signal is generated. This signal triggers the execution of the 'modeSelectCall' function, which requests a method call to someip service. Subsequently, it adjusts the throttle data and provides a response indicating whether the mode change was successful or not.
