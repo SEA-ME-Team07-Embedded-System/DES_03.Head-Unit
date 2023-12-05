@@ -6,17 +6,15 @@ import QtGraphicalEffects 1.0
 Rectangle { //centerstack : 3
     id: settingPage
     color: "black"
-
+    /// 1116 X 550
     Connections {
         target: valueSource
-
         onGearChanged: {
             console.log("onGearChanged")
             p_light.visible = false;
             r_light.visible = false;
             n_light.visible = false;
             d_light.visible = false;
-
             switch (valueSource.gear) {
                 case 0:  // P gear
                     p_light.visible = true;
@@ -44,11 +42,8 @@ Rectangle { //centerstack : 3
                     break;
             }
         }
-
-
         onModeChanged: {
             console.log("onModeChanged")
-
             switch (valueSource.mode) {
                 case 9:  // Sports mode
                     sportsmode_light.visible = true;
@@ -68,61 +63,15 @@ Rectangle { //centerstack : 3
             }
         }
     }
-
-    Canvas {
-        id:shadow
-        width: 900
-        height: shadow.width/7
-//                    rotation: -5
-        x:-20//(1024-shadow.width)*0.01
-        y:265
-        onPaint: {
-            var ctx = getContext("2d");
-            ctx.fillStyle = "#4a4a4f";
-            ctx.strokeStyle = "#5a5d63";
-            ctx.beginPath();
-            ctx.ellipse(shadow.width/2, shadow.height/2, shadow.width/2.5, shadow.height/4, 0, 0, Math.PI * 2); // 타원을 그립니다.
-            ctx.fill();
-            ctx.stroke(); // 타원을 스트로크로 그립니다.
-        }
-        InnerShadow {
-            anchors.fill: source
-            cached: true
-            radius: shadow.height/6
-            samples: 20
-            color: "#5d5d63"
-            source: parent
-        }
-        DropShadow {
-            anchors.fill: source
-            source: parent
-            radius: shadow.height/5.5 //6//shadow.height/5.9
-            color: "#343438"
-            samples: 15
-//                        cached: true
-        }
-    }
-
-//                Image{
-//                    id:car_image
-//                    x:modebutton_detail.x+car_image.width/2
-//                    y:parent.height/9
-////                        anchors.horizontalCenter: parent.horizontalCenter
-////                        anchors.centerIn: parent
-//                        width: parent.height*0.9
-//                        height: car_image.width*0.8
-//                        source:"file:///home/daekyung/Desktop/DES_03/DES_03.Head-Unit/qt/head_unit/image/caynne.png"
-//                }
     Image{
         id:car_image
-        anchors.centerIn: settingPage
+        anchors.fill:parent
         source:"qrc:/image/caynne4.jpg"
         fillMode:Image.Stretch
-//                    visible:false
     }
     Image {
         id:info_background
-        anchors.centerIn: settingPage //main_window
+        anchors.fill:parent //main_window
         source: "qrc:/image/caynne3.jpg"
         fillMode:Image.Stretch//PreserveAspectFit
         visible:false
@@ -140,7 +89,7 @@ Rectangle { //centerstack : 3
     }
     Image{
         id:gear_background
-        anchors.centerIn: settingPage
+        anchors.fill:parent
         source:"qrc:/image/new_cay.jpg"
         fillMode:Image.Stretch
         visible:false
@@ -163,35 +112,20 @@ Rectangle { //centerstack : 3
         width: parent.width
         height: parent.height
     }
-//                Image {
-//                    id:car_image//gear_background
-//                    anchors.centerIn: settingPage //main_window
-//                    source: "file:///home/daekyung/Desktop/DES_03/DES_03.Head-Unit/qt/head_unit/image/caynne_new.png"
-//                    fillMode:Image.Stretch//PreserveAspectFit
-//                    visible:true
-//                    opacity:1
-//                    Behavior on opacity {
-//                        NumberAnimation {
-//                            duration: 500  // 1초 동안 애니메이션 진행
-//                        }
-//                    }
-//                    onOpacityChanged: {
-//                        if (opacity == 0) {
-//                            info_background.visible = false;
-//                        }
-//                    }
-//                }
+
+
 
     ColumnLayout {
         anchors.top: parent.top
         anchors.left: parent.left
+        width:parent.height*0.15   //
+        height: parent.height*0.45  // 502.2
         spacing: 1
-
         // CarMode Button
         Button {
             id: carmodeArea
-            Layout.preferredWidth: 70  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.33  // Adjust according to your needs
             background: Rectangle {
                 color: "#242323"  // Change this color for your button background color
                 anchors.fill: parent
@@ -216,7 +150,6 @@ Rectangle { //centerstack : 3
                     duration: 100
                 }
             }
-
             Rectangle {
                 id:modebutton_light
                 visible: false
@@ -233,13 +166,10 @@ Rectangle { //centerstack : 3
                     modebutton_light.visible=true
                     informationbutton_light.visible=false
                     gearbutton_light.visible=false
-
                     informationbutton_detail.opacity=0
                     info_background.opacity=0
                     gearbutton_detail.opacity=0
                     gear_background.opacity=0
-
-
                     if (modebutton_detail.visible==false){
                         modebutton_detail.visible=true
                         modebutton_detail.opacity=1
@@ -247,7 +177,6 @@ Rectangle { //centerstack : 3
                     else{
                         modebutton_detail.opacity=0
                     }
-
                     // Logic for video button
                 }
             }
@@ -257,8 +186,8 @@ Rectangle { //centerstack : 3
         // CarInformation Button
         Button {
             id: carinformationButton
-            Layout.preferredWidth: 70  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.33  // Adjust according to your needs
             background: Rectangle {
                 color: "#242323"  // Change this color for your button background color
                 anchors.fill: parent
@@ -291,13 +220,10 @@ Rectangle { //centerstack : 3
                     modebutton_light.visible=false
                     informationbutton_light.visible=true
                     gearbutton_light.visible=false
-
                     modebutton_detail.opacity=0
-
                     gear_background.opacity=0
                     gearbutton_detail.opacity=0
 //                                car_image.visible=false
-
                     if (informationbutton_detail.visible==false){
                         informationbutton_detail.visible=true
                         informationbutton_detail.opacity=1
@@ -326,8 +252,8 @@ Rectangle { //centerstack : 3
         // CarGear Button
         Button {
             id: caringearButton
-            Layout.preferredWidth: 70  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.33  // Adjust according to your needs
             background: Rectangle {
                 color: "#242323"  // Change this color for your button background color
                 anchors.fill: parent
@@ -397,9 +323,13 @@ Rectangle { //centerstack : 3
     ColumnLayout {
         id:modebutton_detail
         visible: false
-        x:100
-        y:50
-        spacing: 2 //
+        anchors.top: parent.top
+        anchors.topMargin: parent.height*0.2
+        anchors.left: parent.left
+        anchors.leftMargin: parent.height*0.2 //parent.height*0.15가 button size
+        width: parent.width*0.22
+        height: parent.width*0.23
+        spacing: 5 //
         opacity:1
         Behavior on opacity {
             NumberAnimation {
@@ -415,8 +345,8 @@ Rectangle { //centerstack : 3
         // CarMode Button
         Button {
             id: sportsmode
-            Layout.preferredWidth: 200  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width  // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.33  // Adjust according to your needs
             background: Rectangle {
                 color: "#6e6e75"  // Change this color for your button background color
                 anchors.fill: parent
@@ -441,7 +371,7 @@ Rectangle { //centerstack : 3
 //                    sportsmode_light.visible=true
 //                    normalmode_light.visible=false
 //                    ecomode_light.visible=false
-                    dbusHandler.mode_select(9);
+                    piracerHandler.modeSelectCall(9);
                 }
             }
             Rectangle {
@@ -458,8 +388,8 @@ Rectangle { //centerstack : 3
 //                    // NORMAL Button
         Button {
             id: nomalmode
-            Layout.preferredWidth: 200  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width  // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.33  // Adjust according to your needs
             background: Rectangle {
                 color: "#6e6e75"  // Change this color for your button background color
                 anchors.fill: parent
@@ -484,7 +414,7 @@ Rectangle { //centerstack : 3
 //                    sportsmode_light.visible=false
 //                    normalmode_light.visible=true
 //                    ecomode_light.visible=false
-                    dbusHandler.mode_select(5);
+                    piracerHandler.modeSelectCall(5);
                 }
             }
             Rectangle {
@@ -501,8 +431,8 @@ Rectangle { //centerstack : 3
 //                    // ECO Button
         Button {
             id: ecomode
-            Layout.preferredWidth: 200  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.33  // Adjust according to your needs
             background: Rectangle {
                 color: "#6e6e75"  // Change this color for your button background color
                 anchors.baselineOffset: 10
@@ -528,7 +458,7 @@ Rectangle { //centerstack : 3
 //                    sportsmode_light.visible=false
 //                    normalmode_light.visible=false
 //                    ecomode_light.visible=true
-                    dbusHandler.mode_select(3);
+                    piracerHandler.modeSelectCall(3);
                 }
             }
             Rectangle {
@@ -547,9 +477,13 @@ Rectangle { //centerstack : 3
     ColumnLayout {
         id:informationbutton_detail
         visible: false
-        x:100
-        y:100
-        spacing: 10//
+        anchors.top: parent.top
+        anchors.topMargin: parent.height*0.2
+        anchors.left: parent.left
+        anchors.leftMargin: parent.height*0.2 //parent.height*0.15가 button size
+        width: parent.width*0.22
+        height: parent.width*0.3
+        spacing: 5 //
         opacity:1
         Behavior on opacity {
             NumberAnimation {
@@ -565,8 +499,8 @@ Rectangle { //centerstack : 3
         // battery detail
         Button {
             id: battery
-            Layout.preferredWidth: 200  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.25  // Adjust according to your needs
             background: Rectangle {
                 color: "#6e6e75"  // Change this color for your button background color
                 anchors.fill: parent
@@ -608,8 +542,8 @@ Rectangle { //centerstack : 3
       // Rear Distance
         Button {
             id: rdistance
-            Layout.preferredWidth: 200  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.25  // Adjust according to your needs
             background: Rectangle {
                 color: "#6e6e75"  // Change this color for your button background color
                 anchors.fill: parent
@@ -651,8 +585,8 @@ Rectangle { //centerstack : 3
         // front Distance
         Button {
             id: fdistance
-            Layout.preferredWidth: 200  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.25  // Adjust according to your needs
             background: Rectangle {
                 color: "#6e6e75"  // Change this color for your button background color
                 anchors.fill: parent
@@ -694,8 +628,8 @@ Rectangle { //centerstack : 3
        // Speed
         Button {
             id: temperature
-            Layout.preferredWidth: 200  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.25  // Adjust according to your needs
             background: Rectangle {
                 color: "#6e6e75"  // Change this color for your button background color
                 anchors.fill: parent
@@ -740,9 +674,15 @@ Rectangle { //centerstack : 3
         ColumnLayout {
             id:gearbutton_detail
             visible: false
-            x:700
-            y:100
-            spacing: 25//
+            anchors.top: parent.top
+            anchors.topMargin: parent.height*0.2
+            anchors.right: parent.right
+            anchors.rightMargin: parent.height*0.2 //parent.height*0.15가 button size
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: parent.height*0.2
+            width: parent.width*0.22
+            height: parent.width*0.4
+            spacing: parent.height*0.05//
             opacity:1
             Behavior on opacity {
                 NumberAnimation {
@@ -758,8 +698,8 @@ Rectangle { //centerstack : 3
             // P
             Button {
                 id: gear_p
-                Layout.preferredWidth: 70  // Adjust according to your needs
-                Layout.preferredHeight: 70  // Adjust according to your needs
+                Layout.preferredWidth: parent.height*0.2   // Adjust according to your needs
+                Layout.preferredHeight: parent.height*0.2  // Adjust according to your needs
                 background: Rectangle {
                     color: "transparent" //// Change this color for your button background color
                     anchors.fill: parent
@@ -774,9 +714,6 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: p_Area
                     anchors.fill: parent
-                    onClicked: {
-                        dbusHandler.gear_select(0);
-                    }
                 }
                 Rectangle {
                     id:p_light
@@ -804,8 +741,8 @@ Rectangle { //centerstack : 3
             //R
             Button {
                 id: gear_r
-                Layout.preferredWidth: 70  // Adjust according to your needs
-                Layout.preferredHeight: 70  // Adjust according to your needs
+                Layout.preferredWidth: parent.height*0.2   // Adjust according to your needs
+                Layout.preferredHeight: parent.height*0.2  // Adjust according to your needs
                 background: Rectangle {
                     color: "transparent"  // Change this color for your button background color
                     anchors.fill: parent
@@ -820,9 +757,6 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: r_Area
                     anchors.fill: parent
-                    onClicked: {
-                        dbusHandler.gear_select(1);
-                    }
                 }
                 Rectangle {
                     id:r_light
@@ -849,8 +783,8 @@ Rectangle { //centerstack : 3
              //  N
             Button {
                 id: gear_n
-                Layout.preferredWidth: 70  // Adjust according to your needs
-                Layout.preferredHeight: 70  // Adjust according to your needs
+                Layout.preferredWidth: parent.height*0.2   // Adjust according to your needs
+                Layout.preferredHeight: parent.height*0.2  // Adjust according to your needs
                 background: Rectangle {
                     color: "transparent"  // Change this color for your button background color
                     anchors.fill: parent
@@ -865,9 +799,6 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: n_Area
                     anchors.fill: parent
-                    onClicked: {
-                        dbusHandler.gear_select(2);
-                    }
                 }
                 Rectangle {
                     id:n_light
@@ -893,8 +824,8 @@ Rectangle { //centerstack : 3
             //D
             Button {
                 id: gear_d
-                Layout.preferredWidth: 70  // Adjust according to your needs
-                Layout.preferredHeight: 70  // Adjust according to your needs
+                Layout.preferredWidth: parent.height*0.2   // Adjust according to your needs
+                Layout.preferredHeight: parent.height*0.2  // Adjust according to your needs
                 background: Rectangle {
                     color: "transparent"//"#6e6e75"  // Change this color for your button background color
                     anchors.fill: parent
@@ -909,9 +840,6 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: d_Area
                     anchors.fill: parent
-                    onClicked: {
-                        dbusHandler.gear_select(3);
-                    }
                 }
                 Rectangle {
                     id:d_light
@@ -939,3 +867,48 @@ Rectangle { //centerstack : 3
 
     //////////////////////////
 }
+
+
+//    Canvas {
+//        id:shadow
+//        width: 900
+//        height: shadow.width/7
+////                    rotation: -5
+//        x:-20//(1024-shadow.width)*0.01
+//        y:265
+//        onPaint: {
+//            var ctx = getContext("2d");
+//            ctx.fillStyle = "#4a4a4f";
+//            ctx.strokeStyle = "#5a5d63";
+//            ctx.beginPath();
+//            ctx.ellipse(shadow.width/2, shadow.height/2, shadow.width/2.5, shadow.height/4, 0, 0, Math.PI * 2); // 타원을 그립니다.
+//            ctx.fill();
+//            ctx.stroke(); // 타원을 스트로크로 그립니다.
+//        }
+//        InnerShadow {
+//            anchors.fill: source
+//            cached: true
+//            radius: shadow.height/6
+//            samples: 20
+//            color: "#5d5d63"
+//            source: parent
+//        }
+//        DropShadow {
+//            anchors.fill: source
+//            source: parent
+//            radius: shadow.height/5.5 //6//shadow.height/5.9
+//            color: "#343438"
+//            samples: 15
+////                        cached: true
+//        }
+//    }
+//                Image{
+//                    id:car_image
+//                    x:modebutton_detail.x+car_image.width/2
+//                    y:parent.height/9
+////                        anchors.horizontalCenter: parent.horizontalCenter
+////                        anchors.centerIn: parent
+//                        width: parent.height*0.9
+//                        height: car_image.width*0.8
+//                        source:"file:///home/daekyung/Desktop/DES_03/DES_03.Head-Unit/qt/head_unit/image/caynne.png"
+//                }

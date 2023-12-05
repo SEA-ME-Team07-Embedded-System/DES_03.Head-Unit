@@ -4,21 +4,22 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp" "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.o"
-  "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/Dashboard_autogen/mocs_compilation.cpp" "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.o"
-  "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp" "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o"
-  "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp" "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o"
-  "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp" "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp.o"
-  "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/dbusmanager.cpp" "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/src/dbusmanager.cpp.o"
-  "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/main.cpp" "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/src/main.cpp.o"
-  "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/src/someipmanager.cpp" "/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/src/someipmanager.cpp.o"
+  "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp" "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp.o"
+  "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/Dashboard_autogen/mocs_compilation.cpp" "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/Dashboard_autogen/mocs_compilation.cpp.o"
+  "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPDeployment.cpp" "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o"
+  "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPProxy.cpp" "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/can-interface/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o"
+  "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp" "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp.o"
+  "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp" "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/piracer-interface/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp.o"
+  "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/main.cpp" "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/src/main.cpp.o"
+  "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/methodcallsomeipmanager.cpp" "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/src/methodcallsomeipmanager.cpp.o"
+  "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/piracersomeipmanager.cpp" "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/src/piracersomeipmanager.cpp.o"
+  "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/src/someipmanager.cpp" "/home/seame-workstation05/Desktop/DES_03.Head-Unit/infotainment/dashboard/build/CMakeFiles/Dashboard.dir/src/someipmanager.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "QT_CORE_LIB"
-  "QT_DBUS_LIB"
   "QT_GUI_LIB"
   "QT_LOCATION_LIB"
   "QT_NETWORK_LIB"
@@ -32,7 +33,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "Dashboard_autogen/include"
-  "../../project-pyracer/src-gen"
+  "../../can-interface/src-gen"
+  "../../piracer-interface/src-gen"
   "/home/seame-workstation05/build-commonapi/capicxx-core-runtime/include"
   "/home/seame-workstation05/build-commonapi/capicxx-someip-runtime/include"
   "/home/seame-workstation05/build-commonapi/vsomeip/interface"
@@ -43,7 +45,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/x86_64-linux-gnu/qt5/QtQml"
   "/usr/include/x86_64-linux-gnu/qt5/QtNetwork"
   "/usr/include/x86_64-linux-gnu/qt5/QtGui"
-  "/usr/include/x86_64-linux-gnu/qt5/QtDBus"
   "/usr/include/x86_64-linux-gnu/qt5/QtLocation"
   "/usr/include/x86_64-linux-gnu/qt5/QtPositioningQuick"
   "/usr/include/x86_64-linux-gnu/qt5/QtPositioning"

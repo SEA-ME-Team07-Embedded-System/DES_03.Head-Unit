@@ -10,7 +10,7 @@ Rectangle { //centerstack : 4
     visible: false
     Image{
         id:light_background
-        anchors.centerIn: parent
+        anchors.fill:parent
         source:"qrc:/image/porsche_emblem.jpg"
         fillMode:Image.Stretch
         visible:true
@@ -29,7 +29,7 @@ Rectangle { //centerstack : 4
     Rectangle{
         color: "black"
         opacity: 0.3
-        anchors.centerIn: parent
+        anchors.fill:parent
         width: parent.width
         height: parent.height
     }
@@ -46,10 +46,10 @@ Rectangle { //centerstack : 4
         visible: true
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-//                    x:500
         spacing: 1//
         opacity:0.9
-        width:400
+        width:parent.width*0.45
+        height: parent.height*0.5
         Behavior on opacity {
             NumberAnimation {
                 duration: 500  // 1초 동안 애니메이션 진행
@@ -64,8 +64,8 @@ Rectangle { //centerstack : 4
         // RED
         Button {
             id: ambientlight_red
-            Layout.preferredWidth: parent.width  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.245  // Adjust according to your needs
             background: Rectangle {
                 color: "#6e6e75"  // Change this color for your button background color
                 anchors.fill: parent
@@ -142,8 +142,8 @@ Rectangle { //centerstack : 4
 //                    // blue Button
         Button {
             id: ambientlight_blue
-            Layout.preferredWidth: parent.width  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.245  // Adjust according to your needs
             background: Rectangle {
             color: "#6e6e75"  // Change this color for your button background color
             anchors.fill: parent
@@ -213,8 +213,8 @@ Rectangle { //centerstack : 4
 ////                    // green
         Button {
             id: ambientlight_green
-            Layout.preferredWidth: parent.width  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.245  // Adjust according to your needs
             background: Rectangle {
             color: "#6e6e75"  // Change this color for your button background color
             anchors.fill: parent
@@ -281,8 +281,8 @@ Rectangle { //centerstack : 4
         //white
         Button {
             id: ambientlight_white
-            Layout.preferredWidth: parent.width  // Adjust according to your needs
-            Layout.preferredHeight: 70  // Adjust according to your needs
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.245  // Adjust according to your needs
             background: Rectangle {
             color: "#6e6e75"  // Change this color for your button background color
             anchors.fill: parent

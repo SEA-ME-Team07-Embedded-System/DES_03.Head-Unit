@@ -19,18 +19,64 @@ Window {
         id: valueSource
     }
 
-    //center bar
+    //top bar
+    Rectangle {
+        //left top there is house icon & right top there is current time
+        id: topBar
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: parent.top
+        }
+        height: parent.height / 12   //50
+        color: "#6d7485"
+
+        Image {
+            id: house_icon
+            source: "qrc:/image/house_icon.png"
+            anchors {
+                left: parent.left
+                leftMargin: parent.height*0.7
+            }
+            anchors.verticalCenter: parent.verticalCenter
+            width: parent.height*.6
+            fillMode:Image.PreserveAspectFit
+        }
+
+        // Digital Clock
+        Text {
+            id: digitalClock
+            anchors {
+                right: parent.right
+                rightMargin: parent.height*0.4
+                verticalCenter: parent.verticalCenter
+            }
+            text: Qt.formatDateTime(new Date(), "hh:mm")
+            color: "white"
+            font.pixelSize: parent.height*0.5
+        }
+        Timer {
+            interval: 1000
+            running: true
+            repeat: true
+            onTriggered: {
+                digitalClock.text = Qt.formatDateTime(new Date(), "hh:mm")
+            }
+        }
+    }
+
+    //centerar b
     Rectangle{
         id: centerBar
         anchors {
-            left: leftBar.right
-            right: parent.right
             top: topBar.bottom
-            bottom: parent.bottom
+            bottom: leftBar.bottom
+            left: leftBar.right
+            right: topBar.right
         }
 
-        DBusManager {
-            id: dbusHandler
+        PiracerSomeIPManager {
+            id: piracerHandler
         }
         
         StackLayout{
@@ -41,7 +87,7 @@ Window {
                 color: "red"
                 Plugin {
                     id: mapPlugin
-                    name: "mapboxgl" // Mapbox plugin name
+                    name: "mapboxgl" // Mapbox plugin name //osm
                     PluginParameter { name: "mapbox.access_token"; value: "file:/home/seame-workstation07/QT/Examples/Qt-5.15.2/quickcontrols/extras/dashboard_new/qml/mapbox/api-key.txt" }
                 }
                 Map {
@@ -79,52 +125,7 @@ Window {
         }
     }
 
-    //top bar
-    Rectangle {
-        //left top there is house icon & right top there is current time
-        id: topBar
-        anchors {
-            left: parent.left
-            right: parent.right
-            top: parent.top
-        }
-        height: parent.height / 12
-        color: "#6d7485"
 
-        Image {
-            id: house_icon
-            source: "qrc:/image/house_icon.png"
-            anchors {
-                left: parent.left
-                leftMargin: 36
-            }
-            anchors.verticalCenter: parent.verticalCenter
-            width: parent.height*.6
-            fillMode:Image.PreserveAspectFit
-        }
-
-        // Digital Clock
-        Text {
-            id: digitalClock
-            anchors {
-                right: parent.right
-                rightMargin: 20
-                verticalCenter: parent.verticalCenter
-            }
-            text: Qt.formatDateTime(new Date(), "hh:mm")
-            color: "white"
-            font.pixelSize: 25
-        }
-
-        Timer {
-            interval: 1000
-            running: true
-            repeat: true
-            onTriggered: {
-                digitalClock.text = Qt.formatDateTime(new Date(), "hh:mm")
-            }
-        }
-    }
 
     //left bar
     Rectangle {
@@ -134,7 +135,7 @@ Window {
             top: topBar.bottom
             bottom: parent.bottom
         }
-        width: parent.width / 10
+        width: parent.width / 10  // 124
         color: "black"
 
 

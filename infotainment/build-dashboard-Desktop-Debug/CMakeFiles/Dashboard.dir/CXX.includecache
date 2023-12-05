@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/daekyung/hiiii2/DES_03.Head-Unit/infotainment/build-dashboard-Desktop-Debug/Dashboard_autogen/UVLADIE3JM/qrc_dashboard.cpp
+

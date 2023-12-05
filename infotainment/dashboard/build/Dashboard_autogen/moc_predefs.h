@@ -187,7 +187,6 @@
 #define __VERSION__ "9.4.0"
 #define __UINT64_C(c) c ## UL
 #define __cpp_unicode_characters 200704
-#define QT_DBUS_LIB 1
 #define _STDC_PREDEF_H 1
 #define __cpp_decltype_auto 201304
 #define __GCC_ATOMIC_INT_LOCK_FREE 2

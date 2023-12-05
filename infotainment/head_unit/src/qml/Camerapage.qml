@@ -7,22 +7,22 @@ Rectangle { // Main container
     // Left half - Camera feed
     Rectangle {
         id: cameraFeed
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
         width: parent.width / 2
-        height: parent.height
         color: "#dfe4ea"
-
         // Camera
         Camera {
             id: camera
             imageProcessing.whiteBalanceMode: CameraImageProcessing.WhiteBalanceFlash
         }
-
         VideoOutput {
             id: cameraView
             source: camera
-            width: 640
-            height: 480
-            scale: 0.65
+            width: parent.height*0.7
+            height: parent.height*0.5
+            scale: 0.5
             anchors.centerIn: parent
             focus: visible
             MouseArea {
@@ -36,36 +36,36 @@ Rectangle { // Main container
                 }
             }
         }
-
         Text {
             anchors.bottom: cameraView.top
             anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottomMargin: 5
+            anchors.bottomMargin: parent.width*0.01
             text: "Camera Behind View"
-            font.pixelSize: 20
+            font.pixelSize: parent.width*0.05
         }
     }
 
     // Right half - Visualization
     Rectangle {
         id: distanceVisualization
-        width: parent.width / 2
-        height: parent.height
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: cameraFeed.right
         anchors.right: parent.right
+        width: parent.width / 2
         color: "grey"
-
         Image {
             id: carImage
+            width: parent.width*0.3
+            height: parent.width*0.5
             anchors.centerIn: parent
             source: "qrc:/image/porsche_upview.png"
-            scale: 0.5
+//            scale: 0.1
         }
-
-
         Image {
             id: fdistanceAlertImage
-
-            anchors.top: carImage.top
+            anchors.top: parent.top
+//            anchors.topMargin: parent.height*0.001
             anchors.horizontalCenter: parent.horizontalCenter
             source: {
                 if (valueSource.f_dis <= 10) {
@@ -83,10 +83,10 @@ Rectangle { // Main container
 
         Image {
             id: rdistanceAlertImage
-
-            anchors.top: carImage.top
-            anchors.topMargin: 400
+            anchors.bottom: parent.bottom
+//            anchors.bottomMargin: parent.height*0.001
             anchors.horizontalCenter: parent.horizontalCenter
+//            anchors.verticalCenter: parent.verticalCenter
             source: {
                 if (valueSource.r_dis <= 10) {
                     return "qrc:/image/distance_alert_1.png";
@@ -100,11 +100,10 @@ Rectangle { // Main container
             }
             scale: 0.5
         }
-
         Text {
             anchors.bottom: parent.bottom
             text: "Distance : " + valueSource.r_dis + "cm"
-            font.pixelSize: 20
+            font.pixelSize: parent.width*0.05
         }
     }
 }

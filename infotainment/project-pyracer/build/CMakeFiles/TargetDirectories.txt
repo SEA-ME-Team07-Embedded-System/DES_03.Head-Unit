@@ -1,4 +1,0 @@
-/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/build/CMakeFiles/rebuild_cache.dir
-/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/build/CMakeFiles/edit_cache.dir
-/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/build/CMakeFiles/CANService.dir
-/home/seame-workstation05/Desktop/DES03_HeadUnit/infotainment/project-pyracer/build/CMakeFiles/CANClient.dir
