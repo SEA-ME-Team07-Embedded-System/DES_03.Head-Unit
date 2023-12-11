@@ -4,10 +4,14 @@ import QtQuick.Layouts 1.12
 
 //ambient light
 
+
 Rectangle { //centerstack : 4
     id: lightPage
     color: "cyan"
     visible: false
+    property int currentIndex: 0
+    property var colorList: ["red", "green", "blue", "orange", "purple"]
+    property color random_color:"red"
     Image{
         id:light_background
         anchors.centerIn: parent
@@ -97,6 +101,11 @@ Rectangle { //centerstack : 4
                     greenmode_light_r.opacity=0
                     whitemode_light_l.opacity=0
                     whitemode_light_r.opacity=0
+                    random_light_l.opacity=0
+                    random_light_r.opacity=0
+                    timer.running = false;
+                    ambient_color="red"
+
                 }
             }
             Rectangle {
@@ -168,6 +177,10 @@ Rectangle { //centerstack : 4
                     greenmode_light_r.opacity=0
                     whitemode_light_l.opacity=0
                     whitemode_light_r.opacity=0
+                    random_light_l.opacity=0
+                    random_light_r.opacity=0
+                    timer.running = false;
+                    ambient_color="blue"
                 }
             }
             Rectangle {
@@ -239,6 +252,10 @@ Rectangle { //centerstack : 4
                     greenmode_light_r.opacity=1
                     whitemode_light_l.opacity=0
                     whitemode_light_r.opacity=0
+                    random_light_l.opacity=0
+                    random_light_r.opacity=0
+                    timer.running = false;
+                    ambient_color="green"
                 }
             }
             Rectangle {
@@ -314,6 +331,10 @@ Rectangle { //centerstack : 4
                     whitemode_light_r.visible=true
                     whitemode_light_l.opacity=1
                     whitemode_light_r.opacity=1
+                    random_light_l.opacity=0
+                    random_light_r.opacity=0
+                    timer.running = false;
+                    ambient_color="white"
                 }
             }
             Rectangle {
@@ -341,6 +362,107 @@ Rectangle { //centerstack : 4
                 height: parent.height // 선 두께
                 width: 2
                 color: "white"
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 500  // 1초 동안 애니메이션 진행
+                    }
+                }
+                onOpacityChanged: {
+                    if (opacity == 0) {
+                        whitemode_light_r.visible = false;
+                    }
+                }
+            }
+        }
+        //random
+        Button {
+
+            id: ambientlight_random
+            Layout.preferredWidth: parent.width  // Adjust according to your needs
+            Layout.preferredHeight: 70  // Adjust according to your needs
+            background: Rectangle {
+            color: "#6e6e75"  // Change this color for your button background color
+            anchors.fill: parent
+            }
+            Text{
+                text:"RANDOM MODE"
+                color: "white"
+                font.pointSize: parent.width*0.045
+                anchors.centerIn:parent
+            }
+            // Animation Effect
+            scale: random_Area.pressed ? 0.95 : 1.0
+            Behavior on scale {
+                PropertyAnimation {
+                    duration: 100
+                }
+            }
+            MouseArea {
+                id: random_Area
+                anchors.fill: parent
+                onClicked: {
+                    redmode_light_l.opacity=0
+                    redmode_light_r.opacity=0
+                    bluemode_light_l.opacity=0
+                    bluemode_light_r.opacity=0
+                    greenmode_light_l.opacity=0
+                    greenmode_light_r.opacity=0
+                    whitemode_light_l.opacity=0
+                    whitemode_light_r.opacity=0
+                    random_light_l.visible=true
+                    random_light_r.visible=true
+                    random_light_l.opacity=1
+                    random_light_r.opacity=1
+                    timer.running=true
+//                    var colors = ["red", "green", "blue", "orange", "purple"];
+//                    var randomIndex = Math.floor(Math.random() * colors.length);
+//                    currentColor = colors[randomIndex];
+//                    random_light_l.visible=true
+//                    random_light_r.visible=true
+//                    random_light_l.opacity=1
+//                    random_light_r.opacity=1
+//                    ambient_color= colorList[currentIndex]
+                }
+            }
+            Timer {
+                id: timer
+                interval: 1500 // 1초마다 색상 변경
+                running: false
+                repeat: true
+                onTriggered: {
+                    // 색상 변경
+                    currentIndex = (currentIndex + 1) % colorList.length;
+                    random_color = colorList[currentIndex];
+                    ambient_color = random_color;
+                }
+            }
+
+
+            Rectangle {
+                id:random_light_l
+                visible: false
+                anchors.right: parent.left
+                height: parent.height // 선 두께
+                width: 2
+                color: ambient_color
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 500  // 1초 동안 애니메이션 진행
+                    }
+                }
+                onOpacityChanged: {
+                    if (opacity == 0) {
+                        whitemode_light_l.visible = false;
+                    }
+                }
+            }
+            Rectangle {
+                id:random_light_r
+                visible: false
+                anchors.left: parent.right
+                height: parent.height // 선 두께
+                width: 2
+                color: ambient_color
                 Behavior on opacity {
                     NumberAnimation {
                         duration: 500  // 1초 동안 애니메이션 진행
