@@ -7,7 +7,8 @@
 int main() {
 
     system("ip link set can0 up type can bitrate 125000");
-
+    system("rfkill unblock wifi");
+    system("ip link set wlan0 up");
     int s;
     int nbytes;
     struct sockaddr_can addr;
