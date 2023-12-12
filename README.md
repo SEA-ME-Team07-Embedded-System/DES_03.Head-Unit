@@ -55,6 +55,10 @@ This represents the flow within the Dashboard and Head Unit Qt application. Let'
 
 Simultaneously, within 'valuesource.qml,' which manages all data for GUI display, the 'onDataChange' function activates to fetch and store the data. It's then presented within the application. If you touch the screen to modify the car mode and adjust the throttle rate, an 'onClicked' signal is generated. This signal triggers the execution of the 'modeSelectCall' function, which requests a method call to someip service. Subsequently, it adjusts the throttle data and provides a response indicating whether the mode change was successful or not.
 
+## mete-mylayer (custom-layer)
+![customlayer](https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/97211801/3a81fd3c-61f2-4f4e-b615-e60f4c15280a)
+
+
 ## Head Unit
 
 https://github.com/SEA-ME-Team07-Embedded-System/DES_03.Head-Unit/assets/73748884/753fa946-4e91-4aca-b700-7fdc8ba7c7ad
