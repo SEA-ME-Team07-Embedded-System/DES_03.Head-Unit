@@ -1,0 +1,57 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>image/arrow_grey.png</file>
+        <file>image/car.png</file>
+        <file>image/porsche_upview.png</file>
+        <file>image/distance_alert_1.png</file>
+        <file>image/distance_alert_2.png</file>
+        <file>image/distance_alert_3.png</file>
+        <file>image/distance_alert_4.png</file>
+        <file>image/fdistance_alert_1.png</file>
+        <file>image/fdistance_alert_2.png</file>
+        <file>image/fdistance_alert_3.png</file>
+        <file>image/fdistance_alert_4.png</file>
+        <file>image/caynne3.jpg</file>
+        <file>image/caynne4.jpg</file>
+        <file>image/caynne_new.png</file>
+        <file>image/video_icon.png</file>
+        <file>image/caynne.png</file>
+        <file>image/front.png</file>
+        <file>image/gear.png</file>
+        <file>image/information.png</file>
+        <file>image/light_icon.png</file>
+        <file>image/music_icon.png</file>
+        <file>image/navigate_icon.png</file>
+        <file>image/navigation-sdk.png</file>
+        <file>image/new_cay.jpg</file>
+        <file>image/playing_icon.png</file>
+        <file>image/porsche_emblem.jpg</file>
+        <file>image/setting_icon.png</file>
+        <file>qml/Musicpage.qml</file>
+        <file>qml/Camerapage.qml</file>
+        <file>qml/Settingpage.qml</file>
+        <file>qml/Lightpage.qml</file>
+        <file>qml/MusicDeatil.qml</file>
+        <file>qml/VideoDetail.qml</file>
+        <file>qml/mapbox/api-key.txt</file>
+        <file>image/ABCDEFU.jpeg</file>
+        <file>image/ASAP.jpeg</file>
+        <file>image/ETA.jpeg</file>
+        <file>image/Every Second.jpeg</file>
+        <file>image/I Like Me Better.jpeg</file>
+        <file>image/Im not the only one.jpeg</file>
+        <file>image/next.png</file>
+        <file>image/Paris In The Rain.jpeg</file>
+        <file>image/pause.png</file>
+        <file>image/previous.png</file>
+        <file>image/Seven.jpeg</file>
+        <file>image/shuffle.png</file>
+        <file>image/stop.png</file>
+        <file>image/Super Shy.jpeg</file>
+        <file>image/The Nigths.jpeg</file>
+        <file>image/theater_icon.png</file>
+        <file>qml/ValueSource.qml</file>
+        <file>image/house_icon.png</file>
+    </qresource>
+</RCC>
