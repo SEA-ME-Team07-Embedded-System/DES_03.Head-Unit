@@ -2,6 +2,7 @@ tmp/
 cache/
 downloads/
 sstate-cache/
+/Yocto/bitbake
 /Yocto/poky/contrib
 /Yocto/poky/meta
 /Yocto/poky/meta-openembedded
@@ -12,5 +13,5 @@ sstate-cache/
 /Yocto/poky/meta-selftest
 /Yocto/poky/meta-skeleton
 /Yocto/poky/meta-yocto-bsp
-/Yocto/poky/meta-openembedded-core
-/Yocto/poky/meta-scripts
+/Yocto/poky/openembedded-core
+/Yocto/poky/scripts

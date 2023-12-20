@@ -4,7 +4,6 @@ Name=wlan*
 [Network]
 Address=192.168.1.105/24
 Gateway=192.168.1.1
-DNS=8.8.8.8
 DHCP=yes
  
 [DHCPv4]

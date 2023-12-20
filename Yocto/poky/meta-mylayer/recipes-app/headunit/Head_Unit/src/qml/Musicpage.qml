@@ -224,11 +224,9 @@ Rectangle { //centerstack : 1
                    anchors.bottom: parent.bottom /////////////////////////////
                    anchors.bottomMargin: musicpage_spacing
                    anchors.horizontalCenter: parent.horizontalCenter
-                   anchors.left: songImage_Item.left
-                   anchors.right: songImage_Item.right
+//                   anchors.left: songImage_Item.left
+//                   anchors.right: songImage_Item.right
 //                   spacing: parent.height*0.02
-////                   height: parent.height*0.1
-//                   width:parent.width /////////////////////////////
                    RoundButton {
                        icon.name: "stop!"
                        Layout.preferredWidth: parent.width*0.15
@@ -624,7 +622,6 @@ Rectangle { //centerstack : 1
                TextField {
                    id: searchField
                    width: parent.width-parent.height*0.55 //searchButton.width-parent.height*0.25
-//                   height: parent.height*0.1 ///////////////////////
                    anchors.top: parent.top
                    anchors.left: parent.left
                    anchors.leftMargin: parent.height*0.2
@@ -639,12 +636,13 @@ Rectangle { //centerstack : 1
                Button {
                    id: searchButton
                    text: "Search"
-                   anchors.top: searchField.top    ///////////////////////
-                   anchors.left: searchField.right ///////////////////////
-                   anchors.right: videoDetail.right      ///////////////////////
+                   anchors.top: parent.top    ///////////////////////
+                   anchors.right: parent.right      ///////////////////////
+//                   anchors.left: searchField.right ///////////////////////
 //                   width: parent.width*0.14
                    onClicked: {
-                       webView.url = "https://www.youtube.com/results?search_query=" + encodeURIComponent(searchField.text);
+                       webView.url = "https://youtube.com/results?search_query=" + encodeURIComponent(searchField.text);
+                       console.log(encodeURIComponent(searchField.text));
                        searchField.focus = false; // Hide the keyboard when searching
                    }
                }
