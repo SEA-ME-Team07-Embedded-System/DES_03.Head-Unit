@@ -157,7 +157,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
             MouseArea {
                 id: carmode_Area
@@ -245,7 +245,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -278,7 +278,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
 
             // Animation Effect
@@ -381,7 +381,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -424,7 +424,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -468,7 +468,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
     }
@@ -535,7 +535,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -578,7 +578,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -621,7 +621,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -665,7 +665,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
     }
