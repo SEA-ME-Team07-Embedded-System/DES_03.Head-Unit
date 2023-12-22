@@ -9,9 +9,16 @@ MethodCallSomeIPManager::MethodCallSomeIPManager(QObject *parent)
     std::cout << "Checking availability from PiracerProxy!" << std::endl;
 }
 
-void MethodCallSomeIPManager::modeSelectCall(QVariant data)
+void MethodCallSomeIPManager::modeSelectCall(QVariant mode)
 {
-    newMode = data.toUInt();
+    newMode = mode.toUInt();
     proxy->modeSelect(newMode, callStatus, returnMessage);
     std::cout << "Got Return Message: '" << returnMessage << "Sent Message: "<< (int)newMode << "'\n";
+}
+
+void MethodCallSomeIPManager::gearSelectCall(QVariant gear)
+{
+    newGear = gear.toUInt();
+    proxy->modeSelect(newGear, callStatus, returnMessage);
+    std::cout << "Got Return Message: '" << returnMessage << "Sent Message: "<< (int)newGear << "'\n";
 }

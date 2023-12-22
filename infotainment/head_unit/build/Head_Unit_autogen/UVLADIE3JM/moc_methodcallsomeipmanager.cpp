@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MethodCallSomeIPManager_t {
-    QByteArrayData data[4];
-    char stringdata0[45];
+    QByteArrayData data[6];
+    char stringdata0[65];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,11 +34,13 @@ static const qt_meta_stringdata_MethodCallSomeIPManager_t qt_meta_stringdata_Met
 QT_MOC_LITERAL(0, 0, 23), // "MethodCallSomeIPManager"
 QT_MOC_LITERAL(1, 24, 14), // "modeSelectCall"
 QT_MOC_LITERAL(2, 39, 0), // ""
-QT_MOC_LITERAL(3, 40, 4) // "data"
+QT_MOC_LITERAL(3, 40, 4), // "mode"
+QT_MOC_LITERAL(4, 45, 14), // "gearSelectCall"
+QT_MOC_LITERAL(5, 60, 4) // "gear"
 
     },
     "MethodCallSomeIPManager\0modeSelectCall\0"
-    "\0data"
+    "\0mode\0gearSelectCall\0gear"
 };
 #undef QT_MOC_LITERAL
 
@@ -48,7 +50,7 @@ static const uint qt_meta_data_MethodCallSomeIPManager[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -56,10 +58,12 @@ static const uint qt_meta_data_MethodCallSomeIPManager[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   19,    2, 0x0a /* Public */,
+       1,    1,   24,    2, 0x0a /* Public */,
+       4,    1,   27,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QVariant,    3,
+    QMetaType::Void, QMetaType::QVariant,    5,
 
        0        // eod
 };
@@ -71,6 +75,7 @@ void MethodCallSomeIPManager::qt_static_metacall(QObject *_o, QMetaObject::Call 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->modeSelectCall((*reinterpret_cast< QVariant(*)>(_a[1]))); break;
+        case 1: _t->gearSelectCall((*reinterpret_cast< QVariant(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -105,13 +110,13 @@ int MethodCallSomeIPManager::qt_metacall(QMetaObject::Call _c, int _id, void **_
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }
