@@ -97,7 +97,7 @@ public:
      * "SUCCESS" or which type of error has occurred. In case of an error, ONLY the CallStatus
      * will be set.
      */
-    virtual void modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_internalCallStatus, std::string &_message, const CommonAPI::CallInfo *_info = nullptr);
+    virtual void modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_internalCallStatus, std::string &_gearmessage, const CommonAPI::CallInfo *_info = nullptr);
     /**
      * Calls modeSelect with asynchronous semantics.
      *
@@ -109,6 +109,27 @@ public:
      * It will provide the same value for CallStatus as will be handed to the callback.
      */
     virtual std::future<CommonAPI::CallStatus> modeSelectAsync(const uint8_t &_modeS, ModeSelectAsyncCallback _callback = nullptr, const CommonAPI::CallInfo *_info = nullptr);
+    /**
+     * Calls gearSelect with synchronous semantics.
+     *
+     * All const parameters are input parameters to this method.
+     * All non-const parameters will be filled with the returned values.
+     * The CallStatus will be filled when the method returns and indicate either
+     * "SUCCESS" or which type of error has occurred. In case of an error, ONLY the CallStatus
+     * will be set.
+     */
+    virtual void gearSelect(uint8_t _gearS, CommonAPI::CallStatus &_internalCallStatus, std::string &_modemessage, const CommonAPI::CallInfo *_info = nullptr);
+    /**
+     * Calls gearSelect with asynchronous semantics.
+     *
+     * The provided callback will be called when the reply to this call arrives or
+     * an error occurs during the call. The CallStatus will indicate either "SUCCESS"
+     * or which type of error has occurred. In case of any error, ONLY the CallStatus
+     * will have a defined value.
+     * The std::future returned by this method will be fulfilled at arrival of the reply.
+     * It will provide the same value for CallStatus as will be handed to the callback.
+     */
+    virtual std::future<CommonAPI::CallStatus> gearSelectAsync(const uint8_t &_gearS, GearSelectAsyncCallback _callback = nullptr, const CommonAPI::CallInfo *_info = nullptr);
 
 
 
@@ -192,13 +213,22 @@ PiracerProxy<_AttributeExtensions...>::~PiracerProxy() {
 }
 
 template <typename ... _AttributeExtensions>
-void PiracerProxy<_AttributeExtensions...>::modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_internalCallStatus, std::string &_message, const CommonAPI::CallInfo *_info) {
-    delegate_->modeSelect(_modeS, _internalCallStatus, _message, _info);
+void PiracerProxy<_AttributeExtensions...>::modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_internalCallStatus, std::string &_gearmessage, const CommonAPI::CallInfo *_info) {
+    delegate_->modeSelect(_modeS, _internalCallStatus, _gearmessage, _info);
 }
 
 template <typename ... _AttributeExtensions>
 std::future<CommonAPI::CallStatus> PiracerProxy<_AttributeExtensions...>::modeSelectAsync(const uint8_t &_modeS, ModeSelectAsyncCallback _callback, const CommonAPI::CallInfo *_info) {
     return delegate_->modeSelectAsync(_modeS, _callback, _info);
+}
+template <typename ... _AttributeExtensions>
+void PiracerProxy<_AttributeExtensions...>::gearSelect(uint8_t _gearS, CommonAPI::CallStatus &_internalCallStatus, std::string &_modemessage, const CommonAPI::CallInfo *_info) {
+    delegate_->gearSelect(_gearS, _internalCallStatus, _modemessage, _info);
+}
+
+template <typename ... _AttributeExtensions>
+std::future<CommonAPI::CallStatus> PiracerProxy<_AttributeExtensions...>::gearSelectAsync(const uint8_t &_gearS, GearSelectAsyncCallback _callback, const CommonAPI::CallInfo *_info) {
+    return delegate_->gearSelectAsync(_gearS, _callback, _info);
 }
 
 template <typename ... _AttributeExtensions>
