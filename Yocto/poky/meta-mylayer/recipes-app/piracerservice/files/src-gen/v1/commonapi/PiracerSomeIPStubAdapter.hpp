@@ -85,6 +85,14 @@ public:
         std::tuple< CommonAPI::SomeIP::StringDeployment>
     > modeSelectStubDispatcher;
     
+    CommonAPI::SomeIP::MethodWithReplyStubDispatcher<
+        ::v1::commonapi::PiracerStub,
+        std::tuple< uint8_t>,
+        std::tuple< std::string>,
+        std::tuple< CommonAPI::SomeIP::IntegerDeployment<uint8_t>>,
+        std::tuple< CommonAPI::SomeIP::StringDeployment>
+    > gearSelectStubDispatcher;
+    
     PiracerSomeIPStubAdapterInternal(
         const CommonAPI::SomeIP::Address &_address,
         const std::shared_ptr<CommonAPI::SomeIP::ProxyConnection> &_connection,
@@ -120,11 +128,20 @@ public:
             std::make_tuple(static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr)),
             std::make_tuple(static_cast< CommonAPI::SomeIP::StringDeployment* >(nullptr)))
         
+        ,
+        gearSelectStubDispatcher(
+            &PiracerStub::gearSelect,
+            false,
+            _stub->hasElement(4),
+            std::make_tuple(static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr)),
+            std::make_tuple(static_cast< CommonAPI::SomeIP::StringDeployment* >(nullptr)))
+        
     {
         PiracerSomeIPStubAdapterHelper::addStubDispatcher( { CommonAPI::SomeIP::method_id_t(0xbc0) }, &getBatteryAttributeStubDispatcher );
         PiracerSomeIPStubAdapterHelper::addStubDispatcher( { CommonAPI::SomeIP::method_id_t(0xbc2) }, &getGearAttributeStubDispatcher );
         PiracerSomeIPStubAdapterHelper::addStubDispatcher( { CommonAPI::SomeIP::method_id_t(0xbc4) }, &getModeAttributeStubDispatcher );
         PiracerSomeIPStubAdapterHelper::addStubDispatcher( { CommonAPI::SomeIP::method_id_t(0x7b) }, &modeSelectStubDispatcher );
+        PiracerSomeIPStubAdapterHelper::addStubDispatcher( { CommonAPI::SomeIP::method_id_t(0x7c) }, &gearSelectStubDispatcher );
         std::shared_ptr<CommonAPI::SomeIP::ClientId> itsClient = std::make_shared<CommonAPI::SomeIP::ClientId>(0xFFFF, 0xFFFFFFFF, 0xFFFFFFFF);
 
         // Provided events/fields

@@ -31,6 +31,7 @@ add_executable(PiracerService
     src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp
 )
 target_link_libraries(PiracerService Python3::Python pthread CommonAPI CommonAPI-SomeIP vsomeip3)
+
 add_executable(PiracerService_test
     src/PiracerService_test.cpp
     src/PiracerClass.cpp

@@ -61,9 +61,14 @@ void PiracerClient::startSubscribeMode() {
 	}
 }
 
-void PiracerClient::modeSelectCall(uint8_t i) {
-    proxy->modeSelect(i, callStatus, returnMessage);
-	std::cout << "Got Return Message: '" << returnMessage << "Sent Message: "<< (int)i << "'\n";
+void PiracerClient::modeSelectCall(uint8_t mode) {
+    proxy->modeSelect(mode, callStatus, returnMessage);
+	std::cout << "Got Return Message: '" << returnMessage << "Sent Message: "<< (int)mode << "'\n";
+}
+
+void PiracerClient::gearSelectCall(uint8_t gear) {
+    proxy->gearSelect(gear, callStatus, returnMessage);
+	std::cout << "Got Return Message: '" << returnMessage << "Sent Message: "<< (int)gear << "'\n";
 }
 
 int main() {
@@ -80,10 +85,11 @@ int main() {
 
 	while (true) {
 		piracerClient.modeSelectCall(i);
+		piracerClient.gearSelectCall(i);
 		std::cout << "Waiting data ... " << std::endl;
 		std::this_thread::sleep_for(std::chrono::seconds(1));
 		i++;
-		if(i > 5)
+		if(i > 3)
 			i = 0;
 	}
 	

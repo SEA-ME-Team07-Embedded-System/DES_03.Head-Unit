@@ -119,12 +119,13 @@ class PiracerStub
     : public virtual CommonAPI::Stub<PiracerStubAdapter, PiracerStubRemoteEvent>
 {
 public:
-    typedef std::function<void (std::string _message)> modeSelectReply_t;
+    typedef std::function<void (std::string _gearmessage)> modeSelectReply_t;
+    typedef std::function<void (std::string _modemessage)> gearSelectReply_t;
 
     virtual ~PiracerStub() {}
     void lockInterfaceVersionAttribute(bool _lockAccess) { static_cast<void>(_lockAccess); }
     bool hasElement(const uint32_t _id) const {
-        return (_id < 4);
+        return (_id < 5);
     }
     virtual const CommonAPI::Version& getInterfaceVersion(std::shared_ptr<CommonAPI::ClientId> _client) = 0;
 
@@ -169,6 +170,8 @@ public:
     }
     /// This is the method that will be called on remote calls on the method modeSelect.
     virtual void modeSelect(const std::shared_ptr<CommonAPI::ClientId> _client, uint8_t _modeS, modeSelectReply_t _reply) = 0;
+    /// This is the method that will be called on remote calls on the method gearSelect.
+    virtual void gearSelect(const std::shared_ptr<CommonAPI::ClientId> _client, uint8_t _gearS, gearSelectReply_t _reply) = 0;
 
 
     using CommonAPI::Stub<PiracerStubAdapter, PiracerStubRemoteEvent>::initStubAdapter;

@@ -102,8 +102,14 @@ public:
     COMMONAPI_EXPORT virtual void modeSelect(const std::shared_ptr<CommonAPI::ClientId> _client, uint8_t _modeS, modeSelectReply_t _reply) {
         (void)_client;
         (void)_modeS;
-        std::string message = "";
-        _reply(message);
+        std::string gearmessage = "";
+        _reply(gearmessage);
+    }
+    COMMONAPI_EXPORT virtual void gearSelect(const std::shared_ptr<CommonAPI::ClientId> _client, uint8_t _gearS, gearSelectReply_t _reply) {
+        (void)_client;
+        (void)_gearS;
+        std::string modemessage = "";
+        _reply(modemessage);
     }
 
 
