@@ -1,0 +1,16 @@
+tmp/
+cache/
+downloads/
+sstate-cache/
+/Yocto/poky/contrib
+/Yocto/poky/meta
+/Yocto/poky/meta-openembedded
+/Yocto/poky/meta-poky
+/Yocto/poky/meta-python2
+/Yocto/poky/meta-qt5
+/Yocto/poky/meta-raspberrypi
+/Yocto/poky/meta-selftest
+/Yocto/poky/meta-skeleton
+/Yocto/poky/meta-yocto-bsp
+/Yocto/poky/meta-openembedded-core
+/Yocto/poky/meta-scripts
