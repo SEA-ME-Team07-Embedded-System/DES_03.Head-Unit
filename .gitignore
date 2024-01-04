@@ -2,6 +2,9 @@ tmp/
 cache/
 downloads/
 sstate-cache/
+/yocto/poky/
+!yocto/poky/mete-mylayer/
+!yocto/poky/build/conf/
 /yocto/poky/contrib
 /yocto/poky/meta
 /yocto/poky/meta-openembedded
