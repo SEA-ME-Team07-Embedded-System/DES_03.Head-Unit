@@ -98,7 +98,7 @@ void piracer_source(GamePad& gamepad, PiracerClass& piracer, uint8_t& gear, uint
                     piracer.setSteering(0);
             }
 
-	        std::cout << "Battery :" << (int)batteryLevel << std::endl;
+            // std::cout << "Battery :" << (int)batteryLevel << std::endl;
 	        std::cout << "Throttle :" << throttle << std::endl;
 	        std::cout << "Steering :" << steering << std::endl;
         }
