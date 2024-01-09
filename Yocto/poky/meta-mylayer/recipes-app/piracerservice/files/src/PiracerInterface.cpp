@@ -29,6 +29,7 @@ void piracer_publish(std::shared_ptr<PiracerStubImpl>& PiracerService, uint8_t& 
             }
             // Sleep to reduce CPU usage
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
+<<<<<<< HEAD
             
             // Limit Battery under 100
             if(battery > 100)
@@ -40,6 +41,14 @@ void piracer_publish(std::shared_ptr<PiracerStubImpl>& PiracerService, uint8_t& 
             std::cout << "Battery: " << int(battery) << std::endl;
             std::cout << "Gear: " << int(gear) << std::endl;
             std::cout << "Mode: " << int(mode) << std::endl;
+=======
+            // Debug Battery 
+            //if(battery > 100)
+            //    battery = 100;
+            //if(battery < 0)
+            //    battery = 0;
+            //std::cout << "Battery: " << int(battery) << std::endl;
+>>>>>>> 583ba13d1133a6146535f939bdb7e049e70217a5
 
             // Publish Data to Client
             PiracerService->batteryPublisher(battery);
@@ -68,6 +77,7 @@ void piracer_source(GamePad& gamepad, PiracerClass& piracer, uint8_t& gear, uint
                 
                 // Battery change
                 batteryLevel = piracer.getBattery();
+<<<<<<< HEAD
             }
             // Set Piracer throttle and steering based on gear
             // Gear values: 0 (P), 1 (R), 2 (N), 3 (D)
@@ -101,6 +111,17 @@ void piracer_source(GamePad& gamepad, PiracerClass& piracer, uint8_t& gear, uint
             // std::cout << "Battery :" << (int)batteryLevel << std::endl;
 	        std::cout << "Throttle :" << throttle << std::endl;
 	        std::cout << "Steering :" << steering << std::endl;
+=======
+
+                // Set Piracer throttle and steering
+                piracer.setThrottle(throttle * int(mode) * 0.1);
+                piracer.setSteering(steering);
+		//std::this_thread::sleep_for(std::chrono::milliseconds(10));
+            }
+	    std::cout << "Battery :" << (int)batteryLevel << std::endl;
+	    std::cout << "Throttle :" << throttle << std::endl;
+	    std::cout << "Steering :" << steering << std::endl;
+>>>>>>> 583ba13d1133a6146535f939bdb7e049e70217a5
         }
     } catch (const std::exception& e) {
         std::cerr << "Exception in piracer_source: " << e.what() << std::endl;
@@ -109,7 +130,7 @@ void piracer_source(GamePad& gamepad, PiracerClass& piracer, uint8_t& gear, uint
 }
 
 int main() {
-
+    std::cout << "someip initailzing start" << std::endl;
     // SOME/IP initialize
     std::cout << "someip initailzing start" << std::endl;
     std::shared_ptr<CommonAPI::Runtime> runtime = CommonAPI::Runtime::get();
@@ -129,7 +150,11 @@ int main() {
     std::cout << "piracer spawned instance" << std::endl;
     GamePad gamepad;
     std::cout << "gameapd spawned instance" << std::endl;
+<<<<<<< HEAD
 
+=======
+    GearState gearstate;
+>>>>>>> 583ba13d1133a6146535f939bdb7e049e70217a5
     uint8_t mode = 5;
     uint8_t gear = 0;
     uint8_t batteryLevel;
@@ -137,11 +162,19 @@ int main() {
     // Create threads for fetching data
     std::vector<std::thread> threads;    
     
+    
     try {   
+<<<<<<< HEAD
         threads.emplace_back(piracer_source, std::ref(gamepad), std::ref(piracer), std::ref(gear), std::ref(mode), std::ref(batteryLevel));
 	    std::cout << "thread piracer_source executed..." << std::endl;
         threads.emplace_back(piracer_publish, std::ref(PiracerService), std::ref(gear), std::ref(mode), std::ref(batteryLevel));
 	    std::cout << "thread piracer_publish executed..." << std::endl;
+=======
+        threads.emplace_back(piracer_source, std::ref(gamepad), std::ref(piracer), std::ref(gearstate), std::ref(mode), std::ref(batteryLevel));
+	std::cout << "thread piracer_source executed..." << std::endl;
+        //threads.emplace_back(piracer_publish, std::ref(PiracerService), std::ref(gearstate), std::ref(mode), std::ref(batteryLevel));
+	//std::cout << "thread piracer_publish executed..." << std::endl;
+>>>>>>> 583ba13d1133a6146535f939bdb7e049e70217a5
 
         // Wait for threads to finish
         for (auto& t : threads) {

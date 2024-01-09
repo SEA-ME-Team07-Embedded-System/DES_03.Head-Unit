@@ -23,6 +23,7 @@
         <file>image/light_icon.png</file>
         <file>image/music_icon.png</file>
         <file>image/navigate_icon.png</file>
+        <file>image/navigation-sdk.png</file>
         <file>image/new_cay.jpg</file>
         <file>image/playing_icon.png</file>
         <file>image/porsche_emblem.jpg</file>
@@ -33,6 +34,7 @@
         <file>qml/Lightpage.qml</file>
         <file>qml/MusicDeatil.qml</file>
         <file>qml/VideoDetail.qml</file>
+        <file>qml/mapbox/api-key.txt</file>
         <file>image/ABCDEFU.jpeg</file>
         <file>image/ASAP.jpeg</file>
         <file>image/ETA.jpeg</file>

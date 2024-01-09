@@ -23,7 +23,9 @@ public:
     explicit MethodCallSomeIPManager(QObject *parent = nullptr);
 
 public Q_SLOTS:
-    Q_INVOKABLE void modeSelectCall(QVariant data); //method call
+    // Method Call
+    Q_INVOKABLE void modeSelectCall(QVariant mode);
+    Q_INVOKABLE void gearSelectCall(QVariant gear);
 
 private:
     // CommonAPI vSomeIP var
@@ -33,6 +35,7 @@ private:
     std::string returnMessage;
 
     uint8_t newMode;
+    uint8_t newGear;
 
 };
 

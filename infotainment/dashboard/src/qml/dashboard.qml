@@ -135,7 +135,7 @@ Window {
 //            bottom: parent.bottom
 //        }
         width: 1280 //parent.width/2.5
-        height:480
+        height:400
         color: white //"#d6d6d6"
 
         Rectangle { //bar
@@ -152,12 +152,18 @@ Window {
             id:map_main
             visible: true
             width: 1280
-            height: 480
+            height: 400
 
+//            Image {
+//                anchors.fill: centerScreen
+//                rotation: -90
+//                source: "qrc:/image/navigation-sdk.png"
+//                fillMode:Image.PreserveAspectFit
+//            }
             Plugin {
                 id: mapPlugin
                 name: "mapboxgl" // Mapbox plugin name
-                PluginParameter { name: "mapbox.access_token"; value: "file:/home/seame-workstation07/QT/Examples/Qt-5.15.2/quickcontrols/extras/dashboard_new/qml/mapbox/api-key.txt" }
+                PluginParameter { name: "mapbox.access_token"; value: "/home/seame-workstation07/daekyung/DES_03.Head-Unit/Yocto/poky/meta-mylayer/recipes-example/headunit/Head_Unit/src/qml/mapbox/api-key.txt" }
             }
 
             Map {
@@ -166,9 +172,8 @@ Window {
                 plugin: mapPlugin
                 center: QtPositioning.coordinate(valueSource.lati, valueSource.longi)
                 zoomLevel: 17
-
-            tilt:85
-            activeMapType: map.supportedMapTypes[0]
+                tilt:85
+                activeMapType: map.supportedMapTypes[0]
             }
 
             Image{
