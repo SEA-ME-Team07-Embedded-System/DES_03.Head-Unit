@@ -14,6 +14,8 @@ Window {
     //visibility: Window.FullScreen
     title: qsTr("Head Unit")
     property color leftbutton_colors : "#383838"
+    property color ambient_color: "#ff0000"
+    property double light_width: 1.8
 
     ValueSource {
         id: valueSource
@@ -74,11 +76,10 @@ Window {
             left: leftBar.right
             right: topBar.right
         }
-
         PiracerSomeIPManager {
             id: piracerHandler
         }
-        
+
         StackLayout{
             id: centerStack
             anchors.fill: parent
@@ -87,29 +88,44 @@ Window {
                 color: "red"
                 Plugin {
                     id: mapPlugin
-                    name: "mapboxgl" // Mapbox plugin name //osm
-                    PluginParameter { name: "mapbox.access_token"; value: "file:/home/seame-workstation07/QT/Examples/Qt-5.15.2/quickcontrols/extras/dashboard_new/qml/mapbox/api-key.txt" }
+                    name: "mapboxgl" // Mapbox plugin name
+                    PluginParameter { name: "mapbox.access_token"; value: "/home/seame-workstation07/daekyung/DES_03.Head-Unit/Yocto/poky/meta-mylayer/recipes-example/headunit/Head_Unit/src/qml/mapbox/api-key.txt" }
                 }
-                Map {
+                Map{
                     id: map
                     anchors.fill: parent
                     plugin: mapPlugin
-                    center: QtPositioning.coordinate(valueSource.lati, valueSource.longi) //valueSource.lati, valueSource.longi
+                    center: positionSource.position.coordinate //valueSource.lati, valueSource.longi
                     zoomLevel: 18
+                    tilt:85                 //기울기
 
-                tilt:85
-                activeMapType: map.supportedMapTypes[0]
+                    // 사용자의 현재 위치를 추적하는 PositionSource
+                    PositionSource {
+                        id: positionSource
+                        active: true
+                        updateInterval: 1000
+                        onPositionChanged: {
+                            map.center = position.coordinate
+                        }
+                    }
+                    MapQuickItem {
+                        id: arrow
+                        coordinate: positionSource.position.coordinate
+                        anchorPoint.x: arrowImage.width / 2
+                        anchorPoint.y: arrowImage.height / 2
+                        sourceItem: Image {
+                            id: arrowImage
+                            source: "qrc:/image/arrow_grey.png" // 화살표 이미지 경로
+                        }
+                    }
                 }
 
-                Image{
-                    id:arrow
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    y: parent.height*0.5
-                    width: parent.height*0.1
-                    height: arrow.width
-                    rotation:180
-                    source:"qrc:/image/arrow_grey.png"
-                }
+//                Image{
+//                    id:navi
+//                    anchors.fill: parent
+//                    source:"qrc:/image/navigation-sdk.png"
+//                }
+
                 //feature : 1. map 2. destination 3. favorite
                 //when goes to naviPage refresh map with current position and possible change map position by touch
                 //when compass icon touched go to current Position
@@ -162,6 +178,20 @@ Window {
                         duration: 100
                     }
                 }
+                Rectangle {
+                    id:naviButton_light
+                    visible: true
+                    anchors.top: parent.bottom
+                    anchors.left: parent.left
+                    width: parent.width
+                    height: light_width // 선 두께
+                    color: ambient_color
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 500 // 애니메이션 지속 시간 (밀리초)
+                        }
+                    }
+                }
                 MouseArea {
                     id: navimouseArea
                     anchors.fill: parent
@@ -189,6 +219,20 @@ Window {
                 Behavior on scale {
                     PropertyAnimation {
                         duration: 100
+                    }
+                }
+                Rectangle {
+                    id:musicButton_light
+                    visible: true
+                    anchors.top: parent.bottom
+                    anchors.left: parent.left
+                    width: parent.width
+                    height: light_width // 선 두께
+                    color: ambient_color
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 500 // 애니메이션 지속 시간 (밀리초)
+                        }
                     }
                 }
                 MouseArea {
@@ -219,6 +263,20 @@ Window {
                         duration: 100
                     }
                 }
+                Rectangle {
+                    id:videoButton_light
+                    visible: true
+                    anchors.top: parent.bottom
+                    anchors.left: parent.left
+                    width: parent.width
+                    height: light_width // 선 두께
+                    color: ambient_color
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 500 // 애니메이션 지속 시간 (밀리초)
+                        }
+                    }
+                }
                 MouseArea {
                     id: videomouseArea
                     anchors.fill: parent
@@ -245,6 +303,20 @@ Window {
                 Behavior on scale {
                     PropertyAnimation {
                         duration: 100
+                    }
+                }
+                Rectangle {
+                    id:settingButton_light
+                    visible: true
+                    anchors.top: parent.bottom
+                    anchors.left: parent.left
+                    width: parent.width
+                    height: light_width // 선 두께
+                    color: ambient_color
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 500 // 애니메이션 지속 시간 (밀리초)
+                        }
                     }
                 }
                 MouseArea {
@@ -282,6 +354,20 @@ Window {
                     anchors.fill: parent
                     onClicked: {
                         centerStack.currentIndex = 4;
+                    }
+                }
+                Rectangle {
+                    id:lightButton_light
+                    visible: false
+                    anchors.top: parent.bottom
+                    anchors.left: parent.left
+                    width: parent.width
+                    height: light_width // 선 두께
+                    color: ambient_color
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 500 // 애니메이션 지속 시간 (밀리초)
+                        }
                     }
                 }
 //                OpacityAnimator on opacity {

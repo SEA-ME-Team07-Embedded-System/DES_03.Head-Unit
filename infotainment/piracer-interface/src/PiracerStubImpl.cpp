@@ -37,7 +37,7 @@ void PiracerStubImpl::batteryPublisher(const uint8_t  battery) {
 
 void PiracerStubImpl::gearPublisher(const uint8_t  gear) {
   if (_gear != gear) {
-    _gear = gear;
+    //_gear = gear;
     setGearAttribute(_gear);
     std::cout <<  "New Gear Data = " << int(_gear) << "!" << std::endl;
   }

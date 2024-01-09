@@ -15,5 +15,6 @@
         <file>images/clock_minute2.png</file>
         <file>images/clock_hour2.png</file>
         <file>images/arrow_grey.png</file>
+        <file>images/navigation-sdk.png</file>
     </qresource>
 </RCC>
