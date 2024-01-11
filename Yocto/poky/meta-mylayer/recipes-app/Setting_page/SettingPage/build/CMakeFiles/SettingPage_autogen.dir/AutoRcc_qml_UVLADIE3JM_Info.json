@@ -1,0 +1,31 @@
+{
+	"BUILD_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/build/SettingPage_autogen",
+	"CMAKE_BINARY_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page",
+	"CMAKE_SOURCE_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page",
+	"INCLUDE_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/build/SettingPage_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/qml/Settingpage.qml",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/qml/ValueSource.qml",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/image/new_cay.jpg",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/image/information.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/image/car.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/image/setting_icon.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/image/caynne4.jpg",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/image/caynne.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/image/caynne3.jpg",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/image/gear.png"
+	],
+	"LOCK_FILE" : "/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/build/CMakeFiles/SettingPage_autogen.dir/AutoRcc_qml_UVLADIE3JM_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "qml" ],
+	"OUTPUT_CHECKSUM" : "UVLADIE3JM",
+	"OUTPUT_NAME" : "qrc_qml.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/build/CMakeFiles/SettingPage_autogen.dir/AutoRcc_qml_UVLADIE3JM_Used.txt",
+	"SOURCE" : "/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/src/qml.qrc",
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,32 @@
+{
+	"BUILD_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/build/PDCPage_autogen",
+	"CMAKE_BINARY_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page",
+	"CMAKE_SOURCE_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page",
+	"INCLUDE_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/build/PDCPage_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/qml/Camerapage.qml",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/qml/ValueSource.qml",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/image/fdistance_alert_3.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/image/porsche_upview.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/image/distance_alert_4.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/image/fdistance_alert_2.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/image/distance_alert_3.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/image/fdistance_alert_1.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/image/distance_alert_2.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/image/distance_alert_1.png",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/image/fdistance_alert_4.png"
+	],
+	"LOCK_FILE" : "/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/build/CMakeFiles/PDCPage_autogen.dir/AutoRcc_qml_UVLADIE3JM_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "qml" ],
+	"OUTPUT_CHECKSUM" : "UVLADIE3JM",
+	"OUTPUT_NAME" : "qrc_qml.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/build/CMakeFiles/PDCPage_autogen.dir/AutoRcc_qml_UVLADIE3JM_Used.txt",
+	"SOURCE" : "/home/seame-workstation05/Desktop/DES_04.PDC/PDC_page/src/qml.qrc",
+	"VERBOSITY" : 0
+}

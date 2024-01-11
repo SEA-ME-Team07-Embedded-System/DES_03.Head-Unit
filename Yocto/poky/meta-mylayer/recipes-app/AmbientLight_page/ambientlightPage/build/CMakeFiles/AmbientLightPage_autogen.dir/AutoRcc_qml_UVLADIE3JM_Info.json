@@ -1,0 +1,23 @@
+{
+	"BUILD_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/build/AmbientLightPage_autogen",
+	"CMAKE_BINARY_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page",
+	"CMAKE_SOURCE_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page",
+	"INCLUDE_DIR" : "/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/build/AmbientLightPage_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/src/qml/Lightpage.qml",
+		"/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/src/image/porsche_emblem.jpg"
+	],
+	"LOCK_FILE" : "/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/build/CMakeFiles/AmbientLightPage_autogen.dir/AutoRcc_qml_UVLADIE3JM_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "qml" ],
+	"OUTPUT_CHECKSUM" : "UVLADIE3JM",
+	"OUTPUT_NAME" : "qrc_qml.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/build/CMakeFiles/AmbientLightPage_autogen.dir/AutoRcc_qml_UVLADIE3JM_Used.txt",
+	"SOURCE" : "/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/src/qml.qrc",
+	"VERBOSITY" : 0
+}

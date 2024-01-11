@@ -5,7 +5,11 @@ SUMMARY = "A basic Qt5 dev image"
 include recipes-core/images/core-image-base.bb
 
 IMAGE_INSTALL:append = " dashboard"
-IMAGE_INSTALL:append = " headunit"
+IMAGE_INSTALL:append = " compositor"
+IMAGE_INSTALL:append = " pdc"
+IMAGE_INSTALL:append = " setting"
+IMAGE_INSTALL:append = " light"
+
   
     
 QT_BASE = " \
@@ -53,6 +57,7 @@ QT_PKGS = " \
     qtwebsockets \
     qtwebsockets-dev \
     qtwebsockets-mkspecs \
+    qtwayland \
 "
 
 GSTREAMER_PKGS = " \

@@ -1,0 +1,4 @@
+/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/CMakeFiles/rebuild_cache.dir
+/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/CMakeFiles/edit_cache.dir
+/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/CMakeFiles/ivi-compoitor.dir
+/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/CMakeFiles/ivi-compoitor_autogen.dir

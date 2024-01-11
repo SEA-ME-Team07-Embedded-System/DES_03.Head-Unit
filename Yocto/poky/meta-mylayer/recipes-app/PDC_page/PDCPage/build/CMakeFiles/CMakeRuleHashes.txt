@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+acf81d95748dbfc5e744d7d7eacbcbf9 CMakeFiles/PDCPage_autogen
+3b4a2e7dcd6eb5157e8ae2968e28b9a8 PDCPage_autogen/UVLADIE3JM/qrc_qml.cpp

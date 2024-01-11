@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Lightpage.qml</file>
+        <file>image/porsche_emblem.jpg</file>
+        </qresource>
+</RCC>

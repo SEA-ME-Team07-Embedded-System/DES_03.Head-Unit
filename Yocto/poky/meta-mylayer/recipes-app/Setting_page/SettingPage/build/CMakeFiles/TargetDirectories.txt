@@ -1,0 +1,4 @@
+/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/build/CMakeFiles/rebuild_cache.dir
+/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/build/CMakeFiles/edit_cache.dir
+/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/build/CMakeFiles/SettingPage.dir
+/home/seame-workstation05/Desktop/DES_04.PDC/Setting_page/build/CMakeFiles/SettingPage_autogen.dir

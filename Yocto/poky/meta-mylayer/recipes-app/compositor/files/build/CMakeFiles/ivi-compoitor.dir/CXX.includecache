@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/ivi-compoitor_autogen/UVLADIE3JM/qrc_ivi-compositor.cpp
+

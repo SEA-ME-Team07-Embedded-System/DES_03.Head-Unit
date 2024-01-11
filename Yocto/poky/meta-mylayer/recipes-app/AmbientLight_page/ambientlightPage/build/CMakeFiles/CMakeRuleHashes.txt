@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+81511af9827e914143a89c139f38dec2 AmbientLightPage_autogen/UVLADIE3JM/qrc_qml.cpp
+eb0de0f313acb8545fef1f0bcfb9ab96 CMakeFiles/AmbientLightPage_autogen

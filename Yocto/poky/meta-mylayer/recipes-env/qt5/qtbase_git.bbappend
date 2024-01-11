@@ -8,6 +8,8 @@ PACKAGECONFIG:append = " \
                         tslib \
                         gl \
                         accessibility \
+                        openssl \
+                        xkbcommon \
 "
 
 DEPENDS += "userland"

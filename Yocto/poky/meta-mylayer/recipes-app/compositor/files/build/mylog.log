@@ -1,0 +1,200 @@
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
+[CAPI][INFO] Loading configuration file '/home/seame-workstation05/Desktop/DES_04.PDC/ivi-compositor/build/commonapi.ini'
+[CAPI][INFO] Using default binding 'someip'
+[CAPI][INFO] Using default shared library folder '/usr/local/lib/commonapi'
+[CAPI][DEBUG] Added address mapping: local:commonapi.Piracer:v1_0:Piracer <--> [1248.567c(1.0)]
+[CAPI][VERBOSE] Registering function for creating "commonapi.Piracer:v1_0" proxy.
+[CAPI][DEBUG] Loading library for local:commonapi.Piracer:v1_0:Piracer proxy.
+[CAPI][DEBUG] Loading interface library "liblocal__commonapi_Piracer:v1_0__Piracer.so" failed (liblocal__commonapi_Piracer:v1_0__Piracer.so: cannot open shared object file: No such file or directory)
+[CAPI][VERBOSE] Creating proxy for "local:commonapi.Piracer:v1_0:Piracer"
