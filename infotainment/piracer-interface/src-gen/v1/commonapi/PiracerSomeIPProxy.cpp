@@ -68,9 +68,9 @@ PiracerSomeIPProxy::ModeAttribute& PiracerSomeIPProxy::getModeAttribute() {
 }
 
 
-void PiracerSomeIPProxy::modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_internalCallStatus, std::string &_message, const CommonAPI::CallInfo *_info) {
+void PiracerSomeIPProxy::modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_internalCallStatus, std::string &_gearmessage, const CommonAPI::CallInfo *_info) {
     CommonAPI::Deployable< uint8_t, CommonAPI::SomeIP::IntegerDeployment<uint8_t>> deploy_modeS(_modeS, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr));
-    CommonAPI::Deployable< std::string, CommonAPI::SomeIP::StringDeployment> deploy_message(static_cast< CommonAPI::SomeIP::StringDeployment* >(nullptr));
+    CommonAPI::Deployable< std::string, CommonAPI::SomeIP::StringDeployment> deploy_gearmessage(static_cast< CommonAPI::SomeIP::StringDeployment* >(nullptr));
     CommonAPI::SomeIP::ProxyHelper<
         CommonAPI::SomeIP::SerializableArguments<
             CommonAPI::Deployable<
@@ -92,13 +92,13 @@ void PiracerSomeIPProxy::modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_inte
         (_info ? _info : &CommonAPI::SomeIP::defaultCallInfo),
         deploy_modeS,
         _internalCallStatus,
-        deploy_message);
-    _message = deploy_message.getValue();
+        deploy_gearmessage);
+    _gearmessage = deploy_gearmessage.getValue();
 }
 
 std::future<CommonAPI::CallStatus> PiracerSomeIPProxy::modeSelectAsync(const uint8_t &_modeS, ModeSelectAsyncCallback _callback, const CommonAPI::CallInfo *_info) {
     CommonAPI::Deployable< uint8_t, CommonAPI::SomeIP::IntegerDeployment<uint8_t>> deploy_modeS(_modeS, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr));
-    CommonAPI::Deployable< std::string, CommonAPI::SomeIP::StringDeployment> deploy_message(static_cast< CommonAPI::SomeIP::StringDeployment* >(nullptr));
+    CommonAPI::Deployable< std::string, CommonAPI::SomeIP::StringDeployment> deploy_gearmessage(static_cast< CommonAPI::SomeIP::StringDeployment* >(nullptr));
     return CommonAPI::SomeIP::ProxyHelper<
         CommonAPI::SomeIP::SerializableArguments<
             CommonAPI::Deployable<
@@ -119,11 +119,69 @@ std::future<CommonAPI::CallStatus> PiracerSomeIPProxy::modeSelectAsync(const uin
         false,
         (_info ? _info : &CommonAPI::SomeIP::defaultCallInfo),
         deploy_modeS,
-        [_callback] (CommonAPI::CallStatus _internalCallStatus, CommonAPI::Deployable< std::string, CommonAPI::SomeIP::StringDeployment > _message) {
+        [_callback] (CommonAPI::CallStatus _internalCallStatus, CommonAPI::Deployable< std::string, CommonAPI::SomeIP::StringDeployment > _gearmessage) {
             if (_callback)
-                _callback(_internalCallStatus, _message.getValue());
+                _callback(_internalCallStatus, _gearmessage.getValue());
         },
-        std::make_tuple(deploy_message));
+        std::make_tuple(deploy_gearmessage));
+}
+
+void PiracerSomeIPProxy::gearSelect(uint8_t _gearS, CommonAPI::CallStatus &_internalCallStatus, std::string &_modemessage, const CommonAPI::CallInfo *_info) {
+    CommonAPI::Deployable< uint8_t, CommonAPI::SomeIP::IntegerDeployment<uint8_t>> deploy_gearS(_gearS, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr));
+    CommonAPI::Deployable< std::string, CommonAPI::SomeIP::StringDeployment> deploy_modemessage(static_cast< CommonAPI::SomeIP::StringDeployment* >(nullptr));
+    CommonAPI::SomeIP::ProxyHelper<
+        CommonAPI::SomeIP::SerializableArguments<
+            CommonAPI::Deployable<
+                uint8_t,
+                CommonAPI::SomeIP::IntegerDeployment<uint8_t>
+            >
+        >,
+        CommonAPI::SomeIP::SerializableArguments<
+            CommonAPI::Deployable<
+                std::string,
+                CommonAPI::SomeIP::StringDeployment
+            >
+        >
+    >::callMethodWithReply(
+        *this,
+        CommonAPI::SomeIP::method_id_t(0x7c),
+        false,
+        false,
+        (_info ? _info : &CommonAPI::SomeIP::defaultCallInfo),
+        deploy_gearS,
+        _internalCallStatus,
+        deploy_modemessage);
+    _modemessage = deploy_modemessage.getValue();
+}
+
+std::future<CommonAPI::CallStatus> PiracerSomeIPProxy::gearSelectAsync(const uint8_t &_gearS, GearSelectAsyncCallback _callback, const CommonAPI::CallInfo *_info) {
+    CommonAPI::Deployable< uint8_t, CommonAPI::SomeIP::IntegerDeployment<uint8_t>> deploy_gearS(_gearS, static_cast< CommonAPI::SomeIP::IntegerDeployment<uint8_t>* >(nullptr));
+    CommonAPI::Deployable< std::string, CommonAPI::SomeIP::StringDeployment> deploy_modemessage(static_cast< CommonAPI::SomeIP::StringDeployment* >(nullptr));
+    return CommonAPI::SomeIP::ProxyHelper<
+        CommonAPI::SomeIP::SerializableArguments<
+            CommonAPI::Deployable<
+                uint8_t,
+                CommonAPI::SomeIP::IntegerDeployment<uint8_t>
+            >
+        >,
+        CommonAPI::SomeIP::SerializableArguments<
+            CommonAPI::Deployable<
+                std::string,
+                CommonAPI::SomeIP::StringDeployment
+            >
+        >
+    >::callMethodAsync(
+        *this,
+        CommonAPI::SomeIP::method_id_t(0x7c),
+        false,
+        false,
+        (_info ? _info : &CommonAPI::SomeIP::defaultCallInfo),
+        deploy_gearS,
+        [_callback] (CommonAPI::CallStatus _internalCallStatus, CommonAPI::Deployable< std::string, CommonAPI::SomeIP::StringDeployment > _modemessage) {
+            if (_callback)
+                _callback(_internalCallStatus, _modemessage.getValue());
+        },
+        std::make_tuple(deploy_modemessage));
 }
 
 void PiracerSomeIPProxy::getOwnVersion(uint16_t& ownVersionMajor, uint16_t& ownVersionMinor) const {

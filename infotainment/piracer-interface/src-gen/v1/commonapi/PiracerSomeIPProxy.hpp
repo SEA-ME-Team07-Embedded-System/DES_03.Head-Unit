@@ -60,9 +60,13 @@ public:
 
     virtual ModeAttribute& getModeAttribute();
 
-    virtual void modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_internalCallStatus, std::string &_message, const CommonAPI::CallInfo *_info);
+    virtual void modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_internalCallStatus, std::string &_gearmessage, const CommonAPI::CallInfo *_info);
 
     virtual std::future<CommonAPI::CallStatus> modeSelectAsync(const uint8_t &_modeS, ModeSelectAsyncCallback _callback, const CommonAPI::CallInfo *_info);
+
+    virtual void gearSelect(uint8_t _gearS, CommonAPI::CallStatus &_internalCallStatus, std::string &_modemessage, const CommonAPI::CallInfo *_info);
+
+    virtual std::future<CommonAPI::CallStatus> gearSelectAsync(const uint8_t &_gearS, GearSelectAsyncCallback _callback, const CommonAPI::CallInfo *_info);
 
     virtual void getOwnVersion(uint16_t &_major, uint16_t &_minor) const;
 

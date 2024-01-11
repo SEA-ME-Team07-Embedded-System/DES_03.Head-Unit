@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PiracerClient.dir/src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp.o"
+  "CMakeFiles/PiracerClient.dir/src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp.o.d"
   "CMakeFiles/PiracerClient.dir/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp.o"
+  "CMakeFiles/PiracerClient.dir/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp.o.d"
   "CMakeFiles/PiracerClient.dir/src/PiracerClient.cpp.o"
+  "CMakeFiles/PiracerClient.dir/src/PiracerClient.cpp.o.d"
   "PiracerClient"
   "PiracerClient.pdb"
 )
