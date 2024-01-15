@@ -20,8 +20,8 @@ public:
     explicit SomeIPManager(QObject *parent = nullptr);
 
     Q_PROPERTY(uint8_t rpm READ rpm WRITE setRpm NOTIFY rpmChanged FINAL)
-    Q_PROPERTY(uint8_t fdis READ fdis WRITE setFDis NOTIFY fdisChanged FINAL)
-    Q_PROPERTY(uint8_t rdis READ rdis WRITE setRDis NOTIFY rdisChanged FINAL)
+    Q_PROPERTY(uint8_t dis READ fdis WRITE setFDis NOTIFY fdisChanged FINAL)
+    Q_PROPERTY(uint8_t dis READ rdis WRITE setRDis NOTIFY rdisChanged FINAL)
     Q_PROPERTY(uint8_t speed READ speed WRITE setSpeed NOTIFY speedChanged FINAL)
     Q_PROPERTY(qreal odo READ odo WRITE setOdo NOTIFY odoChanged FINAL)
     Q_PROPERTY(qreal latitude READ latitude WRITE setLatitude NOTIFY latitudeChanged FINAL)

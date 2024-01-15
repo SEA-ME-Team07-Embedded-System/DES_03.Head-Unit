@@ -1,4 +1,0 @@
-/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/build/CMakeFiles/rebuild_cache.dir
-/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/build/CMakeFiles/edit_cache.dir
-/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/build/CMakeFiles/AmbientLightPage.dir
-/home/seame-workstation05/Desktop/DES_04.PDC/AmbientLight_page/build/CMakeFiles/AmbientLightPage_autogen.dir

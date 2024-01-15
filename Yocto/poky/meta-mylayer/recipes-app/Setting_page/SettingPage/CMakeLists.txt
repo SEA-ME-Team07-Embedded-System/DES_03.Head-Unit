@@ -30,7 +30,6 @@ add_executable(SettingPage
         src-gen/v1/commonapi/CANSomeIPProxy.cpp
         src-gen/v1/commonapi/PiracerSomeIPProxy.cpp
         src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp
-
         )
 
 target_compile_definitions(SettingPage
@@ -45,4 +44,5 @@ PRIVATE
     CommonAPI-SomeIP 
     vsomeip3
 )
+
 install(TARGETS SettingPage DESTINATION /usr/bin/application)

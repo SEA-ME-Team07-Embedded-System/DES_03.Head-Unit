@@ -71,7 +71,7 @@ Window { // Main container
         Image {
             id: fdistanceAlertImage
             anchors.top: parent.top
-//            anchors.topMargin: parent.height*0.001
+            anchors.topMargin: parent.height*0.01
             anchors.horizontalCenter: parent.horizontalCenter
             source: {
                 if (valueSource.f_dis <= 10) {
@@ -84,13 +84,13 @@ Window { // Main container
                     return "qrc:/image/fdistance_alert_4.png";
                 }
             }
-            scale: 0.5
+            scale: 0.2
         }
 
         Image {
             id: rdistanceAlertImage
             anchors.bottom: parent.bottom
-//            anchors.bottomMargin: parent.height*0.001
+//            anchors.bottomMargin: parent.height*0.01
             anchors.horizontalCenter: parent.horizontalCenter
 //            anchors.verticalCenter: parent.verticalCenter
             source: {
@@ -104,17 +104,11 @@ Window { // Main container
                     return "qrc:/image/distance_alert_4.png";
                 }
             }
-            scale: 0.5
+            scale: 0.3
         }
         Text {
-            id: reardistext
             anchors.bottom: parent.bottom
-            text: "Rear Distance : " + valueSource.r_dis + "cm"
-            font.pixelSize: parent.width*0.05
-        }
-        Text {
-            anchors.bottom: reardistext.top
-            text: "Front Distance : " + valueSource.f_dis + "cm"
+            text: "Distance : " + valueSource.r_dis + "cm"
             font.pixelSize: parent.width*0.05
         }
     }

@@ -23,9 +23,6 @@ find_package(Qt5 COMPONENTS Core Quick Gui Multimedia WaylandCompositor REQUIRED
 add_executable(ivi_compositor
         src/main.cpp
         src/ivi-compositor.qrc
-        src/piracersomeipmanager.cpp
-        src-gen/v1/commonapi/PiracerSomeIPProxy.cpp
-        src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp
 )
 
 target_compile_definitions(ivi_compositor

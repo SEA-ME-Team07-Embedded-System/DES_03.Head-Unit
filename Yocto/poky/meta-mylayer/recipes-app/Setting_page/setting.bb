@@ -34,10 +34,10 @@ RDEPENDS:{PN} += " \
 
 #If we don't put install in cmake, we have to put this in bb.file(Use :append is for do not break default structure )
 #do_install:append()
-do_install(){
-    install -d ${D}${bindir}
-    install -m 0755 SettingPage ${D}${bindir}
-}
+#do_install(){
+#    install -d ${D}${bindir}
+#    install -m 0755 SettingPage ${D}${bindir}
+#}
 
 EXTRA_OECMAKE += " \
                 -DCMAKE_INCLUDE_PATH=${STAGING_INCDIR} \

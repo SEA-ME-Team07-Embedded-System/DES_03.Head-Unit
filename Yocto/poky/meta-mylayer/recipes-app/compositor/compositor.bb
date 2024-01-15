@@ -7,7 +7,6 @@ inherit cmake_qt5
 SRC_URI += " \
 file://CMakeLists.txt \ 
 file://src/ \
-file://src-gen/ \
 "
 
 S = "${WORKDIR}"

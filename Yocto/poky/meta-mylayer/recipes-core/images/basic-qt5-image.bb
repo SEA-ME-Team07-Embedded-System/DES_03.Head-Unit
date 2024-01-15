@@ -6,11 +6,13 @@ include recipes-core/images/core-image-base.bb
 
 IMAGE_INSTALL:append = " dashboard"
 IMAGE_INSTALL:append = " compositor"
+IMAGE_INSTALL:append = " light"
+IMAGE_INSTALL:append = " media"
 IMAGE_INSTALL:append = " pdc"
 IMAGE_INSTALL:append = " setting"
-IMAGE_INSTALL:append = " light"
+IMAGE_INSTALL:append = " navi"
 
-  
+
     
 QT_BASE = " \
     qtbase \

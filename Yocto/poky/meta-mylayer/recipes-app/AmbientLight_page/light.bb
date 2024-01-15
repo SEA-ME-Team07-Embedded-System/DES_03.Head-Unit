@@ -7,7 +7,6 @@ inherit cmake_qt5
 SRC_URI += " \
 file://CMakeLists.txt \ 
 file://src/ \
-file://src-gen/ \
 "
 
 S = "${WORKDIR}"
@@ -20,9 +19,6 @@ DEPENDS = " \
            qtmultimedia \
            qtwebengine \
            qtvirtualkeyboard \
-           common-api-c++ \
-           vsomeip \
-           common-api-c++-someip \
            qtwayland \
 "
 
@@ -34,10 +30,10 @@ RDEPENDS:{PN} += " \
 
 #If we don't put install in cmake, we have to put this in bb.file(Use :append is for do not break default structure )
 #do_install:append()
-do_install(){
-    install -d ${D}${bindir}
-    install -m 0755 AmbientLightPage ${D}${bindir}
-}
+#do_install(){
+#    install -d ${D}${bindir}
+#    install -m 0755 AmbientLightPage ${D}${bindir}
+#}
 
 EXTRA_OECMAKE += " \
                 -DCMAKE_INCLUDE_PATH=${STAGING_INCDIR} \

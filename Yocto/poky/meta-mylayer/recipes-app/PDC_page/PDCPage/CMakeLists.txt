@@ -28,7 +28,6 @@ add_executable(PDCPage
         src-gen/v1/commonapi/CANSomeIPProxy.cpp
         src-gen/v1/commonapi/PiracerSomeIPProxy.cpp
         src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp
-
         )
 
 target_compile_definitions(PDCPage

@@ -3,7 +3,6 @@
 #include <QtGui/QGuiApplication>
 #include <QtQml/QQmlApplicationEngine>
 #include <QQmlContext>
-#include "piracersomeipmanager.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,13 +11,6 @@ int main(int argc, char *argv[])
 #endif
     QGuiApplication app(argc, argv);
 
-   //SOMEIP Attribute for Piracer
-    PiracerSomeIPManager piracersomeipManager;
-    piracersomeipManager.initVsomeipClient();
-    piracersomeipManager.startSubscribeBattery();
-    piracersomeipManager.startSubscribeGear();
-    piracersomeipManager.startSubscribeMode();
-
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
@@ -26,9 +18,6 @@ int main(int argc, char *argv[])
             if (!obj && url == objUrl)
                 QCoreApplication::exit(-1);
         }, Qt::QueuedConnection);
-
-    // Expose objects to QML
-    engine.rootContext()->setContextProperty("piracersomeipManager", &piracersomeipManager);
 
     engine.load(url);
 
