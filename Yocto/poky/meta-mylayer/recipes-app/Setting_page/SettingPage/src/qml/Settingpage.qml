@@ -125,8 +125,6 @@ Window { //centerstack : 3
         height: parent.height
     }
 
-
-
     ColumnLayout {
         anchors.top: parent.top
         anchors.left: parent.left
@@ -217,7 +215,6 @@ Window { //centerstack : 3
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.bottom: parent.bottom
             }
-
             // Animation Effect
             scale: carinformationButton_Area.pressed ? 0.95 : 1.0
             Behavior on scale {

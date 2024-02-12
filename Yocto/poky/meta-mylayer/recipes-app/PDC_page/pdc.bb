@@ -15,15 +15,16 @@ S = "${WORKDIR}"
 DEPENDS = " \
            qtbase \
            qtquickcontrols2 \
+           qtconnectivity \
            qtlocation \
            qtdeclarative \
            qtmultimedia \
            qtwebengine \
-           qtvirtualkeyboard \
            common-api-c++ \
            vsomeip \
            common-api-c++-someip \
            qtwayland \
+           python3 \
 "
 
 RDEPENDS:{PN} += " \

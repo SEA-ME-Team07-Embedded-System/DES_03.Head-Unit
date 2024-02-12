@@ -27,6 +27,9 @@ PRIVATE
     Qt5::Multimedia 
     Qt5::WebEngine
     Qt5::VirtualKeyboard
+    CommonAPI 
+    CommonAPI-SomeIP 
+    vsomeip3
 )
 
 install(TARGETS MediaPage DESTINATION /usr/bin/application)

@@ -11,6 +11,7 @@ file://src/ \
 
 S = "${WORKDIR}"
 
+
 DEPENDS = " \
            qtbase \
            qtquickcontrols2 \
@@ -19,6 +20,9 @@ DEPENDS = " \
            qtmultimedia \
            qtwebengine \
            qtvirtualkeyboard \
+           common-api-c++ \
+           vsomeip \
+           common-api-c++-someip \
            qtwayland \
 "
 

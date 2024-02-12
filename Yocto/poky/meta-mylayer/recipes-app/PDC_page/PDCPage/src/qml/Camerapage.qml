@@ -1,11 +1,12 @@
 import QtQuick 2.12
 import QtMultimedia 5.12
 import QtQuick.Window 2.12
+import QtQuick.Controls 1.4
+//import DataModule 1.0
 
 Window { // Main container
-    color: "#dfe4ea"
+    color: "blue"  //#dfe4ea
     visible: true
-
     ValueSource {
         id: valueSource
     }
@@ -18,19 +19,48 @@ Window { // Main container
         anchors.left: parent.left
         width: parent.width / 2
         color: "#dfe4ea"
-        // Camera
-        Camera {
-            id: camera
-            imageProcessing.whiteBalanceMode: CameraImageProcessing.WhiteBalanceFlash
-        }
-        VideoOutput {
-            id: cameraView
-            source: camera
-            width: parent.height*0.7
-            height: parent.height*0.5
-            scale: 0.5
+        //testcase
+        Rectangle{
+            width: parent.width*0.5
+            height: parent.width*0.3
             anchors.centerIn: parent
-            focus: visible
+            color:"blue"
+        }
+        Text {
+            anchors.bottom: cameraView.top
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottomMargin: parent.width*0.01
+            text: "Camera Behind View"
+            font.pixelSize: parent.width*0.05
+        }
+        // Camera
+        Rectangle{
+            id:hello
+            width:parent.width*0.5
+            height: parent.height*0.3
+            anchors.centerIn: parent
+            Rectangle{
+               id:hello_daekyung
+               anchors.fill: hello
+               color: "transparent"
+               border.color: "red"
+               border.width: 2
+            }
+            Camera {
+                id: camera
+                objectName: "camera"
+//                captureMode: Camera.CaptureViewfinder
+                imageProcessing.whiteBalanceMode: CameraImageProcessing.WhiteBalanceFlash
+            }
+            VideoOutput {
+                id: cameraView
+                source: camera
+                anchors.fill: parent
+//                focus: visible
+                //            width: parent.height*0.7
+                //            height: parent.height*0.5
+                //            scale: 0.5
+            }
             MouseArea {
                 anchors.fill: cameraView;
                 onClicked: {
@@ -41,13 +71,6 @@ Window { // Main container
                     }
                 }
             }
-        }
-        Text {
-            anchors.bottom: cameraView.top
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottomMargin: parent.width*0.01
-            text: "Camera Behind View"
-            font.pixelSize: parent.width*0.05
         }
     }
 
@@ -84,7 +107,7 @@ Window { // Main container
                     return "qrc:/image/fdistance_alert_4.png";
                 }
             }
-            scale: 0.2
+            scale: 0.15
         }
 
         Image {
@@ -104,7 +127,7 @@ Window { // Main container
                     return "qrc:/image/distance_alert_4.png";
                 }
             }
-            scale: 0.3
+            scale: 0.15
         }
         Text {
             anchors.bottom: parent.bottom

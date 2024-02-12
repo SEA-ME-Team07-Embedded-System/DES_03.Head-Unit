@@ -7,6 +7,7 @@ PACKAGECONFIG:append = " \
                         linuxfb \
                         tslib \
                         gl \
+                        gles2 \
                         accessibility \
                         openssl \
                         xkbcommon \
