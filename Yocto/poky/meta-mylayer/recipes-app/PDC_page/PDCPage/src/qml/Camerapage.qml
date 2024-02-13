@@ -22,14 +22,14 @@ Window { // Main container
         //testcase
         Rectangle{
             width: parent.width*0.5
-            height: parent.width*0.3
+            height: parent.width*0.4
             anchors.centerIn: parent
             color:"blue"
         }
         Text {
-            anchors.bottom: cameraView.top
+            anchors.top: parent.top
             anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottomMargin: parent.width*0.01
+            anchors.topMargin: parent.height*0.2
             text: "Camera Behind View"
             font.pixelSize: parent.width*0.05
         }
@@ -37,7 +37,7 @@ Window { // Main container
         Rectangle{
             id:hello
             width:parent.width*0.5
-            height: parent.height*0.3
+            height: parent.height*0.4
             anchors.centerIn: parent
             Rectangle{
                id:hello_daekyung
@@ -107,7 +107,7 @@ Window { // Main container
                     return "qrc:/image/fdistance_alert_4.png";
                 }
             }
-            scale: 0.15
+            scale: 0.3
         }
 
         Image {
@@ -127,7 +127,7 @@ Window { // Main container
                     return "qrc:/image/distance_alert_4.png";
                 }
             }
-            scale: 0.15
+            scale: 0.3
         }
         Text {
             anchors.bottom: parent.bottom

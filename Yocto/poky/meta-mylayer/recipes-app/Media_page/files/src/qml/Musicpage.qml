@@ -58,17 +58,17 @@ Window { //centerstack : 1
         ListElement { source: "qrc:/image/Im not the only one.jpeg"; title: "Sam Smith - I'm not the only one" }
         ListElement { source: "qrc:/image/Seven.jpeg"; title: "Jungkuk - Seven" }
     }
-    MediaPlayer {
-         id: mediaPlayer
-        source: songsModel.get(0).source  // Set the default song
-    }
+//    MediaPlayer {
+//         id: mediaPlayer
+//        source: songsModel.get(0).source  // Set the default song
+//    }
 
 ////New Music musicpage
     Rectangle{
         id: musicdeatil
         anchors.fill:parent
         visible:true
-        opcity:1
+        opacity:1
         color: "#dfe4ea"
         Behavior on opacity {
            NumberAnimation {
@@ -99,6 +99,103 @@ Window { //centerstack : 1
             }
         }
     }
+    ColumnLayout{
+        anchors.top: parent.top
+        anchors.left: parent.left
+        width:parent.height*0.15
+        height: parent.height*0.3
+        spacing: 1
+        Button{
+            id: playMusicButton
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.495  // Adjust according to your needs
+            background:
+            Rectangle {
+                color: "#242323"  // Change this color for your button background color
+                anchors.fill: parent
+            }
+            Image {
+                anchors.centerIn: parent
+                width: playMusicButton.width * 0.5
+                source: "qrc:/image/music_icon.png" // Update the path to your music icon
+                fillMode: Image.PreserveAspectFit
+            }
+            Behavior on scale {
+                PropertyAnimation {
+                    duration: 100
+                }
+            }
+            Rectangle {
+                id:playMusicButton_light
+                visible: false
+                anchors.top: parent.bottom
+                anchors.left: parent.left
+                width: parent.width
+                height: 1 // 선 두께
+                color: ambient_color
+            }
+            MouseArea {
+                id: musicbuttonmouseArea
+                anchors.fill: parent
+                onClicked: {
+                    videoDetail.opacity=0
+                    if (musicdeatil.visible==false){
+                        musicdeatil.visible=true
+                        musicdeatil.opacity=1
+                    }
+                    else{
+                        musicdeatil.opacity=0
+                    }
+                }
+            }
+            scale: musicbuttonmouseArea.pressed ? 0.95 : 1.0
+        }
+        Button {
+            id: playVideoButton
+            Layout.preferredWidth: parent.width         // Adjust according to your needs
+            Layout.preferredHeight: parent.height*0.495  // Adjust according to your needs
+            background: Rectangle {
+                color: "#242323"  // Change this color for your button background color
+                anchors.fill: parent
+            }
+            Image {
+                anchors.centerIn: parent
+                width: playVideoButton.width * 0.5
+                source: "qrc:/image/theater_icon.png" // Update the path to your video icon
+                fillMode: Image.PreserveAspectFit
+            }
+            Behavior on scale {
+                PropertyAnimation {
+                    duration: 100
+                }
+            }
+            Rectangle {
+                id:playVideoButton_light
+                visible: false
+                anchors.top: parent.bottom
+                anchors.left: parent.left
+                width: parent.width
+                height: 1 // 선 두께
+                color: ambient_color
+            }
+            MouseArea {
+                id: videobuttonmouseArea
+                anchors.fill: parent
+                onClicked: {
+                    musicdeatil.opacity=0
+                    if (videoDetail.visible==false){
+                        videoDetail.visible=true
+                        videoDetail.opacity=1
+                    }
+                    else{
+                        videoDetail.opacity=0
+                    }
+                }
+            }
+            scale: videobuttonmouseArea.pressed ? 0.95 : 1.0
+        }
+    }
+
 
 
    ////////////////////////////////////////////////////////////MUSIC PAGE
@@ -488,103 +585,5 @@ Window { //centerstack : 1
 //   }
 
 //    / BUTTON///////////////////////////////////////////////
-//    ColumnLayout{
-//        anchors.top: parent.top
-//        anchors.left: parent.left
-//        width:parent.height*0.15
-//        height: parent.height*0.3
-//        spacing: 1
-//        Button{
-//            id: playMusicButton
-//            Layout.preferredWidth: parent.width         // Adjust according to your needs
-//            Layout.preferredHeight: parent.height*0.495  // Adjust according to your needs
-//            background:
-//            Rectangle {
-//                color: "#242323"  // Change this color for your button background color
-//                anchors.fill: parent
-//            }
-//            Image {
-//                anchors.centerIn: parent
-//                width: playMusicButton.width * 0.5
-//                source: "qrc:/image/music_icon.png" // Update the path to your music icon
-//                fillMode: Image.PreserveAspectFit
-//            }
-//            Behavior on scale {
-//                PropertyAnimation {
-//                    duration: 100
-//                }
-//            }
-//            Rectangle {
-//                id:playMusicButton_light
-//                visible: false
-//                anchors.top: parent.bottom
-//                anchors.left: parent.left
-//                width: parent.width
-//                height: 1 // 선 두께
-//                color: ambient_color
-//            }
-//            MouseArea {
-//                id: musicbuttonmouseArea
-//                anchors.fill: parent
-//                onClicked: {
-//                    videoDetail.opacity=0
-//                    if (musicdeatil.visible==false){
-//                        musicdeatil.visible=true
-//                        musicdeatil.opacity=1
-//                    }
-//                    else{
-//                        musicdeatil.opacity=0
-//                    }
-//                }
-//            }
-//            scale: musicbuttonmouseArea.pressed ? 0.95 : 1.0
-//        }
-//        Button {
-//            id: playVideoButton
-//            Layout.preferredWidth: parent.width         // Adjust according to your needs
-//            Layout.preferredHeight: parent.height*0.495  // Adjust according to your needs
-//            background: Rectangle {
-//                color: "#242323"  // Change this color for your button background color
-//                anchors.fill: parent
-//            }
-//            Image {
-//                anchors.centerIn: parent
-//                width: playVideoButton.width * 0.5
-//                source: "qrc:/image/theater_icon.png" // Update the path to your video icon
-//                fillMode: Image.PreserveAspectFit
-//            }
-//            Behavior on scale {
-//                PropertyAnimation {
-//                    duration: 100
-//                }
-//            }
-//            Rectangle {
-//                id:playVideoButton_light
-//                visible: false
-//                anchors.top: parent.bottom
-//                anchors.left: parent.left
-//                width: parent.width
-//                height: 1 // 선 두께
-//                color: ambient_color
-//            }
-//            MouseArea {
-//                id: videobuttonmouseArea
-//                anchors.fill: parent
-//                onClicked: {
-//                    musicdeatil.opacity=0
-//                    if (videoDetail.visible==false){
-//                        videoDetail.visible=true
-//                        videoDetail.opacity=1
-//                    }
-//                    else{
-//                        videoDetail.opacity=0
-//                    }
-//                }
-//            }
-//            scale: videobuttonmouseArea.pressed ? 0.95 : 1.0
-//        }
-//    }
-
-
 
 }
