@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Navipage.qml</file>
+        <file>qml/ValueSource.qml</file>
+        <file>image/arrow_grey.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Camerapage.qml</file>
+        <file>qml/ValueSource.qml</file>
+        <file>image/porsche_upview.png</file>
+        <file>image/distance_alert_1.png</file>
+        <file>image/distance_alert_2.png</file>
+        <file>image/distance_alert_3.png</file>
+        <file>image/distance_alert_4.png</file>
+        <file>image/fdistance_alert_1.png</file>
+        <file>image/fdistance_alert_2.png</file>
+        <file>image/fdistance_alert_3.png</file>
+        <file>image/fdistance_alert_4.png</file>
+    </qresource>
+</RCC>

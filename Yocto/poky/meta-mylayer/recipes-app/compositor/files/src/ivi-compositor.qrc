@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/ValueSource.qml</file>
+        <file>image/car.png</file>
+        <file>image/house_icon.png</file>
+        <file>image/navigate_icon.png</file>
+        <file>image/playing_icon.png</file>
+        <file>image/video_icon.png</file>
+        <file>image/light_icon.png</file>
+    </qresource>
+</RCC>

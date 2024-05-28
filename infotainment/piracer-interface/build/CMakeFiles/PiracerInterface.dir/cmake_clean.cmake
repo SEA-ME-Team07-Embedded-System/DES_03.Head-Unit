@@ -1,11 +1,18 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PiracerInterface.dir/src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp.o"
+  "CMakeFiles/PiracerInterface.dir/src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp.o.d"
   "CMakeFiles/PiracerInterface.dir/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp.o"
+  "CMakeFiles/PiracerInterface.dir/src-gen/v1/commonapi/PiracerSomeIPProxy.cpp.o.d"
   "CMakeFiles/PiracerInterface.dir/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.o"
+  "CMakeFiles/PiracerInterface.dir/src-gen/v1/commonapi/PiracerSomeIPStubAdapter.cpp.o.d"
   "CMakeFiles/PiracerInterface.dir/src/GamePad.cpp.o"
+  "CMakeFiles/PiracerInterface.dir/src/GamePad.cpp.o.d"
   "CMakeFiles/PiracerInterface.dir/src/PiracerClass.cpp.o"
+  "CMakeFiles/PiracerInterface.dir/src/PiracerClass.cpp.o.d"
   "CMakeFiles/PiracerInterface.dir/src/PiracerInterface.cpp.o"
+  "CMakeFiles/PiracerInterface.dir/src/PiracerInterface.cpp.o.d"
   "CMakeFiles/PiracerInterface.dir/src/PiracerStubImpl.cpp.o"
+  "CMakeFiles/PiracerInterface.dir/src/PiracerStubImpl.cpp.o.d"
   "PiracerInterface"
   "PiracerInterface.pdb"
 )

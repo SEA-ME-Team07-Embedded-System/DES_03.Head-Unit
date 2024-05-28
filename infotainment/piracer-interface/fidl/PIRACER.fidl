@@ -12,7 +12,15 @@ interface Piracer {
       UInt8 modeS
     }
     out {
-      String message
+      String gearmessage
+    }
+  }
+  method gearSelect {
+    in {
+      UInt8 gearS
+    }
+    out {
+      String modemessage
     }
   }
 }

@@ -157,7 +157,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
             MouseArea {
                 id: carmode_Area
@@ -245,7 +245,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -278,7 +278,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
 
             // Animation Effect
@@ -381,7 +381,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -424,7 +424,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -468,7 +468,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
     }
@@ -535,7 +535,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -578,7 +578,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -621,7 +621,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
 
@@ -665,7 +665,7 @@ Rectangle { //centerstack : 3
                 anchors.left: parent.left
                 width: parent.width
                 height: 1 // 선 두께
-                color: "red"
+                color: ambient_color
             }
         }
     }
@@ -714,6 +714,9 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: p_Area
                     anchors.fill: parent
+                    onClicked: {
+                        piracerHandler.gearSelectCall(0);
+                    }
                 }
                 Rectangle {
                     id:p_light
@@ -757,6 +760,9 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: r_Area
                     anchors.fill: parent
+                    onClicked: {
+                        piracerHandler.gearSelectCall(1);
+                    }
                 }
                 Rectangle {
                     id:r_light
@@ -799,6 +805,9 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: n_Area
                     anchors.fill: parent
+                    onClicked: {
+                        piracerHandler.gearSelectCall(2);
+                    }
                 }
                 Rectangle {
                     id:n_light
@@ -840,6 +849,9 @@ Rectangle { //centerstack : 3
                 MouseArea {
                     id: d_Area
                     anchors.fill: parent
+                    onClicked: {
+                        piracerHandler.gearSelectCall(3);
+                    }
                 }
                 Rectangle {
                     id:d_light

@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Settingpage.qml</file>
+        <file>qml/ValueSource.qml</file>
+        <file>image/car.png</file>
+        <file>image/caynne.png</file>
+        <file>image/caynne3.jpg</file>
+        <file>image/caynne4.jpg</file>
+        <file>image/gear.png</file>
+        <file>image/information.png</file>
+        <file>image/new_cay.jpg</file>
+        <file>image/setting_icon.png</file>
+    </qresource>
+</RCC>
