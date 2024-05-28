@@ -24,7 +24,8 @@ public:
   void startSubscribeBattery();
   void startSubscribeGear();
   void startSubscribeMode();
-  void modeSelectCall(uint8_t i);
+  void modeSelectCall(uint8_t mode);
+  void gearSelectCall(uint8_t gear);
 
 private:
   // CommonAPI vSomeIP var

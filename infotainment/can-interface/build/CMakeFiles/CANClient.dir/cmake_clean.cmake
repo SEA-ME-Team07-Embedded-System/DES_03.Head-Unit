@@ -2,8 +2,11 @@ file(REMOVE_RECURSE
   "CANClient"
   "CANClient.pdb"
   "CMakeFiles/CANClient.dir/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o"
+  "CMakeFiles/CANClient.dir/src-gen/v1/commonapi/CANSomeIPDeployment.cpp.o.d"
   "CMakeFiles/CANClient.dir/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o"
+  "CMakeFiles/CANClient.dir/src-gen/v1/commonapi/CANSomeIPProxy.cpp.o.d"
   "CMakeFiles/CANClient.dir/src/CANClient.cpp.o"
+  "CMakeFiles/CANClient.dir/src/CANClient.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

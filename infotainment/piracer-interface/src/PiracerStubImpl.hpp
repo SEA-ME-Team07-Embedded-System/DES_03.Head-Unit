@@ -14,6 +14,7 @@ public:
 
     // Method Call
     virtual void modeSelect(const std::shared_ptr<CommonAPI::ClientId> _client, uint8_t mode, modeSelectReply_t _reply);
+    virtual void gearSelect(const std::shared_ptr<CommonAPI::ClientId> _client, uint8_t gear, modeSelectReply_t _reply);
 
     // Atrribute
     virtual void batteryPublisher(const uint8_t battery);
@@ -21,6 +22,7 @@ public:
     virtual void modePublisher(const uint8_t mode);
 
     virtual uint8_t getMode();
+    virtual uint8_t getGear();
 
     
 

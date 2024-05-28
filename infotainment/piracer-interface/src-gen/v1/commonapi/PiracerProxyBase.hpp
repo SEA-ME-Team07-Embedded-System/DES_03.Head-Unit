@@ -42,12 +42,15 @@ public:
     typedef CommonAPI::ObservableReadonlyAttribute<uint8_t> ModeAttribute;
 
     typedef std::function<void(const CommonAPI::CallStatus&, const std::string&)> ModeSelectAsyncCallback;
+    typedef std::function<void(const CommonAPI::CallStatus&, const std::string&)> GearSelectAsyncCallback;
 
     virtual BatteryAttribute& getBatteryAttribute() = 0;
     virtual GearAttribute& getGearAttribute() = 0;
     virtual ModeAttribute& getModeAttribute() = 0;
-    virtual void modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_internalCallStatus, std::string &_message, const CommonAPI::CallInfo *_info = nullptr) = 0;
+    virtual void modeSelect(uint8_t _modeS, CommonAPI::CallStatus &_internalCallStatus, std::string &_gearmessage, const CommonAPI::CallInfo *_info = nullptr) = 0;
     virtual std::future<CommonAPI::CallStatus> modeSelectAsync(const uint8_t &_modeS, ModeSelectAsyncCallback _callback = nullptr, const CommonAPI::CallInfo *_info = nullptr) = 0;
+    virtual void gearSelect(uint8_t _gearS, CommonAPI::CallStatus &_internalCallStatus, std::string &_modemessage, const CommonAPI::CallInfo *_info = nullptr) = 0;
+    virtual std::future<CommonAPI::CallStatus> gearSelectAsync(const uint8_t &_gearS, GearSelectAsyncCallback _callback = nullptr, const CommonAPI::CallInfo *_info = nullptr) = 0;
 
     virtual std::future<void> getCompletionFuture() = 0;
 };

@@ -31,6 +31,9 @@ define org.genivi.commonapi.someip.deployment for interface commonapi.Piracer {
   method modeSelect {
     SomeIpMethodID = 123
   }
+  method gearSelect {
+    SomeIpMethodID = 124
+  }
 }
 
 define org.genivi.commonapi.someip.deployment for provider as PiracerService {
